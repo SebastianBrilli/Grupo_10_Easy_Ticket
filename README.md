@@ -5,7 +5,7 @@ Nuestro sitio es un marketplace para la comercialización de tickets de eventos.
 Integrantes del grupo:
 Pedro Gallardo
 Manuel Jacubowicz: Hola
-Sebastian Brilli
+Sebastian Brilli: Ingeniero Electronico, MBA, Presidente de Gasei SA
 Abril Massoia
 
 
