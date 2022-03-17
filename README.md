@@ -4,7 +4,7 @@ Nuestro sitio es un marketplace para la comercialización de tickets de eventos.
 
 Integrantes del grupo:
 Pedro Gallardo
-Manuel Jacubowicz
+Manuel Jacubowicz: Hola
 Sebastian Brilli
 Abril Massoia
 
