@@ -14,4 +14,6 @@ https://www.cinemarkhoyts.com.ar/ Por su estética y colores de la página: tono
 https://www.edenentradas.com.ar/sitio/contenido/inicio Por ser del interior (apuntamos al mismo público). 
 https://entradas.microteatro.com.ar/ Por el formato del calendario.
 
+El Wireframe està en archivo PDF.
+
 
