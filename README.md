@@ -15,5 +15,6 @@ https://www.edenentradas.com.ar/sitio/contenido/inicio Por ser del interior (apu
 https://entradas.microteatro.com.ar/ Por el formato del calendario.
 
 El Wireframe està en archivo PDF.
+TRELLO https://trello.com/b/aFPvKO4f/proyecto-integrador-sprint-n1
 
 
