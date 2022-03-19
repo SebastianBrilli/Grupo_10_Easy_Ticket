@@ -4,9 +4,9 @@ Nuestro sitio es un marketplace para la comercialización de tickets de eventos.
 
 Integrantes del grupo:
 Pedro Gallardo: Lic. en Economía Empresarial, trabajo como administrador en una empresa familiar de salud CPC SRL.
-Manuel Jacubowicz: Hola
+Manuel Jacubowicz: Estudiante Sociologia, Estadistica, y Ciencia de Datos. 
 Sebastian Brilli: Ingeniero Electronico, MBA, Presidente de Gasei SA
-Abril Massoia
+Abril Massoia: Estudiante de Diseño de indumentaria UBA.
 
 https://www.ticketek.com.ar/ Por ser el principal servicio de venta de tickets en el país.
 https://www.passline.com/home Por su enfoque en las productoras.
