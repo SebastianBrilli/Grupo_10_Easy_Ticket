@@ -124,7 +124,7 @@ header nav a:hover{
   }
     
   .description_banner {
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 55%;
     left: 50%;
@@ -139,7 +139,7 @@ header nav a:hover{
     font-family: 'Roboto', sans-serif;
   }
   .titulo_banner {
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 30%;
     left: 50%;
@@ -155,7 +155,7 @@ header nav a:hover{
     
   }
   .info_banner{
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 80%;
     left: 50vw;
@@ -164,11 +164,18 @@ header nav a:hover{
     font-size: 5vw;
     margin-top: 1px;
     text-decoration:none;
-    color: aliceblue;
+    color: black;
     text-shadow: 5px 5px 10px black;
     font-family: 'Roboto', sans-serif;
-    
+    background-color: yellow;
+    padding: 10px;
+    font-weight: bold;
   }
+  .info_banner:hover {
+    background-color: white;
+    color: black;
+  }
+/*FIN BANNER*/
 /*FIN BANNER*/
 /*titulo Eventos*/
 h3{
@@ -181,13 +188,13 @@ h3{
 
   
   
-  /*seccion main */
+  /*MAIN*/
   main {
     text-align: center;
     background-color: black;
   }
   
-  /**/
+  
   .main-article{
     position: relative;
     display: inline-block;
@@ -196,7 +203,7 @@ h3{
  
   
   .description {
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -209,7 +216,7 @@ h3{
   }
  
   .info{
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 100%;
     left: 50%;
@@ -250,20 +257,20 @@ h3{
   
   
   main {
-    /*centra los recuadros de producto en la pantalla*/
+   
     width: 90%;
     margin: 0 auto;
   }
   
   main section article {
-    /* fondo al articulo y lo separa del articulo que sigue*/
+   
     background-color: black;
     margin: 10px 0px;
     width: 90vw;
   }
   
   main section article img {
-    /* agranda la imagen del producto*/
+   
     width: 100%;
     
     
@@ -436,7 +443,6 @@ header a {
   }
     
   .description_banner {
-    /*oculta la description en pantalla de 360 a 768*/
     position: absolute;
     top: 55%;
     left: 50%;
@@ -451,7 +457,7 @@ header a {
     font-family: 'Roboto', sans-serif;
   }
   .titulo_banner {
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 30%;
     left: 50%;
@@ -467,7 +473,7 @@ header a {
     box-sizing: border-box;
   }
   .info_banner{
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 80%;
     left: 50vw;
@@ -476,12 +482,19 @@ header a {
     font-size: 2vw;
     margin-top: 1px;
     text-decoration:none;
-    color: aliceblue;
+    color: black;
     text-shadow: 5px 5px 10px black;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-
+    background-color: yellow;
+    padding: 10px;
+    font-weight: bold;
   }
+  .info_banner:hover {
+    background-color: white;
+    color: black;
+  }
+/*FIN BANNER*/
 /*FIN BANNER*/
 
   
@@ -492,7 +505,7 @@ header a {
     }
     
     .description {
-      /*oculta la description en pantalla de 360 a 768*/
+      
       position: absolute;
       top: 50%;
       left: 50%;
@@ -506,9 +519,9 @@ header a {
       font-family: 'Roboto', sans-serif;
     }
     .info{
-      /*oculta la description en pantalla de 360 a 768*/
+      
       position: absolute;
-      top: 80%;
+      top: 85%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
@@ -517,6 +530,18 @@ header a {
       text-decoration:none;
       color: aliceblue;
       font-family: 'Roboto', sans-serif;
+  
+    }
+    .titulo_producto{
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 4vw;
+      margin-top: 1px;
+      text-decoration:none;
+      color: aliceblue;
   
     }
   
@@ -694,7 +719,7 @@ header a {
   }
     
   .description_banner {
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 55%;
     left: 50%;
@@ -709,7 +734,7 @@ header a {
     font-family: 'Roboto', sans-serif;
   }
   .titulo_banner {
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 30%;
     left: 50%;
@@ -721,11 +746,12 @@ header a {
     color: white;
     text-shadow: 5px 5px 10px black;
     text-align:justify ;
+    
     font-family: 'Roboto', sans-serif;
     
   }
   .info_banner{
-    /*oculta la description en pantalla de 360 a 768*/
+    
     position: absolute;
     top: 80%;
     left: 50vw;
@@ -734,10 +760,17 @@ header a {
     font-size: 1vw;
     margin-top: 1px;
     text-decoration:none;
-    color: aliceblue;
+    color: black;
     text-shadow: 5px 5px 10px black;
     font-family: 'Roboto', sans-serif;
+    background-color: yellow;
+    padding: 10px;
+    font-weight: bold;
     
+  }
+  .info_banner:hover {
+    background-color: white;
+    color: black;
   }
 /*FIN BANNER*/
 
@@ -757,9 +790,9 @@ header a {
     }
     
     .description {
-      /*oculta la description en pantalla de 360 a 768*/
+      
       position: absolute;
-      top: 40%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
@@ -771,9 +804,9 @@ header a {
     }
    
     .info{
-      /*oculta la description en pantalla de 360 a 768*/
+      
       position: absolute;
-      top: 60%;
+      top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
@@ -806,7 +839,7 @@ header a {
   
   
   
-    /*footer en 769 en adelante*/
+   /*footer*/
   
   
     footer ul {
