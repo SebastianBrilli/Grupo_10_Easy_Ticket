@@ -369,10 +369,11 @@ h3{
  
 .elemento_menu {
  display:inline;
- background-color:rgb(229, 255, 0);
+ background-color:yellow;
  border-radius: 5px;
  text-shadow: 5px 5px 10px white;
  margin-left: 8px;
+ text-shadow: 2px 2px 10px black;
 }
 header a {
  color:rgb(0, 0, 0);
@@ -403,6 +404,7 @@ header a {
  }
  .crea_un_evento p{
    padding-bottom: 5px;
+   text-shadow: 2px 2px 10px black;
  }
   .crea_un_evento:hover {
     color:rgb(35, 34, 34);
@@ -657,10 +659,11 @@ header a {
  
 .elemento_menu {
  display:flex;
- background-color:rgb(229, 255, 0);
+ background-color:yellow;
  border-radius: 5px;
  margin-left: 8px;
  padding: 10px;
+ text-shadow: 2px 2px 10px black;
 }
 header a {
  color:rgb(0, 0, 0);
@@ -690,12 +693,13 @@ header a {
  }
  .crea_un_evento p{
    padding-bottom: 5px;
+   text-shadow: 2px 2px 10px black;
  }
   .crea_un_evento:hover {
     color:rgb(35, 34, 34);
  background-color:rgb(243, 235, 235);
   }
-    /*HEADER*/
+    /* FIN HEADER*/
   /*BANNER*/
   
   .banner_section:hover .description_banner {
