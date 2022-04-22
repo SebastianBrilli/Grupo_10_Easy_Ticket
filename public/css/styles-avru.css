@@ -1,0 +1,445 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+
+/*HEADER*/
+header{
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+      
+  }
+  
+  div.burger-menu {
+    text-align: center;
+    margin-top: 10px;
+  
+    
+  }
+  .crea_un_evento{
+    display: none;
+  }
+  .menu_header{
+    display: none;
+  }
+  
+  div.burger-menu i {
+    border-radius: 5px;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    padding: 8px 10px;   
+    font-size: 20px;
+    width: 40;
+  }
+  
+  
+ 
+  .logo{
+    text-align: center;
+    
+  }
+  .logo img{
+   
+    width: 50vw;
+    text-align: center;
+    
+
+   
+}
+nav{
+  display: none;
+}
+header a{
+    text-decoration: none;
+    color: yellow;
+    
+}
+
+header nav a:hover{
+    color: #fff;
+}
+  /*HEADER*/
+
+
+
+
+.contenedor{
+    background-color: rgba(40, 38, 38, 0.2);
+    margin: 10px 0;
+    padding: 20px 0;
+    border-radius: 15px;
+    
+}
+
+div.lista-detalle div button{
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.80);
+    margin: 5px;
+    border: rgba(170, 167, 167);
+    margin-left: 15%;
+} 
+.cantidad{
+    color: rgba(130, 127, 127, 0.676);
+}
+div.lista-detalle div.comprar button{
+    background-color: yellow;
+    color: black;
+}
+.contenedor-resumen{
+    background-color: rgba(40, 38, 38, 0.2);  
+    padding: 3% 4%;
+    margin-top: 3%;
+    border-radius: 15px;
+    color: rgba(255,255,255,0.80);
+
+}
+
+.entradas-detalle{
+    display: flex;
+    margin: 7px;
+    border: dotted 1px yellow;
+}
+.entradas h3{
+    font-size: 20px;
+}
+.entradas-servicio{
+    text-align: center;
+}
+.item1{
+    flex: 50%;
+}
+.item2{
+    flex: 50%;
+}
+.servicio-items{
+    display: flex;
+    margin: 7px;
+    border: dotted 1px yellow;
+}
+.servicio-detalle{
+    font-size: 20px;
+    text-align: center;
+   
+}
+.servicio-item1{
+    flex: 50%;
+}
+.servicio-item2{
+    flex: 50%;
+}
+.total{
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+}
+.total-item1{
+    flex: 50%;
+}
+.total-item2{
+    flex: 50%;
+}
+.contenedor-resumen div h2{
+    text-align: center;
+}
+
+/*FOOTER*/
+footer {
+    background-color:rgba(54, 54, 54,0.30);
+    
+    
+  }
+  .contenedor_logo-footer{
+text-align: center;
+  }
+  .ft-sector{
+    display: flex;
+    margin-left: 36%;
+  }
+
+  .iconos-footer{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5px;
+    
+    
+
+  }
+  .iconos-footer img{
+    width: 5vw;
+  }
+  
+ .logo_footer{
+   width: 20vw;
+   text-align: center;
+ } 
+ 
+  
+  h4.subtitulo-footer {
+    font-size: 11px;
+    text-align: center;
+    text-decoration: dotted;
+    margin: 3px;
+    color: white;
+  }
+  
+  footer p {
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+  }
+  
+  footer h4 {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+  }
+  
+    
+    /*FIN FOOTER*/
+
+
+
+/*TABLET*/
+@media (min-width: 361px) and (max-width: 768px){
+    .compra-contenedor{
+        display: flex;
+        align-items: center;
+     
+     }   
+     .contenedor{
+        flex: 50%;
+        margin: 30px;
+        height: 420px;
+     }
+     .lista-detalle{
+         height: 420px;
+         margin-top: 20px;
+     }
+     .lista-detalle div {
+         margin-bottom: 30px;
+     }
+     .contenedor-resumen{
+        flex: 50%;
+        margin: 30px;
+     }
+   
+ div.lista-detalle div.botones button{
+     padding: 20px;
+ }
+ div.lista-detalle div.comprar button{
+     padding: 6%;
+ }
+
+ 
+}
+/*DESKTOP*/
+@media (min-width: 768px){
+/*HEADER*/
+    
+
+div.burger-menu {
+    display: none;
+  }
+  .contenedor_header{
+    z-index:1000;
+    position: fixed;
+  }
+  header{
+    height: 10vw;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;align-items: center;
+    border-bottom: 1px dotted yellow;
+    background-color: black;
+    
+  }
+  .logo{
+    text-align: center;
+    margin-left: 2%;
+    display: flex;
+    
+    
+  }
+  .logo img{
+   
+    width: 8vw;
+    text-align: center;
+    
+    
+
+   
+}
+.menu_header{
+display: flex;   
+}
+
+.elemento_menu {
+display:flex;
+background-color: black;
+margin-left: 8px;
+margin-bottom: 8px;
+padding: 7px;
+
+}
+header a {
+color: white;
+text-decoration:none;
+font-size: 1vw;
+font-family: 'Roboto', sans-serif;
+font-weight: bold;
+margin:0 6px;
+}
+.elemento_menu:hover {
+color: black;
+background-color:yellow;
+
+}
+.elemento_menu:hover a{
+color: black;
+
+}
+
+
+.crea_un_evento {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  margin-right: 50px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  padding: 7px;
+  
+  
+}
+
+.crea_un_evento:hover {
+ background-color:#ffff00
+}
+.crea_un_evento:hover a{
+  color:black
+ }
+/* FIN HEADER*/
+
+
+
+
+    .compra-contenedor{
+       display: flex;
+       align-items: center;
+    
+    }   
+    .contenedor{
+       flex: 50%;
+       margin: 30px;
+       height: 420px;
+    }
+    .lista-detalle{
+        height: 420px;
+        margin-top: 20px;
+    }
+    .lista-detalle div {
+        margin-bottom: 30px;
+    }
+    .contenedor-resumen{
+       flex: 50%;
+       margin: 30px;
+    }
+  
+div.lista-detalle div.botones button{
+    padding: 20px;
+}
+div.lista-detalle div.comprar button{
+    padding: 6%;
+}
+/*FOOTER*/
+footer {
+    background-color:rgba(54, 54, 54,0.30);
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+  }
+  .contenedor_logo-footer{
+text-align: center;
+margin-left: 180px;
+  }
+  .ft-sector{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    
+    
+    
+  }
+
+  .iconos-footer{
+    display: flex;
+    justify-content: space-around;
+    
+   
+    
+    
+
+  }
+  .iconos-footer img{
+    width: 1vw;
+  }
+ 
+ 
+  
+  h4.subtitulo-footer {
+   
+    text-decoration: dotted;
+   font-size: 10px;
+    color: white;
+    display: flex;
+    margin-top: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+  }
+  
+  footer p {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    margin-top: 18px;
+    margin-left: 9px;
+  }
+  
+  footer h4 {
+    text-align: center;
+   margin-top: 18px;
+    
+    color: white;
+    display: flex;
+  }
+  .ft-sector1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .logo_footer{
+    width: 10vw;
+    margin-top: 15px;
+  }
+    
+}
+
+   

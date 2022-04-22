@@ -8,7 +8,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     background-color: black;
-    margin-top:20px;
+    
   }
   
   
@@ -18,17 +18,17 @@
   
   /*HEADER*/
   header{
-    height: 10vw;
-    
+    width: 100vw;
     position: relative;
     display: inline-block;
     text-align: center;
-    
+      
   }
+  
   div.burger-menu {
     text-align: center;
-    
-
+    margin-top: 10px;
+  
     
   }
   .crea_un_evento{
@@ -42,21 +42,21 @@
     border-radius: 5px;
     background-color: yellow;
     color: rgb(0, 0, 0);
-    padding: 8px 10px;
-    margin: 0px 0px 20px 18px;
-    
+    padding: 8px 10px;   
     font-size: 20px;
     width: 40;
   }
   
+  
  
   .logo{
     text-align: center;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .logo img{
    
-    width: 100vw;
+    width: 50vw;
     text-align: center;
     
 
@@ -70,23 +70,6 @@ header a{
     color: yellow;
     
 }
-header li{
-    list-style:none;
-    align-items: center;
-    text-decoration: none;
-    color: yellow;
-    font-size: medium;
-    font-size:4vw;
-     
-}
-header ul{
-    
-    display: flex;
-    justify-content: space-between;
-
-}
-
-
 
 header nav a:hover{
     color: #fff;
@@ -96,31 +79,31 @@ header nav a:hover{
   
   /*BANNER*/
   
-  .banner_section:hover .description_banner {
-    display: block;
-  }
   .banner_section:hover .img_evento_principal {
     filter: blur(5px);
+    transition: all 0.1s linear;
+    
   }
   .banner_section:hover .info_banner {
     display: block;
+    background-color: rgba(255, 255, 0, 0.68);
   }
   .banner_section:hover .titulo_banner {
     display: block;
+    
   }
-  .banner{
-    text-align: left;
-  }
+  
   .img_evento_principal{
     width: 100vw;
-    
     text-align: center;
+    
   }
   .banner_section{
     position: relative;
     display: inline-block;
     text-align: center;
     margin-top: 20px;
+    
   }
     
   .description_banner {
@@ -145,13 +128,14 @@ header nav a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    font-size: 6vw;
+    font-size: 7vw;
     margin-top: 1px;
     text-align:start;
     color: white;
     text-shadow: 5px 5px 10px black;
     text-align:justify ;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     
   }
   .info_banner{
@@ -165,10 +149,9 @@ header nav a:hover{
     margin-top: 1px;
     text-decoration:none;
     color: black;
-    text-shadow: 5px 5px 10px black;
     font-family: 'Roboto', sans-serif;
-    background-color: yellow;
-    padding: 10px;
+    background-color: #ffff00;
+    padding: 2px;
     font-weight: bold;
   }
   .info_banner:hover {
@@ -176,13 +159,14 @@ header nav a:hover{
     color: black;
   }
 /*FIN BANNER*/
-/*FIN BANNER*/
+
 /*titulo Eventos*/
 h3{
-  color:yellow;
+  color:white;
   text-align: center;
-  padding: 20px 0;
-  font-size: 5vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 7vw;
 }
 /*Fin titulo Eventos*/
 
@@ -200,7 +184,22 @@ h3{
     display: inline-block;
     text-align: center;
   }
- 
+  .eventos .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top:1px dotted rgb(62, 62, 62);
+    padding: 20px;
+  }
+  .eventos .products article{
+    margin-left: 15px;
+  }
+  .img_evento{
+    
+    object-fit: cover;
+    width: 60vw;
+    height: 100vw; 
+    }
   
   .description {
     
@@ -209,7 +208,7 @@ h3{
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    font-size: 6vw;
+    font-size: 3.5vw;
     margin-top: 1px;
     text-align:start;
     color: white;
@@ -218,15 +217,25 @@ h3{
   .info{
     
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
     font-size: 5vw;
     margin-top: 1px;
     text-decoration:none;
-    color: aliceblue;
+    color: black;
+    background-color:white;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
 
+
+
+  }
+  .info:hover{
+    background-color: #fff;
+    color: black;
   }
   .titulo_producto{
     position: absolute;
@@ -234,21 +243,41 @@ h3{
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    font-size: 2vw;
+    font-size: 5vw;
     margin-top: 1px;
     text-decoration:none;
-    color: aliceblue;
-
+    color: black;
+    background-color: rgba(255, 255, 0, 0.68);
+    border-radius: 2px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
   }
-  main section article:hover .description {
-    display: block;
-  }
+  
   main section article:hover .img_evento {
     filter: blur(5px);
+    border: 2px solid white ;
+    
+    transition: all 0.1s linear;
+    
+    
+  }
+  main section article:hover  {
+    
+    border: 2px solid white ;
+    
+    
+  }
+  main section article:hover .description {
+    
+    display: block;
+    
+    
   }
   main section article:hover .info {
     display: block;
+    transition: display 0.1s linear 0.1s;
   }
+
   main section article:hover .titulo_producto {
     display: block;
   }
@@ -256,45 +285,149 @@ h3{
     
   
   
-  main {
-   
-    width: 90%;
-    margin: 0 auto;
-  }
+ 
   
   main section article {
    
     background-color: black;
     margin: 10px 0px;
-    width: 90vw;
+    
   }
   
-  main section article img {
-   
-    width: 100%;
-    
-    
-  }
+  
  
+/* OTROS EVENTOS*/
+
+.otros_eventos_seccion {
+  width: 35%;
+  
+  border-radius: 20%;
+}
+
+.otros_eventos .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 22%;
+  border-top:1px dotted rgb(62, 62, 62);
+  padding: 1px;
+}
+
+.img_otros_eventos{
+  
+object-fit: cover;
+width: 32vw;
+height: 32vw; 
+background-color: #ffff00;
+border-radius: 20%;
+
+}
+main section article:hover .img_otros_eventos{
+  filter: blur(5px);
+  border: 2px solid white ;
+  
+  transition: all 0.1s linear;
+}
+
+
+.description_otros_eventos {
+  
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 1vw;
+  text-align:center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.info_otros_eventos{
+  
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 3vw;
+  margin-top: 1px;
+  text-decoration:none;
+  color:black;
+  font-family: 'Roboto', sans-serif;
+  background-color: yellow;
+  font-weight: bold;
+  border-radius: 2px;
+
+}
+main section article:hover .info_otros_eventos{
+  display: block;
+}
+.info_otros_eventos:hover{
+  background-color: #fff;
+  color: black;
+}
+
+
+.titulo_producto_otros_eventos{
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 3vw;
+  margin-top: 1px;
+  text-decoration:none;
+  color:black;
+  font-family: 'Roboto', sans-serif;
+  background-color: yellow;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+main section article:hover .titulo_producto_otros_eventos{
+  display: block;
+}
 
   
   /*FOOTER*/
   footer {
-    background-color: rgb(48, 47, 47);
+    background-color:rgba(54, 54, 54,0.30);
     
     
   }
+  .contenedor_logo-footer{
+text-align: center;
+  }
+  .ft-sector{
+    display: flex;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 30vw;
+  }
+
   .iconos-footer{
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 2vw;
+    
     
 
   }
+  
   .iconos-footer img{
-    text-align: center;
-    width: 2vw;
+    width: 7vw;
+    height: 7vw;
+    filter: grayscale(100%)
   }
+  .iconos-footer img:hover{
+    filter: none;
+  }
+  
  .logo_footer{
-   width: 80vw;
+   width: 30vw;
+   text-align: center;
  } 
  
   
@@ -303,346 +436,206 @@ h3{
     text-align: center;
     text-decoration: dotted;
     margin: 3px;
+    margin-top: 5vw;
     color: white;
   }
   
   footer p {
     text-align: center;
-    margin-block-end: 35px;
     margin-top: 5px;
-    padding: 5px 65px;
-    color: yellow;
+    color: white;
   }
   
   footer h4 {
     text-align: center;
     font-size: 10px;
-    color: yellow;
+    color: white;
   }
   
-  footer ul {
-    padding: 10px 10px;
-    margin-top: 35px;
-    color: yellow;
-  }
-  
+    
     /*FIN FOOTER*/
   
   
   
   @media (min-width: 361px) and (max-width: 768px) {
-    /*HEADER*/
-
-    div.burger-menu {
-      display: none;
-    }
-    header{
-      height: 10vw;
-      
-      position: relative;
-      display: inline-block;
-      text-align: center;
-      
-    }
-    .logo{
-      text-align: center;
-      margin-left: 9%;
-      
-    }
-    .logo img{
-     
-      width: 70vw;
-      margin-left: 19%;
-      text-align: center;
-      
-  
-     
-  }
-.menu_header{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  text-align: center;
-  margin-left: 50%;
-  
-}
- 
-.elemento_menu {
- display:inline;
- background-color:yellow;
- border-radius: 5px;
- text-shadow: 5px 5px 10px white;
- margin-left: 8px;
- text-shadow: 2px 2px 10px black;
-}
-header a {
- color:rgb(0, 0, 0);
- text-decoration:none;
- font-size: 2vw;
- font-family: 'Roboto', sans-serif;
- font-weight: bold;
- margin:0 6px;
-}
-.elemento_menu:hover {
- color:rgb(35, 34, 34);
- background-color:rgb(243, 235, 235);
-}
-  
-  
-  header nav a:hover{
-      color: #fff;
-  }
-  .crea_un_evento {
-    display: block;
-    margin-top: 10px;
-    padding-top: 10px;
-    margin-left: 50%;
-    background-color: yellow;
-    text-align: center;
-    border-radius: 5px;
-    
- }
- .crea_un_evento p{
-   padding-bottom: 5px;
-   text-shadow: 2px 2px 10px black;
- }
-  .crea_un_evento:hover {
-    color:rgb(35, 34, 34);
- background-color:rgb(243, 235, 235);
-  }
-    /*HEADER*/
-
-
-
-
-
-    main section article {
-      width: 45%;
-    }
-    div.burger-menu {
-      display: none;
-    }
+   
     /*BANNER*/
-  
-  .banner_section:hover .description_banner {
-    display: block;
-  }
-  .banner_section:hover .img_evento_principal {
-    filter: blur(5px);
-  }
-  .banner_section:hover .info_banner {
-    display: block;
-  }
-  .banner_section:hover .titulo_banner {
-    display: block;
-  }
-  .banner{
-    text-align: left;
-  }
-  .img_evento_principal{
-    width: 100vw;
-    text-align: center;
-  }
+   
+    .titulo_banner {
     
-  .description_banner {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    font-size: 1.5vw;
-    margin-top: 1px;
-    text-align:start;
-    color: white;
-    text-shadow: 5px 5px 10px black;
-    text-align: start;
-    font-family: 'Roboto', sans-serif;
-  }
-  .titulo_banner {
-    
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    font-size: 6vw;
-    margin-top: 1px;
-    text-align:start;
-    color: white;
-    text-shadow: 5px 5px 10px black;
-    text-align:justify ;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-  }
-  .info_banner{
-    
-    position: absolute;
-    top: 80%;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    display: none;
-    font-size: 2vw;
-    margin-top: 1px;
-    text-decoration:none;
-    color: black;
-    text-shadow: 5px 5px 10px black;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    background-color: yellow;
-    padding: 10px;
-    font-weight: bold;
-  }
-  .info_banner:hover {
-    background-color: white;
-    color: black;
-  }
-/*FIN BANNER*/
-/*FIN BANNER*/
-
-  
-    .main-article{
-      position: relative;
-      display: inline-block;
-      text-align: center;
-    }
-    
-    .description {
-      
       position: absolute;
-      top: 50%;
+      top: 15%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
-      font-size: 2.5vw;
+      font-size: 7vw;
       margin-top: 1px;
       text-align:start;
       color: white;
-      text-align: start;
+      text-shadow: 5px 5px 10px black;
+      text-align:justify ;
       font-family: 'Roboto', sans-serif;
-    }
-    .info{
+      font-weight: bold;
       
-      position: absolute;
-      top: 85%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: none;
-      font-size: 2.5vw;
-      margin-top: 1px;
-      text-decoration:none;
-      color: aliceblue;
-      font-family: 'Roboto', sans-serif;
-  
     }
     .titulo_producto{
       position: absolute;
-      top: 12%;
+      top: 14%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
       font-size: 4vw;
       margin-top: 1px;
       text-decoration:none;
-      color: aliceblue;
+      color: black;
+      background-color: rgba(255, 255, 0, 0.68);
+      border-radius: 2px;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .description_banner {
+    
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 2.2vw;
+      margin-top: 1px;
+      text-align:start;
+      color: white;
+      text-shadow: 5px 5px 10px black;
+      text-align: start;
+      font-family: 'Roboto', sans-serif;
+    }
+    .banner_section:hover .description_banner {
+      display: block;
+    }
+    .info_banner{
+    
+      position: absolute;
+      top: 90%;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 4vw;
+      margin-top: 1px;
+      text-decoration:none;
+      color: black;
+      font-family: 'Roboto', sans-serif;
+      background-color: #ffff00;
+      padding: 2px;
+      font-weight: bold;
+    }
+
+
+/*MAIN*/
+
+    .description {
+    
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 2.3vw;
+      margin-top: 1px;
+      text-align:start;
+      color: white;
+      font-weight: bold;
+      
+
+    }
+    main section article:hover .description{
+      display: block;
+    }
+    .info{
+    
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 3vw;
+      margin-top: 1px;
+      text-decoration:none;
+      color: black;
+      background-color:rgba(255, 255, 255, 0.68);;
+      font-weight: bold;
+      border-radius: 3px;
+      font-family: 'Roboto', sans-serif;
+  
+  
   
     }
-  
-   
-  
-    nav {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+    main section article:hover .info{
+      display: block;
     }
-  
-     
-    main section .products {
+
+    
+    .eventos .products {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
+      
+      border-top:1px dotted rgb(62, 62, 62);
+      padding: 20px;
     }
+    .eventos .products article{
+      margin-left: 15px;
+    }
+    .img_evento{
+      
+      object-fit: cover;
+      width: 40vw;
+      height: 70vw; 
+      }
   
-    
-   
+ }
   
-   
-  
-   /*FOOTER*/
-   footer {
-    background-color: rgb(48, 47, 47);
-    
-    
-  }
- .logo_footer{
-   width: 80vw;
- } 
- 
-  
-  h4.subtitulo-footer {
-    font-size: 11px;
-    text-align: center;
-    text-decoration: dotted;
-    margin: 3px;
-    color: white;
-  }
-  
-  footer p {
-    text-align: center;
-    margin-block-end: 35px;
-    margin-top: 5px;
-    padding: 5px 65px;
-    color: white
-  }
-  
-  footer h4 {
-    text-align: center;
-    font-size: 10px;
-    color: white
-  }
-  
-  footer ul {
-    padding: 10px 10px;
-    margin-top: 35px;
-    color: white
-  }
-  .iconos-footer img{
-    text-align: center;
-    width: 2vw;
-  }
-    /*FIN FOOTER*/  
-  
-    
-  
-    
-  }
+   /*footer*/ 
+ .ft-sector{
+  display: flex;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: 30vw;
+}
   
   @media (min-width: 769px) {
    
 
 
     /*HEADER*/
+    
 
     div.burger-menu {
       display: none;
     }
+    .contenedor_header{
+      z-index:1000;
+      position: fixed;
+    }
     header{
       height: 10vw;
-      position: relative;
       display: flex;
       justify-content: space-between;
       text-align: center;align-items: center;
+      border-bottom: 1px dotted yellow;
+      background-color: black;
       
     }
     .logo{
       text-align: center;
-      margin-left: 2%;
+      margin-left: 1%;
       display: flex;
-      justify-content: space-around;
+      
       
     }
     .logo img{
      
-      width: 14vw;
+      width: 12vw;
       text-align: center;
       
       
@@ -650,23 +643,19 @@ header a {
      
   }
 .menu_header{
-  display: flex;
-  
-  
-  
-  
+  display: flex;   
 }
  
 .elemento_menu {
  display:flex;
- background-color:yellow;
- border-radius: 5px;
+ background-color: black;
  margin-left: 8px;
- padding: 10px;
- text-shadow: 2px 2px 10px black;
+ margin-bottom: 8px;
+ padding: 7px;
+ 
 }
 header a {
- color:rgb(0, 0, 0);
+ color: white;
  text-decoration:none;
  font-size: 1vw;
  font-family: 'Roboto', sans-serif;
@@ -674,33 +663,38 @@ header a {
  margin:0 6px;
 }
 .elemento_menu:hover {
- color:rgb(35, 34, 34);
- background-color:rgb(243, 235, 235);
+ color: black;
+ background-color:yellow;
+ 
 }
+.elemento_menu:hover a{
+  color: black;
   
+ }
   
-  header nav a:hover{
-      color: #fff;
-  }
+ 
   .crea_un_evento {
     display: flex;
     align-items: center;
-    background-color: yellow;
-    border-radius: 5px;
+    background-color: black;
     margin-right: 50px;
-    padding: 10px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    padding: 7px;
+    
     
  }
- .crea_un_evento p{
-   padding-bottom: 5px;
-   text-shadow: 2px 2px 10px black;
- }
+
   .crea_un_evento:hover {
-    color:rgb(35, 34, 34);
- background-color:rgb(243, 235, 235);
+   background-color:#ffff00
   }
-    /* FIN HEADER*/
-  /*BANNER*/
+  .crea_un_evento:hover a{
+    color:black
+   }
+/* FIN HEADER*/
+
+
+ /*BANNER*/
   
   .banner_section:hover .description_banner {
     display: block;
@@ -719,28 +713,29 @@ header a {
   }
   .img_evento_principal{
     width: 100vw;
+    margin-top: 50px;
     text-align: center;
   }
     
   .description_banner {
     
     position: absolute;
-    top: 55%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
     font-size: 1.5vw;
     margin-top: 1px;
-    text-align:start;
+    text-align:justify;
     color: white;
     text-shadow: 5px 5px 10px black;
-    text-align: start;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
   }
   .titulo_banner {
     
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
@@ -750,22 +745,22 @@ header a {
     color: white;
     text-shadow: 5px 5px 10px black;
     text-align:justify ;
-    
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
     
   }
   .info_banner{
     
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50vw;
     transform: translate(-50%, -50%);
     display: none;
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin-top: 1px;
     text-decoration:none;
     color: black;
-    text-shadow: 5px 5px 10px black;
     font-family: 'Roboto', sans-serif;
     background-color: yellow;
     padding: 10px;
@@ -778,10 +773,11 @@ header a {
   }
 /*FIN BANNER*/
 
-
+/*TAMAÑO DEL CONTENEDOR DE LOS EVENTOS*/
     main section article {
       width: 22%;
     }
+
     
     .main-article{
       position: relative;
@@ -790,39 +786,60 @@ header a {
     }
     h3{
       text-align: left;
-      font-size: 4vw;
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      margin-left: 19px;
+      
+      font-weight: bold;
     }
     
     .description {
       
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
       font-size: 1vw;
-      text-align:start;
+      text-align:center;
       color: white;
-      text-align: start;
       font-family: 'Roboto', sans-serif;
+    }
+    main section article:hover .description{
+      display: block;
     }
    
     .info{
       
       position: absolute;
-      top: 80%;
+      top: 90%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
-      font-size: 1vw;
+      font-size: 1.5vw;
       margin-top: 1px;
       text-decoration:none;
-      color: aliceblue;
+      color:black;
       font-family: 'Roboto', sans-serif;
+      background-color: yellow;
+      font-weight: bold;
+      border-radius: 2px;
   
     }
-  
     
+  
+    .titulo_producto{
+    top: 15%;
+    font-size: 2vw;
+    font-weight: bold;
+    display: none;
+    }
+
+    main section article:hover .titulo_producto{
+      display: block;
+    }
+
     nav {
       display: flex;
       width: 90%;
@@ -833,50 +850,202 @@ header a {
     
    
   
-    .products {
+    .eventos .products {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       flex: 22%;
+      border-top:1px dotted rgb(62, 62, 62);
+      padding: 20px;
     }
+    .eventos .products article{
+      margin-left: 16px;
+    }
+    .img_evento{
+      
+    object-fit: fill;
+    width: 21vw;
+    height: 30vw; 
+    background-color: #ffff00;
+    }
+
+    /* OTROS EVENTOS*/
+
+    .otros_eventos_seccion {
+      width: 18.5%;
+      border-radius: 50%;
+    }
+
+    .otros_eventos .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex: 22%;
+      border-top:1px dotted rgb(62, 62, 62);
+      padding: 1px;
+    }
+    .otros_eventos .products article{
+      margin-left: 30px;
+    }
+    .img_otros_eventos{
+      
+    object-fit: fill;
+    width: 17.5vw;
+    height: 17vw; 
+    background-color: #ffff00;
+    border-radius: 50%;
+    
+    }
+
+
+    .description_otros_eventos {
+      
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 1vw;
+      text-align:center;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+   
+    .info_otros_eventos{
+      
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 1.5vw;
+      margin-top: 1px;
+      text-decoration:none;
+      color:black;
+      font-family: 'Roboto', sans-serif;
+      background-color: yellow;
+      font-weight: bold;
+      border-radius: 2px;
   
+    }
+    main section article:hover .info_otros_eventos{
+      display: block;
+    }
+    .info_otros_eventos:hover {
+      background-color: #fff;
+      color: black;
+    }    
+  
+    .titulo_producto_otros_eventos{
+      position: absolute;
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      font-size: 1.5vw;
+      margin-top: 1px;
+      text-decoration:none;
+      color:black;
+      font-family: 'Roboto', sans-serif;
+      background-color: yellow;
+      font-weight: bold;
+      border-radius: 2px;
+    }
+
+    main section article:hover .titulo_producto_otros_eventos{
+      display: block;
+    }
+
+    
     
   
+   /*FOOTER*/
+   footer {
+    background-color:rgba(54, 54, 54,0.30);
+    
+    
+    
+    
+  }
+  .contenedor_logo-footer{
+text-align: center;
+margin-left: 5vw;
+  }
+  .ft-sector{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 2vw;
+    
+    
+    
+  }
+  .ft-sector1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .iconos-footer{
+    display: flex;
+    justify-content: space-around;
+    
+   
+    
+    
+
+  }
+  .iconos-footer img{
+    width: 2vw;
+    height: 2vw;
+    filter: grayscale(100%)
+  }
+  .iconos-footer img:hover{
+    filter: none;
+  }
+ 
+ 
   
-  
-   /*footer*/
-  
-  
-    footer ul {
-      display: flex;
-      justify-content: center;
-      font-size: 12px;
-      color: white;
-    }
-    .logo_footer{
-      width: 25vw;}
-  
-    footer ul div.ft-sector {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items:center;
-      color: white;
-    }
-  
-    h4.subtitulo-footer{
-      font-size: 12px;
-    }
-  
-    p.footer{
-      font-size: 12px;
-      color: white;
-    }
-    div.iconos-footer{
-      font-size: 15px;
-    }
-    .iconos-footer img{
-      text-align: center;
-      width: 2vw;
-    }
+  h4.subtitulo-footer {
+   
+    text-decoration: dotted;
+   font-size: 10px;
+    color: white;
+    display: flex;
+    margin-top: 3vw;
+    margin-left: 25px;
+    margin-right: 25px;
+    
   }
   
+  footer p {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    margin-top: 3vw;
+    margin-left: 9px;
+  }
+  
+  footer h4 {
+   text-align: center;
+   margin-left: 2.5vw;;
+   margin-top: 2vw;;
+   color: white;
+   text-align: center;
+   display: block;
+  }
+  
+  .logo_footer{
+    width: 10vw;
+    margin-top: 15px;
+  }
+    
+
+h1{
+  color: wheat;
+  display: block;
+}
+}
