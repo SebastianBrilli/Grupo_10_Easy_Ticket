@@ -275,6 +275,147 @@ h3{
     
     
   }
+  .event-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #FAFF10;
+}
+
+.event-header .event-title{
+    width: 100%;
+
+}
+
+.event-header .event-title h1{
+    padding: 10px 0px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.event-header .event-title h3{
+    padding: 5px 0px;
+    width: 100%;  
+}
+.event-header .event-title h5{
+    margin-top: 20px;
+    padding: 5px 0px;
+    width: 100%;
+}
+    
+
+.event-header .event-carrousel{
+    width: 100%;
+    border-top: 1px solid #FAFF10;
+}
+
+.event-header .event-carrousel img{
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+
+.purchase-detail{
+    border-top: 1px solid #FAFF10;
+}
+
+.purchase-detail .purchase-table{  
+color: white;
+margin: 10px;
+padding: 10px;
+width: 100%;
+}
+
+.purchase-detail .purchase-table th, td{
+    border: solid 1px #FAFF10;
+    width: 25%;
+    height: 30px;
+    text-align: center;
+}
+
+.purchase-detail .purchase-table td input{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+
+.purchase-detail h3{
+    margin:20px 0px;
+    
+}
+
+.purchase-detail .button{
+    display: flex;
+    justify-content: center;
+}
+
+.purchase-detail button{
+    padding: 3px;
+    border: none;
+    border-radius: 4px;
+    margin: 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    transition: background, 500ms;
+}
+
+.purchase-detail button:hover{
+    background: #FAFF10;
+    color: black;
+    font-weight: bold;
+}
+
+.purchase-detail .aditional-info{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+border-top: 1px solid #FAFF10;
+
+}
+.event-map, .event-calendar{
+    display: flex;
+    justify-content: center;
+}
+
+.purchase-detail .aditional-info .event-map, .event-calendar{
+    width: 100%;
+}
+
+.purchase-detail .aditional-info iframe{
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.event-footer {
+    border-top: 1px solid #FAFF10;
+}
+
+.event-footer .option-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.event-footer img{
+    width: 100%;
+    margin: 10px 0;
+}
+.event-footer h3{
+    margin: 10px;
+    padding: 5px 0px;
+    width: 100%;
+}
  
 
   
@@ -563,7 +704,13 @@ header a {
     }
   
     
-   
+  .purchase-detail .aditional-info .event-map, .event-calendar{
+      width: 45%;
+  }
+
+  .event-footer img{
+      width: 45%;
+  }
   
    
   
@@ -610,6 +757,8 @@ header a {
     width: 2vw;
   }
     /*FIN FOOTER*/  
+
+
   
     
   
@@ -840,7 +989,24 @@ header a {
     }
   
     
+    .purchase-detail>div{
+      display: flex;
+      justify-content: space-between;
+  }
+  .purchase-detail .table-button{
+      width: 40%;
+  }
+
+  .purchase-detail .aditional-info{
+      border: none;
+      width: 60%;
+  }
+
+  .event-footer img{
+      width: 22%;
+  }
   
+}
   
   
    /*footer*/
