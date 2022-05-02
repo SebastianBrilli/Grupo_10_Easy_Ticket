@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Formulario de creación'}) %>
+<body>
+    <%-include('./partials/header')%>
+
+    <div class="create-container">
+
+        <div class="form-title">
+            <h2>Iniciar Sesion:</h2>
+        </div>
+
+        <div class="form-container">
+            <form action="/login" method="POST">
+                
+                <label class='form-label' for=userName" >Ingrese su Usuario:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  placeholder="Nombre de usuario"
+                />
+          
+                <label class='form-label' for="pasword">Ingrese su Contraseña:</label>
+                <input
+                class="form-input"
+                  type="password"
+                  id="pasword"
+                  name="pasword"
+                  placeholder="Contraseña"
+                />
+      
+                <label class='form-label' for="passwordConfirm" >Repita su Contraseña:</label>
+                <input
+                class="form-input"
+                  type="password"
+                  id="passwordConfirm"
+                  name="passwordConfirm"
+                  placeholder="Repita Contraseña"
+                />
+             
+          <div class='purchase-detail' >
+            <button type="submit">
+                Confirmar
+            </button>
+         </div>
+                
+            </form>
+        </div>
+    </div>
+    <%-include('./partials/footer')%>
+</body>
+</html>

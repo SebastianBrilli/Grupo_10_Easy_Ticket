@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Formulario de creación'}) %>
+<body>
+    <%-include('./partials/header')%>
+
+    <div class="create-container">
+
+        <div class="form-title">
+            <h2>Registrate:</h2>
+        </div>
+
+        <div class="form-container">
+            <form action="/register" method="POST">
+                
+                <label class='form-label' for="nombre" >Ingrese su Nombre:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="01"
+                  name="nombre"
+                  placeholder="Nombre"
+                />
+
+                <label class='form-label' for="apellido" >Ingrese su Apellido:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="02"
+                  name="apellido"
+                  placeholder="Apellido"
+                />
+
+                <label class='form-label' for="dni" >Ingrese su DNI:</label>
+                <input
+                class="form-input"
+                  type="number"
+                  id="03"
+                  name="dni"
+                  placeholder="2222222"
+                />
+
+                <label class='form-label' for="email" >Ingrese su email:</label>
+                <input
+                class="form-input"
+                  type="email"
+                  id="04"
+                  name="email"
+                  placeholder="aaa@bbbb.com"
+                />
+          
+                <label class='form-label' for="pasword">Ingrese su Contraseña:</label>
+                <input
+                class="form-input"
+                  type="password"
+                  id="05"
+                  name="pasword"
+                  placeholder="Contraseña"
+                />
+      
+                <label class='form-label' for="passwordConfirm" >Repita su Contraseña:</label>
+                <input
+                class="form-input"
+                  type="password"
+                  id="06"
+                  name="passwordConfirm"
+                  placeholder="Repita Contraseña"
+                />
+             
+          <div class='purchase-detail' >
+            <button type="submit">
+                Confirmar
+            </button>
+         </div>
+                
+            </form>
+        </div>
+    </div>
+    <%-include('./partials/footer')%>
+</body>
+</html>

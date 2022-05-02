@@ -10,6 +10,7 @@ const rutasHome=require('./routes/rutasHome.js')
 const rutasProductDetail=require('./routes/rutasProductDetail.js')
 const rutasCarroDeCompras=require('./routes/rutasCarroDeCompras.js')
 const rutasLogin=require('./routes/rutasLogin.js')
+const rutasRegister=require('./routes/rutasRegister.js')
 
 //Definimos carpeta de archivos publicos
 app.use(express.static(publicPath));
@@ -35,6 +36,7 @@ app.use('/', rutasHome);
 app.use('/productDetail',rutasProductDetail);
 app.use("/carro",rutasCarroDeCompras);
 app.use("/login",rutasLogin);
+app.use("/register",rutasRegister);
 
 
 
