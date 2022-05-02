@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%-include('./partials/head')%>
+  <%- include('./partials/head',{title: 'Bienvenidos'}) %>
   <body>
     <%-include('./partials/header')%>
     <section class="banner">
@@ -11,8 +11,7 @@
               class="img_evento_principal"
               src="/images/LollaArgentina2022_A.jpeg"
               width="150"
-              alt="Cafetera Moulinex"
-              class="product_img"
+              alt="Imagen principal"
             />
             <p class="description_banner">
               Lollapalooza​ es un festival musical de los Estados Unidos que
@@ -23,8 +22,7 @@
             </p>
             <p class="titulo_banner">Lolla Pallooza</p>
             <a class="info_banner" href="/register">
-              Mas informacion <i class="far fa-id-card"></i
-            ></a>
+              Mas informacion ></a>
           </div>
         </article>
       </div>
@@ -45,15 +43,13 @@
                 src="/images/<%= buenosAires[i].image%>"
                 width="360"
                 alt="Imagen evento"
-                class="product_img"
               />
               <p class="titulo_producto"><%= buenosAires[i].name%></p>
               <p class="description">
                 <%= buenosAires[i].description%>
               </p>
-              <a class="info" href="/register">
-                Mas informacion <i class="far fa-id-card"></i
-              ></a>
+              <a class="info" href="/productDetail/<%=buenosAires[i].id%>">
+                Mas informacion ></a>
             </div>
           </article>
           <%}%>     
@@ -74,13 +70,12 @@
                 src="/images/<%= cordoba[i].image%>"
                 width="360"
                 alt="Imagen Evento"
-                class="product_img"
               />
               <p class="titulo_producto"><%= cordoba[i].name%></p>
               <p class="description">
                 <%= cordoba[i].description%>
               </p>
-              <a class="info" href="/register"> Mas informacion </a>
+              <a class="info" href="/productDetail/<%=cordoba[i].id%>"> Mas informacion > </a>
             </div>
           </article>
           <%}%>
@@ -101,13 +96,12 @@
                 src="/images/<%= rosario[i].image%>"
                 width="360"
                 alt="Imagen Evento"
-                class="product_img"
               />
               <p class="titulo_producto"><%= rosario[i].name%></p>
               <p class="description">
                 <%= rosario[i].description%>
               </p>
-              <a class="info" href="/register"> Mas informacion </a>
+              <a class="info" href="/productDetail/<%=rosario[i].id%>"> Mas informacion > </a>
             </div>
           </article>
           <%}%>
@@ -130,14 +124,13 @@
                 src="/images/<%= otrasProvincias[i].image%>"
                 width="360"
                 alt="Imagen Evento"
-                class="product_img"
               />
               <p class="titulo_producto_otros_eventos"><%= otrasProvincias[i].name%></p>
               <p class="description_otros_eventos">
                 <%= otrasProvincias[i].description%>
               </p>
-              <a class="info_otros_eventos" href="/register">
-                Mas informacion
+              <a class="info_otros_eventos" href="/productDetail/<%=otrasProvincias[i].id%>">
+                Mas informacion >
               </a>
             </div>
           </article>

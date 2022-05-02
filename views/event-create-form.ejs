@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Formulario de creación'}) %>
+<body>
+    <%-include('./partials/header')%>
+
+    <div class="create-container">
+
+        <div class="form-title">
+            <h2>Formulario de creación de productos</h2>
+        </div>
+
+        <div class="form-container">
+            <form action="/productDetail/create" method="POST">
+                
+                <label class='form-label' for="name" >Nombre del Evento:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ej: Recital Los Piojos"
+                />
+          
+                <label class='form-label' for="price">Precio de la entrada:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="price"
+                  name="price"
+                  placeholder="Ej: 199"
+                />
+      
+                <label class='form-label' for="discount" >Descuento:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="discount"
+                  name="discount"
+                  placeholder="Ej: 15"
+                />
+
+                <label class='form-label' for="date" >Fecha:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="date"
+                  name="date"
+                  placeholder="Ej: 12/07/22"
+                />
+
+                <label class='form-label' for="address" >Lugar:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Ej: Luna Park"
+                />
+
+                <label class='form-label' for="city" >Ciudad:</label>
+                <input
+                class="form-input"
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Rosario"
+                /> -->
+ 
+                <label class='form-label' for="category">Categoria:</label>
+                <select name="category" id="category" class="form-input">
+                  <option value="">Elegí</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Cordoba">Cordoba</option>
+                  <option value="Rosario">Rosario</option>
+                  <option value="Otras Provincias">Otras Provincias</option>
+                </select>
+              
+          
+                <label class='form-label' for="description">Descipción:</label>
+                <textarea
+                  name="description"
+                  id="description"
+                  class="form-input"
+                ></textarea>
+             
+          <div class='purchase-detail' >
+            <button type="submit">
+                Guardar producto
+            </button>
+         </div>
+                
+            </form>
+        </div>
+    </div>
+    <%-include('./partials/footer')%>
+</body>
+</html>

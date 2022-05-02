@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head')%>
+    <%- include('./partials/head', {title: 'Detalle del evento'}) %>
 <body>
     <%-include('./partials/header')%>
     <main>
         <section class="event-header">
             <div class="event-title">
-                <h1>Nombre del Evento</h1>
-                <h3>Direccion del Evento</h3>
-                <h3>Fecha del Evento</h3>
-                <h5>Condiciones generales del evento</h5>
+                <h1><%=selectedEvent.name%></h1>
+                <h3><%=selectedEvent.address%></h3>
+                <h3><%=selectedEvent.date%></h3>
+                <h5><%=selectedEvent.description%></h5>
             </div>
             <div class="event-carrousel">
-                <img src="images/bootcamp-parejas-indetenibles-15-dias-para-renovar-y-transformar-tu-relacion-de-pareja-argentina-img.jpg" alt="imagen-evento-1">
+                <img src="/images/<%=selectedEvent.image%>" alt="imagen-evento">
             </div>
         </section>
         <section class="purchase-detail">
-            <h3>Titulo de la tabla de compra</h3>
+            <h3><%=selectedEvent.name%></h3>
             <div>
                 <div class="table-button">
                         <table class="purchase-table">
@@ -28,19 +28,19 @@
                             </tr>
                             <tr>
                                 <td>Preferencial</td>
-                                <td>1000 $</td>
+                                <td><%=(selectedEvent.price)*1.5%></td>
                                 <td><input type="number"></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>Platea</td>
-                                <td>800 $</td>
+                                <td><%=(selectedEvent.price)*1.2%></td>
                                 <td><input type="number"></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>General</td>
-                                <td>500 $</td>
+                                <td><%=selectedEvent.price%></td>
                                 <td><input type="number"></td>
                                 <td></td>
                             </tr>
@@ -54,6 +54,9 @@
                         <div class="button">
                             <button type="submit" class="confirmation-button">Comprar</button>
                         </div>
+                        <div class="button">
+                           <a href="/productDetail/<%=selectedEvent.id%>/edit"><button type="button" class="confirmation-button">Editar Evento</button></a> 
+                        </div>
                     </div>
                     <div class="aditional-info">
                         <div class="event-map">
@@ -61,19 +64,42 @@
                         </div>
                         <div class="event-calendar">
                             <iframe src="https://calendar.google.com/calendar/embed?src=o7r935tll0detm57dn4on9io7k%40group.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                        </div>
+                        </div> --> -->
                     </div>
                 </div>                        
             </div>
         </section>
-        <section class="event-footer">
+       <section class="eventos">
             <h3>Tambien podria interesarte</h3>
-            <div class="option-container">
-                    <img src="images/lola-en-la-tangente-120498-rec.jpg" alt="Opcion 1">
-                    <img src="images/meet-greet-juicy-bae-95274-rec.jpg" alt="Opcion 2">
-                    <img src="images/carino-en-niceto-club-120980-rec.jpg" alt="Opcion 3">
-                    <img src="images/presentacion-del-nuevo-disco-de-martin-garcia-15-seis-120505-rec.jpg" alt="Opcion 4">        
-            </div>
+            
+            <div class="products">
+                <% for (let i=0; i < recomendedEvent.length; i++) {%>
+                <article>
+                  <div class="main-article">
+                    <img
+                      class="img_evento"
+                      src="/images/<%= recomendedEvent[i].image%>"
+                      width="360"
+                      alt="Imagen evento"
+                    />
+                    <p class="titulo_producto"><%= recomendedEvent[i].name%></p>
+                    <p class="description">
+                      <%= recomendedEvent[i].description%>
+                    </p>
+                    <a class="info" href="/productDetail/<%=recomendedEvent[i].id%>">
+                      Mas informacion ></a>
+                  </div>
+                </article>
+                <%}%>     
+              </div>
+
+
+            <!-- <div class="option-container">
+                    <img src="/images/lola-en-la-tangente-120498-rec.jpg" alt="Opcion 1">
+                    <img src="/images/meet-greet-juicy-bae-95274-rec.jpg" alt="Opcion 2">
+                    <img src="/images/carino-en-niceto-club-120980-rec.jpg" alt="Opcion 3">
+                    <img src="/images/presentacion-del-nuevo-disco-de-martin-garcia-15-seis-120505-rec.jpg" alt="Opcion 4">        
+            </div> -->
            
         </section>
     </main>  
