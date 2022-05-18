@@ -1,3 +1,4 @@
+const { localsName } = require('ejs');
 let fs = require('fs');
 const path = require('path');
 
@@ -51,6 +52,7 @@ const productDetailController = {
         address: req.body.address,
         city: req.body.city,
         category: req.body.category,
+        image:req.file.filename,
         description: req.body.description,
         }
 
@@ -64,7 +66,8 @@ const productDetailController = {
     edit: (req,res)=>{
         let event = productDetailController.readFile();
         let selectedId= req.params.id;                                          //Tomo el valor del Id recibido del usuario a traves de params
-        let selectedEvent = event.find(elemento => elemento.id == selectedId);  //Seleccion el evento del array usando el metodo find
+        let selectedEvent = event.find(elemento => elemento.id == selectedId);
+       
 
         res.render("event-edit-form", {selectedEvent});                     //Renderizo la vista enviando los datos del elemnto a editar
     },
@@ -72,7 +75,7 @@ const productDetailController = {
     storeEdit: (req,res)=>{
         let event = productDetailController.readFile();
         req.body.id= parseInt(req.params.id);
-        //req.body.image= req.file ? req.file.filename : imagenOld
+        req.body.image= req.file ? req.file.filename : req.body.oldimage 
 
         let eventUpdated = event.map(elemento => {
            if (elemento.id == req.body.id){
