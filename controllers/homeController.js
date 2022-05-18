@@ -2,7 +2,7 @@ let fs = require('fs');
 const path = require('path');
 
 const eventFilePath = path.join(__dirname, '../data/eventDataBase.json');
-const event = JSON.parse(fs.readFileSync(eventFilePath, 'utf-8'));
+let event = JSON.parse(fs.readFileSync(eventFilePath, 'utf-8'));
 
 const homeController={
 

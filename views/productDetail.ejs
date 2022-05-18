@@ -57,6 +57,9 @@
                         <div class="button">
                            <a href="/productDetail/<%=selectedEvent.id%>/edit"><button type="button" class="confirmation-button">Editar Evento</button></a> 
                         </div>
+                        <div class="button">
+                            <form action="/productDetail/<%=selectedEvent.id%>/edit?_method=delete" method="POST"><button type="submit" class="confirmation-button">Borrar Evento</button> </form>
+                         </div>
                     </div>
                     <div class="aditional-info">
                         <div class="event-map">

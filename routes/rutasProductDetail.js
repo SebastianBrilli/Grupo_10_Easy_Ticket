@@ -13,5 +13,7 @@ router.put('/:id/edit', productController.storeEdit);
 
 router.get('/:id', productController.detail);
 
+router.delete('/:id/edit', productController.remove);
+
 
 module.exports = router;

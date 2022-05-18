@@ -1,34 +1,52 @@
 let fs = require('fs');
 const path = require('path');
-const { brotliDecompressSync } = require('zlib');
 
-const eventFilePath = path.join(__dirname, '../data/eventDataBase.json');
-const event = JSON.parse(fs.readFileSync(eventFilePath, 'utf-8'));
+const productDetailController = {
 
-const productDetailController= { 
+    filePath: path.join(__dirname, '../data/eventDataBase.json'),
+    
+    readFile: () => { 
+        return JSON.parse(fs.readFileSync(productDetailController.filePath, 'utf-8'))  
+    },
+
+    generateID: ()=>{
+        let items = productDetailController.readFile();
+        let lastItem= items.pop();
+        if(lastItem){
+            return lastItem.id + 1
+        }
+        return 1
+    },
+
     index: (req,res)=>{
+        let event = productDetailController.readFile();
+        
         res.render('productIndex', {event})
-
     },
 
     create: (req,res)=>{
+        
         res.render('event-create-form')
     },
 
     detail: (req,res)=>{
-        let indice=req.params.id; 										//traigo el parametro del producto
-        let selectedEvent = event.find(elemento => elemento.id == indice);
-        let recomendedEvent = event.filter(elemento=> (elemento.category==selectedEvent.category)&&(elemento.id!=indice));      
-        res.render('productDetail', {selectedEvent, recomendedEvent})
+        let event = productDetailController.readFile();
+        let idSelected=req.params.id; 										                                                         //Traigo el parametro del producto
+        let selectedEvent = event.find(elemento => elemento.id == idSelected);                                                       //Selecciono el evento del array
+        let recomendedEvent = event.filter(elemento=> (elemento.category==selectedEvent.category)&&(elemento.id!=idSelected));       //Selecciono otros elementos que tengan la misma categoria    
+        
+        res.render('productDetail', {selectedEvent, recomendedEvent})                                                            //Renderizo la vista de detalle del procuto pasando los datos como parametros
     },
 
     storeNew: (req,res)=>{
+        let event = productDetailController.readFile();
+        let newId= parseInt(productDetailController.generateID());                               
 
-        let new_event ={ 
-        id: (event.length+1),
-        name: req.body.name,
-        price: req.body.price,
-        discount: req.body.discount,
+        let new_event ={                            //Defino el nuevo evento a guardar en el archivo
+        id: newId,                                  // Incremento en 1 el valor del ID
+        name: req.body.name,                        //Recupero los valores recibitos del formulario y los asigno al correpondiente elemento del OL
+        price: parseInt(req.body.price),
+        discount: parseInt(req.body.discount),
         date: req.body.date,
         address: req.body.address,
         city: req.body.city,
@@ -36,43 +54,49 @@ const productDetailController= {
         description: req.body.description,
         }
 
-        event.push(new_event);
-        let eventJASON = JSON.stringify(event);
-        fs.writeFileSync(eventFilePath,eventJASON);
-
-        res.redirect("/productDetail");
+        event.push(new_event);                                                          //Guardo el nuevo elemento en la ultima posicion del array de OL
+        let eventJASON = JSON.stringify(event, null, ' ');                                           //Transformo en Json
+        fs.writeFileSync(productDetailController.filePath , eventJASON);     //Guardo el resultado en el archivo de texto
+        
+        res.redirect("/productDetail");                                                //Redirecciono la vista
     },
 
     edit: (req,res)=>{
-        let indice= req.params.id;
-        
-        
-        let selectedEvent = event.find(elemento => elemento.id == indice);
+        let event = productDetailController.readFile();
+        let selectedId= req.params.id;                                          //Tomo el valor del Id recibido del usuario a traves de params
+        let selectedEvent = event.find(elemento => elemento.id == selectedId);  //Seleccion el evento del array usando el metodo find
 
-        res.render("event-edit-form", {selectedEvent});
+        res.render("event-edit-form", {selectedEvent});                     //Renderizo la vista enviando los datos del elemnto a editar
     },
 
     storeEdit: (req,res)=>{
-        
-        let indice= (req.params.id-1);
-        
-        event[indice].name= req.body.name;
-        event[indice].price= req.body.price;
-        event[indice].discount= req.body.discount;
-        event[indice].date= req.body.date;
-        event[indice].address= req.body.address;
-        event[indice].city= req.body.city;
-        event[indice].category= req.body.category;
-        event[indice].description= req.body.description;
+        let event = productDetailController.readFile();
+        req.body.id= parseInt(req.params.id);
+        //req.body.image= req.file ? req.file.filename : imagenOld
 
-        console.log(event[indice])
+        let eventUpdated = event.map(elemento => {
+           if (elemento.id == req.body.id){
+               return elemento=req.body
+           }
+           return elemento
+        })
 
-        let eventJASON = JSON.stringify(event);
-        fs.writeFileSync(eventFilePath,eventJASON);
+        let eventJASON = JSON.stringify(eventUpdated, null, ' ');                                           //Transformo en Json
+        fs.writeFileSync(productDetailController.filePath , eventJASON); 
+     
         res.redirect("/productDetail");
+    },
 
+    remove: (req,res)=>{
+        let event = productDetailController.readFile();
+        let indice= parseInt(req.params.id);
+        let newEvent=event.filter(elemento => (elemento.id != indice));  
+       
+        let eventJASON = JSON.stringify(newEvent, null, ' ');                                           //Transformo en Json
+        fs.writeFileSync(productDetailController.filePath , eventJASON);  
+
+        res.redirect('/')
     }
- 
     
 }
 module.exports=productDetailController;
