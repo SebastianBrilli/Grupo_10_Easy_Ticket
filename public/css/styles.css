@@ -6,11 +6,146 @@
   
   body {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     background-color: black;
-    color: white;
     
   }
+  
+  /*====== Formularios ======*/
+.create-container{
+  display: flex;
+  justify-content: center; 
+  margin:auto;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.form-container {
+  width: 90%;
+  
+}
+
+.form-title{
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.form-label {
+  display: flex;
+  
+  font-size: 1.2em;
+  align-items: flex-start;
+  color: white;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-radius: 8px;
+  border: none;
+  border: solid 1px var(--gray);
+  padding: 0 15px;
+}
+
+textarea.form-input {
+  min-height: 140px;
+  resize: vertical;
+  padding: 15px;
+}
+
+/*====== Carro ======*/
+
+.contenedor{
+  background-color: rgba(40, 38, 38, 0.2);
+  margin: 10px 0;
+  padding: 20px 0;
+  border-radius: 15px;
+  
+}
+
+div.lista-detalle div button{
+  font-family: 'Roboto', sans-serif;
+  width: 70%;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.80);
+  margin: 5px;
+  border: rgba(170, 167, 167);
+  margin-left: 15%;
+} 
+.cantidad{
+  color: rgba(130, 127, 127, 0.676);
+}
+div.lista-detalle div.comprar button{
+  background-color: yellow;
+  color: black;
+}
+.contenedor-resumen{
+  background-color: rgba(40, 38, 38, 0.2);  
+  padding: 3% 4%;
+  margin-top: 3%;
+  border-radius: 15px;
+  color: rgba(255,255,255,0.80);
+
+}
+
+.entradas-detalle{
+  display: flex;
+  margin: 7px;
+  border: dotted 1px yellow;
+}
+.entradas h3{
+  font-size: 20px;
+}
+.entradas-servicio{
+  text-align: center;
+}
+.item1{
+  flex: 50%;
+}
+.item2{
+  flex: 50%;
+}
+.servicio-items{
+  display: flex;
+  margin: 7px;
+  border: dotted 1px yellow;
+}
+.servicio-detalle{
+  font-size: 20px;
+  text-align: center;
+ 
+}
+.servicio-item1{
+  flex: 50%;
+}
+.servicio-item2{
+  flex: 50%;
+}
+.total{
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  background-color: yellow;
+  color: black;
+}
+.total-item1{
+  flex: 50%;
+}
+.total-item2{
+  flex: 50%;
+}
+.contenedor-resumen div h2{
+  text-align: center;
+}
+  
   
   
   
@@ -158,6 +293,147 @@ header nav a:hover{
   }
 /*FIN BANNER*/
 
+/*BANNER222222222222222222222*/
+  
+.banner_section_2{
+  
+  display: flex;
+  
+  justify-content: space-around;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+.contenedor_banner_3{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 2vw;
+  
+}
+.c_t_pd{
+  color: white;
+  font-size: 15vw;
+  flex-grow: 0;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  margin-left: 2vw;
+  border-top: dotted yellow 2vw;
+  border-bottom: dotted yellow 2vw;
+  
+}
+.c_d_pd{
+  display: flex;
+  color: white;
+  flex-grow: 0.65;
+  font-size: 5vw;
+  margin: 1vw;
+  font-family: 'Staatliches', cursive;
+  align-items: center;
+  justify-content: center;
+  border-top: inset white 0.2vw;
+  margin-left: 3vw;
+  background-color: rgba(40, 38, 38, 0.5);
+}
+.c_i_pd{
+  display: flex;
+ 
+  color: white;
+  font-size: 6vw;
+  flex-grow: 0.15;
+  margin-left: 2vw;
+  font-family: 'Staatliches', cursive;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+  
+}
+.c_f_pd{
+  color: white;
+  font-size: 8vw;
+  flex-grow: 0.10;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  margin-left: 2vw;
+  
+  
+}
+.c_h_pd{
+  color: white;
+  font-size: 2vw;
+  flex-grow: 0.10;
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+}
+
+.c_bs_pd{
+ display: flex;
+ justify-content: center;
+ margin-left: 2vw;
+
+}
+
+.img_evento_principal_2{
+  width: 70vw;
+  height: 100%;
+  margin-left: 1vw;
+  margin-bottom: 4vw;
+  border: inset white 0.2vw
+  
+  
+}
+.c_descuentos_pd{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+  
+}
+.c_banco_pd img{
+  width: 15vw;
+  margin: 1vw;
+}
+
+
+.botones_detalle {
+  display: flex;
+  
+}
+
+.botones_detalle button{
+  padding: 3px;
+  border: none;
+  border-radius: 4px;
+  margin: 30px;
+  background-color: white;
+  color: black;
+  font-size: 4vw;
+  font-weight: bold;
+  cursor: pointer;
+  width: 25vw;
+  height: 12vw;
+  transition: background, 500ms;
+}
+
+.botones_detalle button:hover{
+  background: #FAFF10;
+  color: black;
+  font-weight: bold;
+}
+.Video_Evento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+}
+
+.Video_Evento video{
+  width: 70vw;
+  border: inset white 0.2vw
+}
+/*FIN BANNER22222222*/
+
+
+
 /*titulo Eventos*/
 h3{
   color:white;
@@ -174,6 +450,7 @@ h3{
   main {
     text-align: center;
     background-color: black;
+    padding-top: 8rem ;
   }
   
   
@@ -291,150 +568,8 @@ h3{
     margin: 10px 0px;
     
   }
-  .event-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-top:1px dotted rgb(62, 62, 62);
-}
-
-.event-header .event-title{
-    width: 100%;
-
-}
-
-.event-header .event-title h1{
-    padding: 10px 0px;
-    margin-bottom: 10px;
-    width: 100%;
-    color:white;
-}
-
-.event-header .event-title h3{
-    padding: 2px 0px;
-    width: 100%;  
-}
-.event-header .event-title h5{
-    margin: 10px;
-    padding: 5px 0px;
-    width: 100%;
-}
-    
-
-.event-header .event-carrousel{
-    width: 100%;
-    border-top:1px dotted rgb(62, 62, 62);
-}
-
-.event-header .event-carrousel img{
-  object-fit: cover;
-  width: 60vw;
-  height: 100vw
-}
-
-
-
-.purchase-detail{
-  border-top:1px dotted rgb(62, 62, 62);
-}
-
-.purchase-detail .purchase-table{  
-color: white;
-margin: 10px;
-padding: 10px;
-width: 100%;
-}
-
-.purchase-detail .purchase-table th, td{
-    border: solid 1px #FAFF10;
-    width: 25%;
-    height: 30px;
-    text-align: center;
-}
-
-.purchase-detail .purchase-table td input{
-    background-color: black;
-    color: white;
-    text-align: center;
-    width: 50%;
-}
-
-.purchase-detail h3{
-    margin:20px 0px;
-    
-}
-
-.purchase-detail .button{
   
-     display: flex;
-    justify-content: center;
-}
-
-.purchase-detail button{
-    padding: 3px;
-    border: none;
-    border-radius: 4px;
-    margin: 30px;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    width: 150px;
-    height: 30px;
-    transition: all, 500ms;
-}
-
-.purchase-detail button:hover{
-    background: #FAFF10;
-    color: black;
-    font-weight: bold;
-}
-
-.purchase-detail .aditional-info{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-border-top: 1px solid #FAFF10;
-
-}
-.event-map, .event-calendar{
-    display: flex;
-    justify-content: center;
-}
-
-.purchase-detail .aditional-info .event-map, .event-calendar{
-    width: 100%;
-}
-
-.purchase-detail .aditional-info iframe{
-    width: 100%;
-    max-width: 300px;
-    max-height: 300px;
-}
-
-.event-footer {
-    border-top: 1px solid #FAFF10;
-}
-
-.event-footer .option-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
-.event-footer img{
-    width: 100%;
-    margin: 10px 0;
-}
-.event-footer h3{
-    margin: 10px;
-    padding: 5px 0px;
-    width: 100%;
-}
+  
  
 /* OTROS EVENTOS*/
 
@@ -530,52 +665,78 @@ main section article:hover .titulo_producto_otros_eventos{
   display: block;
 }
 
-/*====== Formularios ======*/
-.create-container{
-  display: flex;
-  justify-content: center; 
-  margin:auto;
-  flex-wrap: wrap;
-  width: 90%;
-}
-
-.form-container {
-  width: 90%;
   
-}
+  /*FOOTER*/
+  footer {
+    background-color:rgba(54, 54, 54,0.30);
+    
+    
+  }
+  .contenedor_logo-footer{
+text-align: center;
+  }
+  .ft-sector{
+    display: flex;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 30vw;
+  }
 
-.form-title{
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-}
+  .iconos-footer{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 2vw;
+    
+    
 
-.form-label {
-  display: inline-block;
-  font-size: 1.2em;
-  margin: 10px 0;
-}
+  }
+  
+  .iconos-footer img{
+    width: 7vw;
+    height: 7vw;
+    filter: grayscale(100%)
+  }
+  .iconos-footer img:hover{
+    filter: none;
+  }
+  
+ .logo_footer{
+   width: 30vw;
+   text-align: center;
+ } 
+ 
+  
+  h4.subtitulo-footer {
+    font-size: 11px;
+    text-align: center;
+    text-decoration: dotted;
+    margin: 3px;
+    margin-top: 5vw;
+    color: white;
+  }
+  
+  footer p {
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+  }
+  
+  footer h4 {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+  }
+  
+    
+    /*FIN FOOTER*/
+  
+  
 
-.form-input {
-  display: block;
-  width: 100%;
-  height: 45px;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  border-radius: 8px;
-  border: none;
-  border: solid 1px var(--gray);
-  padding: 0 15px;
-}
 
-textarea.form-input {
-  min-height: 140px;
-  resize: vertical;
-  padding: 15px;
-}
 
-/*====== Carro ======*/
 
+
+/* CARRO DE COMPRAS*/
 .contenedor{
   background-color: rgba(40, 38, 38, 0.2);
   margin: 10px 0;
@@ -662,74 +823,354 @@ div.lista-detalle div.comprar button{
   text-align: center;
 }
 
-  
-  /*FOOTER*/
-  footer {
-    background-color:rgba(54, 54, 54,0.30);
-    
-    
-  }
-  .contenedor_logo-footer{
-  text-align: center;
-  }
-  .ft-sector{
-    display: flex;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    margin-left: 30vw;
-  }
 
-  .iconos-footer{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 2vw;
-    
-    
 
-  }
-  
-  .iconos-footer img{
-    width: 3vw;
-    height: 3vw;
-    filter: grayscale(100%)
-  }
-  .iconos-footer img:hover{
-    filter: none;
-  }
-  
- .logo_footer{
-   width: 30vw;
-   text-align: center;
- } 
+
+
+/* Detail product*/
  
+
+.event-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #FAFF10;
+}
+
+.event-header .event-title{
+  width: 100%;
+
+}
+
+.event-header .event-title h1{
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.event-header .event-title h3{
+  padding: 5px 0px;
+  width: 100%;  
+}
+.event-header .event-title h5{
+  margin-top: 20px;
+  padding: 5px 0px;
+  width: 100%;
+}
   
-  h4.subtitulo-footer {
-    font-size: 11px;
-    text-align: center;
-    text-decoration: dotted;
-    margin: 3px;
-    margin-top: 5vw;
-    color: white;
-  }
+
+.event-header .event-carrousel{
+  width: 100%;
+  border-top: 1px solid #FAFF10;
+}
+
+.event-header .event-carrousel img{
+  width: 100%;
+  margin: 10px 0;
+}
+
+
+
+.purchase-detail{
+  border-top: 1px solid #FAFF10;
+}
+
+.purchase-detail .purchase-table{  
+color: white;
+margin: 10px;
+padding: 10px;
+width: 100%;
+}
+
+.purchase-detail .purchase-table th, td{
+  border: solid 1px #FAFF10;
+  width: 25%;
+  height: 30px;
+  text-align: center;
+}
+
+.purchase-detail .purchase-table td input{
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 50%;
+}
+
+.purchase-detail h3{
+  margin:20px 0px;
   
-  footer p {
-    text-align: center;
-    margin-top: 5px;
-    color: white;
-  }
+}
+
+.purchase-detail .button{
+  display: flex;
+  justify-content: center;
+}
+
+.purchase-detail button{
+  padding: 3px;
+  border: none;
+  border-radius: 4px;
+  margin: 30px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  transition: background, 500ms;
+}
+
+.purchase-detail button:hover{
+  background: #FAFF10;
+  color: black;
+  font-weight: bold;
+}
+
+.purchase-detail .aditional-info{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+border-top: 1px solid #FAFF10;
+
+}
+.event-map, .event-calendar{
+  display: flex;
+  justify-content: center;
+}
+
+.purchase-detail .aditional-info .event-map, .event-calendar{
+  width: 100%;
+}
+
+.purchase-detail .aditional-info iframe{
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.event-footer {
+  border-top: 1px solid #FAFF10;
+}
+
+.event-footer .option-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   
-  footer h4 {
-    text-align: center;
-    font-size: 10px;
-    color: white;
-  }
-  
-    
-    /*FIN FOOTER*/
-  
-  
+}
+
+.event-footer img{
+  width: 100%;
+  margin: 10px 0;
+}
+.event-footer h3{
+  margin: 10px;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   @media (min-width: 361px) and (max-width: 768px) {
+
+    /*BANNER222222222222222222222*/
+  
+.banner_section_2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 5rem;
+ 
+}
+.contenedor_banner_3{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 2vw;
+  
+}
+.c_t_pd{
+  color: white;
+  font-size: 8vw;
+  flex-grow: 0;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  border-top: dotted yellow 1vw;
+  border-bottom: dotted yellow 1vw;
+  margin-left: 2vw;
+  
+}
+.c_d_pd{
+  display: flex;
+  color: white;
+  flex-grow: 0.65;
+  font-size: 2vw;
+  margin: 1vw;
+  font-family: 'Staatliches', cursive;
+  align-items: center;
+  justify-content: center;
+  border-top: inset white 0.2vw;
+  margin-left: 3vw;
+  background-color: rgba(40, 38, 38, 0.5);
+}
+.c_i_pd{
+  display: flex;
+ 
+  color: white;
+  font-size: 3vw;
+  flex-grow: 0.15;
+  margin-left: 1vw;
+  font-family: 'Staatliches', cursive;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+  
+}
+.c_f_pd{
+  color: white;
+  font-size: 4vw;
+  flex-grow: 0.10;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  
+  
+}
+.c_h_pd{
+  color: white;
+  font-size: 2vw;
+  flex-grow: 0.10;
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+}
+
+.c_bs_pd{
+ display: flex;
+ justify-content: center;
+ margin-left: 2vw;
+
+}
+
+.img_evento_principal_2{
+  width: 45vw;
+  height: 100%;
+  margin-left: 1vw;
+  
+}
+.c_descuentos_pd{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+  
+}
+.c_banco_pd img{
+  width: 6vw;
+  margin: 1vw;
+}
+
+
+.botones_detalle {
+  display: flex;
+  
+}
+
+.botones_detalle button{
+  padding: 3px;
+  border: none;
+  border-radius: 4px;
+  margin: 30px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  transition: background, 500ms;
+}
+
+.botones_detalle button:hover{
+  background: #FAFF10;
+  color: black;
+  font-weight: bold;
+}
+.Video_Evento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+}
+
+.Video_Evento video{
+  width: 70vw;
+  border: #FAFF10 solid;
+}
+/*FIN BANNER22222222*/
    
     /*BANNER*/
    
@@ -802,6 +1243,11 @@ div.lista-detalle div.comprar button{
       font-weight: bold;
     }
 
+   
+   
+    
+
+
 
 /*MAIN*/
 
@@ -850,7 +1296,7 @@ div.lista-detalle div.comprar button{
     .eventos .products {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       
       border-top:1px dotted rgb(62, 62, 62);
       padding: 20px;
@@ -874,14 +1320,93 @@ div.lista-detalle div.comprar button{
   margin-bottom: 5vw;
   margin-left: 30vw;
 }
+
+
+
+
+
+
+
+
+ /*CARRO COMPRAS*/ 
+
+.compra-contenedor{
+  display: flex;
+  align-items: center;
+
+}   
+.contenedor{
+  flex: 50%;
+  margin: 30px;
+  height: 420px;
+}
+.lista-detalle{
+   height: 420px;
+   margin-top: 20px;
+}
+.lista-detalle div {
+   margin-bottom: 30px;
+}
+.contenedor-resumen{
+  flex: 50%;
+  margin: 30px;
+}
+
+div.lista-detalle div.botones button{
+padding: 20px;
+}
+div.lista-detalle div.comprar button{
+padding: 6%;
+}
+
+
+
+
+
+
+
+
+
+  /*DETALLE PRODUCTO*/
+
+.purchase-detail .aditional-info .event-map, .event-calendar{
+  width: 45%;
+}
+
+.event-footer img{
+  width: 45%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   @media (min-width: 769px) {
-   
-
-
     /*HEADER*/
-    
-
     div.burger-menu {
       display: none;
     }
@@ -909,22 +1434,19 @@ div.lista-detalle div.comprar button{
      
       width: 12vw;
       text-align: center;
-      
-      
+    
   
      
   }
 .menu_header{
   display: flex;   
 }
- 
 .elemento_menu {
  display:flex;
  background-color: black;
  margin-left: 8px;
  margin-bottom: 8px;
  padding: 7px;
- 
 }
 header a {
  color: white;
@@ -937,14 +1459,10 @@ header a {
 .elemento_menu:hover {
  color: black;
  background-color:yellow;
- 
 }
 .elemento_menu:hover a{
   color: black;
-  
  }
-  
- 
   .crea_un_evento {
     display: flex;
     align-items: center;
@@ -952,11 +1470,8 @@ header a {
     margin-right: 50px;
     margin-left: 8px;
     margin-bottom: 8px;
-    padding: 7px;
-    
-    
+    padding: 7px; 
  }
-
   .crea_un_evento:hover {
    background-color:#ffff00
   }
@@ -1045,17 +1560,25 @@ header a {
   }
 /*FIN BANNER*/
 
+/*BANNER222222*/
+  
+
+
+
+/*FIN BANNER222*/
+
+
+
+
+
+
+
 /*TAMAÑO DEL CONTENEDOR DE LOS EVENTOS*/
     main section article {
-      width: 22%;
-    }
-
-    
-    .main-article{
-      position: relative;
-      display: inline-block;
-      text-align: center;
-    }
+      width: 25%;
+      
+    }  
+   
     h3{
       text-align: left;
       font-size: 20px;
@@ -1065,7 +1588,6 @@ header a {
       
       font-weight: bold;
     }
-    
     .description {
       
       position: absolute;
@@ -1080,8 +1602,7 @@ header a {
     }
     main section article:hover .description{
       display: block;
-    }
-   
+    } 
     .info{
       
       position: absolute;
@@ -1099,53 +1620,42 @@ header a {
       border-radius: 2px;
   
     }
-    
-  
     .titulo_producto{
     top: 15%;
     font-size: 2vw;
     font-weight: bold;
     display: none;
     }
-
     main section article:hover .titulo_producto{
       display: block;
     }
-
     nav {
       display: flex;
       width: 90%;
       height: 40px;
       
     }
-  
-    
-  .purchase-detail .aditional-info .event-map, .event-calendar{
-      width: 45%;
-  }
-
-  .event-footer img{
-      width: 45%;
-  }
-  
     .eventos .products {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      flex: 22%;
+      justify-content: flex-start;
+      
       border-top:1px dotted rgb(62, 62, 62);
-      padding: 20px;
+      
     }
+    
+
     .eventos .products article{
-      margin-left: 16px;
+     margin-left: 6vw;
     }
     .img_evento{
       
     object-fit: fill;
-    width: 21vw;
+    width: 22vw;
     height: 30vw; 
-    background-color: #ffff00;
+    
+    
     }
+   
 
     /* OTROS EVENTOS*/
 
@@ -1241,54 +1751,62 @@ header a {
    /*FOOTER*/
    footer {
     background-color:rgba(54, 54, 54,0.30);
-    }
-
-    .contenedor_logo-footer{
-    text-align: center;
-    margin-left: 5vw;
-    }
-
-    .ft-sector1{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: baseline;
-    }
-
-    .ft-sector{
-      display: flex;
-      flex-wrap: wrap;
-      padding: 10px;
-      margin: 10px;
-      margin-top: 2vw;
-      justify-content:right;
-      align-items: baseline;
-    }
+    
+    
+    
+    
+  }
+  .contenedor_logo-footer{
+text-align: center;
+margin-left: 5vw;
+  }
+  .ft-sector{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 2vw;
+    
+    
+    
+  }
+  .ft-sector1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
   .iconos-footer{
     display: flex;
     justify-content: space-around;
-  }
+    
    
     
-  .purchase-detail>div{
-      display: flex;
-      justify-content: space-between;
-  }
-  .purchase-detail .table-button{
-      width: 40%;
-  }
+    
 
-  .purchase-detail .aditional-info{
-      border: none;
-      width: 60%;
   }
-
-  .event-footer img{
-      width: 22%;
+  .iconos-footer img{
+    width: 2vw;
+    height: 2vw;
+    filter: grayscale(100%)
   }
+  .iconos-footer img:hover{
+    filter: none;
+  }
+ 
+ 
   
-
+  h4.subtitulo-footer {
+   
+    text-decoration: dotted;
+   font-size: 10px;
+    color: white;
+    display: flex;
+    margin-top: 3vw;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+  }
   
   footer p {
     text-align: center;
@@ -1309,8 +1827,224 @@ header a {
   }
   
   .logo_footer{
-    width: 8vw;
-    margin-top: 10px;
+    width: 10vw;
+    margin-top: 15px;
   }
     
+
+h1{
+  color: wheat;
+  display: block;
 }
+
+
+
+
+
+
+
+
+
+
+ /*CARRO COMPRAS*/ 
+
+ .compra-contenedor{
+  display: flex;
+  align-items: center;
+
+}   
+.contenedor{
+  flex: 50%;
+  margin: 30px;
+  height: 420px;
+}
+.lista-detalle{
+   height: 420px;
+   margin-top: 20px;
+}
+.lista-detalle div {
+   margin-bottom: 30px;
+}
+.contenedor-resumen{
+  flex: 50%;
+  margin: 30px;
+}
+
+div.lista-detalle div.botones button{
+padding: 20px;
+}
+div.lista-detalle div.comprar button{
+padding: 6%;
+}
+
+
+
+
+
+
+
+
+
+/*DETALLE PRODUCTO*/ 
+
+.purchase-detail>div{
+  display: flex;
+  justify-content: space-between;
+}
+.purchase-detail .table-button{
+  width: 40%;
+}
+
+.purchase-detail .aditional-info{
+  border: none;
+  width: 60%;
+}
+
+.event-footer img{
+  width: 22%;
+}
+
+
+
+.form-container¨{
+  margin-top: 40vw;
+}
+/*BANNER222222222222222222222*/
+  
+.banner_section_2{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 5rem;
+ 
+}
+.contenedor_banner_3{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 2vw;
+  
+}
+.c_t_pd{
+  color: white;
+  font-size: 8vw;
+  flex-grow: 0;
+  font-family: 'Staatliches', cursive;
+  
+  font-weight: bold;
+  border-top: dotted yellow 1vw;
+  border-bottom: dotted yellow 1vw;
+  margin-left: 2vw;
+  
+}
+.c_d_pd{
+  display: flex;
+  color: white;
+  flex-grow: 0.65;
+  font-size: 2vw;
+  margin: 1vw;
+  font-family: 'Staatliches', cursive;
+  align-items: center;
+  justify-content: center;
+  border-top: inset white 0.2vw;
+  margin-left: 3vw;
+  background-color: rgba(40, 38, 38, 0.5);
+}
+.c_i_pd{
+  display: flex;
+ 
+  color: white;
+  font-size: 3vw;
+  flex-grow: 0.15;
+  margin-left: 1vw;
+  font-family: 'Staatliches', cursive;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+  
+}
+.c_f_pd{
+  color: white;
+  font-size: 4vw;
+  flex-grow: 0.10;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  
+  
+}
+.c_h_pd{
+  color: white;
+  font-size: 2vw;
+  flex-grow: 0.10;
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+}
+
+.c_bs_pd{
+ display: flex;
+ justify-content: center;
+ margin-left: 2vw;
+
+}
+
+.img_evento_principal_2{
+  width: 45vw;
+  height: 100%;
+  margin-left: 1vw;
+  
+}
+.c_descuentos_pd{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+  
+}
+.c_banco_pd img{
+  width: 6vw;
+  margin: 1vw;
+}
+
+
+.botones_detalle {
+  display: flex;
+  
+}
+
+.botones_detalle button{
+  padding: 3px;
+  border: none;
+  border-radius: 4px;
+  margin: 30px;
+  background-color: rgba(40, 38, 38, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 2vw;
+  cursor: pointer;
+  width: 150px;
+  font-family: 'Staatliches', cursive;
+  height: 30px;
+  transition: background, 500ms;
+}
+
+.botones_detalle button:hover{
+  background: #FAFF10;
+  color: black;
+  font-weight: bold;
+}
+.Video_Evento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+}
+
+.Video_Evento video{
+  width: 70vw;
+  border: inset white 0.2vw;
+}
+/*FIN BANNER22222222*/
+
+}
+
+

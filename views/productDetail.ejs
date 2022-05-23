@@ -2,76 +2,85 @@
 <html lang="en">
     <%- include('./partials/head', {title: 'Detalle del evento'}) %>
 <body>
-    <%-include('./partials/header')%>
-    <main>
-        <section class="event-header">
-            <div class="event-title">
-                <h1><%=selectedEvent.name%></h1>
-                <h3><%=selectedEvent.address%></h3>
-                <h3><%=selectedEvent.date%></h3>
-                <h5><%=selectedEvent.description%></h5>
+    <div class="contenedor_header">
+        <header>
+            <!-- Logo -->
+            <div class="logo">
+                    <img src="/images/logo_tnt.png" alt="">
             </div>
-            <div class="event-carrousel">
-                <img src="/images/<%=selectedEvent.image%>" alt="imagen-evento">
+            <!-- Icono para menu en celular -->
+            <div class="burger-menu">
+                    <i class="fa fa-bars burger"></i>
             </div>
-        </section>
-        <section class="purchase-detail">
-            <h3><%=selectedEvent.name%></h3>
-            <div>
-                <div class="table-button">
-                        <table class="purchase-table">
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Valor</th>
-                                <th>Cantidad</th>
-                                <th>Total</th>
-                            </tr>
-                            <tr>
-                                <td>Preferencial</td>
-                                <td><%=(selectedEvent.price)*1.5%></td>
-                                <td><input type="number"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Platea</td>
-                                <td><%=(selectedEvent.price)*1.2%></td>
-                                <td><input type="number"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>General</td>
-                                <td><%=selectedEvent.price%></td>
-                                <td><input type="number"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>            
-                        </table>
-                        <div class="button">
-                            <button type="submit" class="confirmation-button">Comprar</button>
-                        </div>
-                        <div class="button">
-                           <a href="/productDetail/<%=selectedEvent.id%>/edit"><button type="button" class="confirmation-button">Editar Evento</button></a> 
-                        </div>
-                        <div class="button">
-                            <form action="/productDetail/<%=selectedEvent.id%>/edit?_method=delete" method="POST"><button type="submit" class="confirmation-button">Borrar Evento</button> </form>
-                         </div>
-                    </div>
-                    <div class="aditional-info">
-                        <div class="event-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20510.491556762587!2d-71.37316774013514!3d-40.166702130905925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1649558815300!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="event-calendar">
-                            <iframe src="https://calendar.google.com/calendar/embed?src=o7r935tll0detm57dn4on9io7k%40group.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-                        </div> --> -->
-                    </div>
-                </div>                        
+            <!-- menu para tablet y pc -->  
+            <div class="menu_header">
+              <div class="elemento_menu"><a href="/">HOME</a></div>
+              <div class="elemento_menu"><a href="/productDetail">PRODUCTOS</a></div>
+              <div class="elemento_menu"><a href="/register">REGISTRATE</a></div>
+              <div class="elemento_menu"><a href="/carro">CARRITO</a></div>
+              <div class="elemento_menu"><a href="/productDetail/create">CREAR EVENTO</a></div>
             </div>
-        </section>
+      
+            <!-- boton para crear evento -->    
+            <div class="crea_un_evento">
+                    
+               <p><a href="/login"><i class="far fa-id-card"></i> INICIA SESION</a></p>
+                         
+            </div>
+       </header>
+    </div>
+     
+    
+    
+        
+
+           
+   
+
+<main>    
+    <article class="banner_section_2">
+
+        <div class="contenedor_imagen_banner_pd">
+
+          <img class="img_evento_principal_2" src="/images/<%=selectedEvent.image%>" width="50" alt="Cafetera Moulinex" class="product_img"> 
+          
+              
+         </div>
+
+      <div class="contenedor_banner_3">
+         <div class="c_t_pd"> <p class="titulo_banner_2"><%=selectedEvent.name%></p>  </div>
+         <div class="c_i_pd"><p class="info_banner_2"><%=selectedEvent.address%> </p> </div>
+         <div class="c_f_pd"><p class="info_banner_2">  <%=selectedEvent.date%></p> </div>
+         <div class="c_h_pd"><p class="info_banner_2">  <%=selectedEvent.hora%></p> </div>
+         
+         <div class="c_d_pd"> <p class="description_banner_2"> <%=selectedEvent.description%></p> </div>
+         
+         <div class="c_descuentos_pd">
+            <div class="c_banco_pd"> <img src="/images/visa.png" alt=""> </div>
+            <div class="c_banco_pd"> <img src="/images/AEX.png" alt=""> </div>
+            <div class="c_banco_pd"> <img src="/images/master.png" alt=""> </div>
+        </div> 
+           
+            
+            <div class="c_bs_pd">
+                <div class="botones_detalle">
+                  <a href="/carro"><button type="button" >Comprar</button></a>
+                </div>
+                <div class="botones_detalle">
+                    <a href="/productDetail/<%=selectedEvent.id%>/edit"><button type="button" >Editar Evento</button></a> 
+                </div>
+            </div>      
+            
+              
+
+
+        </div>       
+         
+              
+      </article>
+      <div class="Video_Evento">
+      <video controls src="/images/<%=selectedEvent.video%>" ></video>
+     </div>
        <section class="eventos">
             <h3>Tambien podria interesarte</h3>
             

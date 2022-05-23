@@ -1,15 +1,17 @@
 [
  {
-  "id": 1,
   "name": "Coldplay",
   "price": "200",
   "discount": "13",
   "date": "13/07/22",
   "address": "Luna Park",
   "city": "Buenos Aires",
-  "category": "Buenos Aires",
-  "description": "Excelente banda",
-  "image": "coldplay.jpg"
+  "category": "",
+  "oldimage": "coldplay.jpg",
+  "description": " Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
+  "id": 1,
+  "image": "coldplay.jpg",
+  "video" :"coldplay.mp4"
  },
  {
   "id": 2,
@@ -21,7 +23,8 @@
   "city": "Buenos Aires",
   "category": "Buenos Aires",
   "description": "es un buen show",
-  "image": "cds3.jpg"
+  "image": "cds3.jpg",
+  "video": "cdsa.mp4"
  },
  {
   "id": 3,
@@ -33,7 +36,8 @@
   "city": "Buenos Aires",
   "category": "Buenos Aires",
   "description": "   rrrrrrrrrrrrrrrrrrr",
-  "image": "cds.jpg"
+  "image": "cds.jpg",
+  "video": "cdsa.mp4"
  },
  {
   "id": 4,
@@ -57,7 +61,8 @@
   "address": "Gran Rex",
   "city": "Buenos Aires",
   "image": "pf.jpg",
-  "category": ""
+  "category": "Buenos Aires",
+  "video": "pinkFloyd.mp4"
  },
  {
   "id": 6,
@@ -287,5 +292,17 @@
   "category": "Cordoba",
   "image": "evento1652888826873.jpg",
   "description": "Desde las 19:00 hr. hasta las 02:00 hr."
+ },
+ {
+  "id": 219,
+  "name": "asdasd",
+  "price": 455555,
+  "discount": 4545,
+  "date": "454545",
+  "address": "4545",
+  "city": "",
+  "category": "Buenos Aires",
+  "image": "evento1653265236475.jpg",
+  "description": "45454545"
  }
 ]
