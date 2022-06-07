@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head',{title: 'Carrito de compras'})%>
+<body>
+   
+    <%-include('./partials/header')%>
+   
+</div>
+
+<main>
+    <div class="compra-contenedor">
+        <div class="contenedor">
+            <div class="lista-detalle">
+                <div class='purchase-detail'>
+                    <button type="button"><strong>GENERAL</strong></button>
+                </div>
+                <div class='purchase-detail'>
+                    <button type="button"><strong>PRE-VENTA<span>$2.000</span></strong></button>
+                </div>
+                <div class='purchase-detail'>
+                    <button type="button"><strong class="cantidad">CANTIDAD</strong></button>
+                </div>
+                <div class='purchase-detail'>
+                    <button type="button"><strong>COMPRAR</strong></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-resumen">
+            <div>
+                <h2>Resumen de compra</h2>
+            </div>
+            <div class="entradas-servicio">
+                <div class="entradas">
+                    <h3>Entradas</h3>
+                </div>
+                <div class="entradas-detalle">
+
+                    <div class="item1">PREVENTA</div>
+                    <div class="item2">$2.000</div>
+
+                </div>
+                <div class="entradas-detalle">
+
+                    <div class="item1">PREVENTA</div>
+                    <div class="item2">$2.000</div>
+
+                </div>
+            </div>
+            <div class="servicio-detalle">
+                <h3>Servicios</h3>
+                <div class="servicio-items">
+                    <div class="servicio-item1">Cargos por servicio</div>
+                    <div class="servicio-item2">$200</div>
+                </div>
+            </div>
+            <div class="total">
+                <div class="total-item1">Total</div>
+                <div class="total-item2">$2.200</div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+
+<%-include('./partials/footer')%>
+</body>
+</html>
