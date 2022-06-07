@@ -61,92 +61,86 @@ textarea.form-input {
 
 /*====== Carro ======*/
 
-.contenedor{
-  background-color: rgba(40, 38, 38, 0.2);
-  margin: 10px 0;
-  padding: 20px 0;
-  border-radius: 15px;
-  
-}
-
-div.lista-detalle div button{
-  font-family: 'Roboto', sans-serif;
-  width: 70%;
-  padding: 10px;
-  background-color: rgba(255,255,255,0.80);
-  margin: 5px;
-  border: rgba(170, 167, 167);
-  margin-left: 15%;
-} 
-.cantidad{
-  color: rgba(130, 127, 127, 0.676);
-}
-div.lista-detalle div.comprar button{
-  background-color: yellow;
-  color: black;
-}
-.contenedor-resumen{
-  background-color: rgba(40, 38, 38, 0.2);  
-  padding: 3% 4%;
-  margin-top: 3%;
-  border-radius: 15px;
-  color: rgba(255,255,255,0.80);
-
-}
-
-.entradas-detalle{
-  display: flex;
-  margin: 7px;
-  border: dotted 1px yellow;
-}
-.entradas h3{
-  font-size: 20px;
-}
-.entradas-servicio{
-  text-align: center;
-}
-.item1{
-  flex: 50%;
-}
-.item2{
-  flex: 50%;
-}
-.servicio-items{
-  display: flex;
-  margin: 7px;
-  border: dotted 1px yellow;
-}
-.servicio-detalle{
-  font-size: 20px;
-  text-align: center;
+/*====== Carro ======*/
  
+.contenedor-sections{
+  margin-top: 15vw;
 }
-.servicio-item1{
-  flex: 50%;
+
+.foto{
+  width: 100vw;
 }
-.servicio-item2{
-  flex: 50%;
+.foto img{
+  width: 100%;
 }
-.total{
+.formularios1{
   display: flex;
-  padding: 10px;
-  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-top: 8vw;
+  margin-bottom: 8vw;
+  font-size: 1vw;
+}
+.desplegables{
+  width: 60%;
+  margin-bottom: 4vw;
+  height: 8vw;  
+  font-size: 1vw;
   font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-  background-color: yellow;
-  color: black;
-}
-.total-item1{
-  flex: 50%;
-}
-.total-item2{
-  flex: 50%;
-}
-.contenedor-resumen div h2{
   text-align: center;
 }
+
+.boton-compra{
+  width:60%;
+  background-color: #FAFF10;
+  font-weight: bold;
+  height: 12vw;
+  border: #FAFF10;
+
+}
+
+/*CARRO RESUMEN DE COMPRA*/
+  .resumen-contenedor{
+    background-color: #0a0a097d;
+    padding: 10vw;
+    margin: 5vw;
+  }
+  .resumen-titulo {
+    color: #fff;
+    font-size: 7vw;
+    text-align: left;
+  }
+  .resumen-item{
+    color: #fff;
+ }
+  .titulo-entradas{
+    font-size: 5vw;
+    text-align: left;
+    margin-bottom: 0%;
+  }
+  .resumen-item-detalle{
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+  }
+  .resumen-total{
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 5vw;
+    margin-top: 2vw;
+  }
+  .boton-resumen{
+    width:60%;
+    background-color: #FAFF10;
+    font-weight: bold;
+    height: 12vw;
+    border: #FAFF10;
+    margin-top: 2vw;
   
+  }
   
   
   
@@ -760,94 +754,6 @@ text-align: center;
 
 
 
-/* CARRO DE COMPRAS*/
-.contenedor{
-  background-color: rgba(40, 38, 38, 0.2);
-  margin: 10px 0;
-  padding: 20px 0;
-  border-radius: 15px;
-  
-}
-
-div.lista-detalle div button{
-  font-family: 'Roboto', sans-serif;
-  width: 70%;
-  padding: 10px;
-  background-color: rgba(255,255,255,0.80);
-  margin: 5px;
-  border: rgba(170, 167, 167);
-  margin-left: 15%;
-} 
-.cantidad{
-  color: rgba(130, 127, 127, 0.676);
-}
-div.lista-detalle div.comprar button{
-  background-color: yellow;
-  color: black;
-}
-.contenedor-resumen{
-  background-color: rgba(40, 38, 38, 0.2);  
-  padding: 3% 4%;
-  margin-top: 3%;
-  border-radius: 15px;
-  color: rgba(255,255,255,0.80);
-
-}
-
-.entradas-detalle{
-  display: flex;
-  margin: 7px;
-  border: dotted 1px yellow;
-}
-.entradas h3{
-  font-size: 20px;
-}
-.entradas-servicio{
-  text-align: center;
-}
-.item1{
-  flex: 50%;
-}
-.item2{
-  flex: 50%;
-}
-.servicio-items{
-  display: flex;
-  margin: 7px;
-  border: dotted 1px yellow;
-}
-.servicio-detalle{
-  font-size: 20px;
-  text-align: center;
- 
-}
-.servicio-item1{
-  flex: 50%;
-}
-.servicio-item2{
-  flex: 50%;
-}
-.total{
-  display: flex;
-  padding: 10px;
-  margin: 20px;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-  background-color: yellow;
-  color: black;
-}
-.total-item1{
-  flex: 50%;
-}
-.total-item2{
-  flex: 50%;
-}
-.contenedor-resumen div h2{
-  text-align: center;
-}
-
-
 
 
 
@@ -1360,34 +1266,38 @@ border-top: 1px solid #FAFF10;
 
  /*CARRO COMPRAS*/ 
 
-.compra-contenedor{
-  display: flex;
-  align-items: center;
 
-}   
-.contenedor{
-  flex: 50%;
-  margin: 30px;
-  height: 420px;
-}
-.lista-detalle{
-   height: 420px;
-   margin-top: 20px;
-}
-.lista-detalle div {
-   margin-bottom: 30px;
-}
-.contenedor-resumen{
-  flex: 50%;
-  margin: 30px;
-}
+ .foto{
+  padding: 5vw; }
+  .desplegables{
+      font-size: 2vw;
+  }
+  .boton-compra{
+      font-size:3vw ;
+  }
+  .resumen-titulo {
+    font-size: 5vw;
+  }
 
-div.lista-detalle div.botones button{
-padding: 20px;
-}
-div.lista-detalle div.comprar button{
-padding: 6%;
-}
+  .titulo-entradas{
+    font-size: 4vw;
+  }
+  .resumen-total{
+    font-size: 5vw; 
+  }
+  .resumen-item-detalle{
+    font-size: 3vw;
+  }
+  .boton-resumen{
+      font-size: 2vw;
+      height: 5vw;
+      width: 30vw;
+  }
+
+
+
+
+
 
 
 
@@ -1888,35 +1798,110 @@ h1{
 
 
  /*CARRO COMPRAS*/ 
-
- .compra-contenedor{
+ .contenedor-sections{
   display: flex;
+  margin-bottom: 2vw;
+  margin-top: 12vw;
+}
+.formulario-resumen{
+  width: 60vw;
+  margin-right: 2vw;
+}
+.foto{
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.foto img{
+ width: 100%;
+ height: 100%;
+}
+.formularios1{
+  display: flex;
+  flex-direction: row;
   align-items: center;
-
-}   
-.contenedor{
-  flex: 50%;
-  margin: 30px;
-  height: 420px;
+  width: 100%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  font-size: 1vw;
 }
-.lista-detalle{
-   height: 420px;
-   margin-top: 20px;
-}
-.lista-detalle div {
-   margin-bottom: 30px;
-}
-.contenedor-resumen{
-  flex: 50%;
-  margin: 30px;
+.desplegables{
+  width: 60%;
+  margin-bottom: 0vw;
+  height: 3vw;  
+  font-size: 1vw;
+  font-weight: bold;
+  text-align: center;
 }
 
-div.lista-detalle div.botones button{
-padding: 20px;
+.boton-compra{
+  width:30%;
+  background-color: #FAFF10;
+  font-weight: bold;
+  height: 3vw;
+  border: #FAFF10;
+
 }
-div.lista-detalle div.comprar button{
-padding: 6%;
-}
+
+/*CARRO RESUMEN DE COMPRA*/
+  .resumen-contenedor{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .resumen-titulo {
+    color: #fff;
+    font-size: 3vw;
+    text-align: center;
+  }
+  .resumen-item{
+    color: #fff;
+ }
+  .titulo-entradas{
+    font-size: 2vw;
+    text-align: left;
+    margin-bottom: 0%;
+  }
+  .resumen-item-detalle{
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+    width: 100%;
+    font-size: 2vw;
+  }
+  .resumen-total{
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+    margin-top: 2vw;
+  }
+  .boton-resumen{
+    width:20vw;
+    background-color: #FAFF10;
+    font-weight: bold;
+    height: 6vw;
+    border: #FAFF10;
+    margin-top: 2vw;
+  
+  }
+  .resumen-footer{
+    align-self: center;
+    font-size: 4vw;
+    width: 100%;
+  }
+  .resumen-body{
+    align-self: center;
+    width: 100%;
+  }
 
 
 
