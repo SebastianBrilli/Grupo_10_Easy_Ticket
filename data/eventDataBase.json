@@ -14,6 +14,20 @@
   "video" :"coldplay.mp4"
  },
  {
+    "name": "THE WEEKEND",
+    "price": "200",
+    "discount": "13",
+    "date": "13/07/22",
+    "address": "Luna Park",
+    "city": "Buenos Aires",
+    "category": "Buenos Aires",
+    "oldimage": "theWeekend.jpeg",
+    "description": " Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
+    "id": 88,
+    "image": "theWeekend.jpeg",
+    "video" :"theWeekend.mp4"
+   },
+ {
   "id": 2,
   "name": "Cirque do Soleil Alegria",
   "price": "350",

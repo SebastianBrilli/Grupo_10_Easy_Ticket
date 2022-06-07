@@ -3,32 +3,32 @@
   <%- include('./partials/head',{title: 'Bienvenidos'}) %>
   <body>
     <%-include('./partials/header')%>
-    <section class="banner">
-      <div class="banner">
-        <article class="banner_section">
-          <div class="contenedor_banner">
-            <img
-              class="img_evento_principal"
-              src="/images/LollaArgentina2022_A.jpeg"
-              width="150"
-              alt="Imagen principal"
-            />
-            <p class="description_banner">
-              Lollapalooza​ es un festival musical de los Estados Unidos que
-              originalmente ofrecía bandas de rock alternativo, indie y punk
-              rock; también hay actuaciones cómicas y de danza. Concebido en
-              1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza
-              se realizó anualmente hasta 1997
-            </p>
-            <p class="titulo_banner">Lolla Pallooza</p>
-            <a class="info_banner" href="/register">
-              Mas informacion ></a>
-          </div>
-        </article>
-      </div>
-    </section>
+    
     <main>
-
+      <section class="banner">
+        
+          <article class="banner_section">
+            
+              <img
+                class="img_evento_principal"
+                src="/images/LollaArgentina2022_A.jpeg"
+                width="150"
+                alt="Imagen principal"
+              />
+              <p class="description_banner">
+                Lollapalooza​ es un festival musical de los Estados Unidos que
+                originalmente ofrecía bandas de rock alternativo, indie y punk
+                rock; también hay actuaciones cómicas y de danza. Concebido en
+                1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza
+                se realizó anualmente hasta 1997
+              </p>
+              <p class="titulo_banner">Lolla Pallooza</p>
+              <a class="info_banner" href="/register">
+                Mas informacion</a>
+            
+          </article>
+        
+      </section>
      <!-- Eventos Provincia 1-->
      
       <section class="eventos">
@@ -49,7 +49,7 @@
                 <%= buenosAires[i].description%>
               </p>
               <a class="info" href="/productDetail/<%=buenosAires[i].id%>">
-                Mas informacion ></a>
+                Mas informacion</a>
             </div>
           </article>
           <%}%>     
