@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Edicion de usuario' }) %>
+
+    <body>
+        <%-include('./partials/header')%>
+            <main>
+                
+                <h1>Edicion de Usuario</h1>
+
+                <%if (locals.errors){%>
+                    <ul>
+                        <%for(let i=0;i < errors.length;i++){%>
+                            <li class="msgError">
+                                <%=errors[i].msg%>
+                            </li>
+                            <%}%>
+                    </ul>
+                    <%}%>
+
+                        <article class="card">
+                            <div class="card-left">
+                                <figure>
+                                    <img src="/images/users/<%= user.image ? user.image : 'default.png' %>" alt="">
+                                </figure>
+                                <h3>#<%= user.id %>
+                                </h3>
+                            </div>
+                            <div class="card-content">
+                                <form action="/register/edit/<%=user.id%>?_method=PUT" enctype="multipart/form-data"
+                                    method="POST">
+
+                                    <label class='form-label-inv' for="first_name">Nombre:</label>
+                                    <input class="form-input" type="text" name="first_name"
+                                        value="<%=user.first_name%>" />
+
+                                    <label class='form-label-inv' for="first_name">Apellido:</label>
+                                    <input class="form-input" type="text" name="last_name"
+                                        value="<%=user.last_name%>" />
+
+
+
+                                    <label class='form-label-inv' for="email">Email:</label>
+                                    <input class="form-input" type="text" name="email" value="<%=user.email%>" />
+
+                                    <input class="form-input" type="hidden" name="password" value="<%=user.password%>" />
+
+                                    <label class='form-label-inv' for="category">Categoria:</label>
+                                    <select name="category" class="form-input">
+                                        <option value="">Elegí</option>
+                                        <option value="user" <%=user.category==='user' ? 'selected' : '' %> >Usuario
+                                        </option>
+                                        <option value="admin" <%=user.category==='admin' ? 'selected' : '' %>
+                                            >Administrador</option>
+                                    </select>
+
+                                    <label class='form-label-inv' for="userImage">Imagen de usuario</label>
+                                    <input class="form-input" type="hidden" name="oldimage" value="<%=user.image%>" />
+                                    <input class="form-input" type="file" name="image" />
+
+                                    <div class="botones_detalle">
+                                        <button type="submit">
+                                            Confirmar
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </article>
+            </main>
+
+            <%-include('./partials/footer')%>
+    </body>
+
+</html>

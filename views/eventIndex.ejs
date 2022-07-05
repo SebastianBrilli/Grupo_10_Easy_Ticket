@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Listado de eventos' }) %>
+
+    <body>
+
+        <%-include('./partials/header')%>
+
+            <main>
+                <div class="create-container">
+                    <div class="form-title">
+                        <h2>Listado de Eventos</h2>
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="container">
+                        <% event.forEach(event=> { %>
+                            <article class="card">
+                                <div class="card-left">
+                                    <figure>
+                                        <img src="/images/<%= event.image ? event.image : 'LOGO_AMARILLO_FINAL.png' %>"
+                                            alt="">
+                                    </figure>
+                                    <h3>#<%= event.id %>
+                                    </h3>
+                                </div>
+                                <div class="card-content">
+                                    <h3>
+                                        <%= event.name %>
+                                    </h3>
+                                    <h2>Fecha: <%= event.date %>
+                                    </h2>
+                                    <h2>Lugar: <%= event.address %>, <%= event.city %>
+                                    </h2>
+                                    <br>
+                                    <br>
+                                    <p>
+                                        <%= event.description %>
+                                    </p>
+                                    <div class="botones_detalle">
+                                        <a href="<%= event.id %>/edit"><button type="button">Editar</button></a>
+
+                                        <form action="/productDetail/delete/<%=event.id%>?_method=DELETE"
+                                            enctype="multipart/form-data" method="POST"> <button
+                                                type=" button">Borrar</button></form>
+
+                                    </div>
+                                </div>
+                            </article>
+                            <% }) %>
+                    </div>
+                </div>
+            </main>
+
+            <%-include('./partials/footer')%>
+    </body>
+
+</html>

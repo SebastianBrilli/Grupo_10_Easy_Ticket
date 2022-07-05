@@ -1,6 +1,6 @@
 [
  {
-  "name": "Coldplay",
+  "name": "Coldplay 45",
   "price": "200",
   "discount": "13",
   "date": "13/07/22",
@@ -8,23 +8,9 @@
   "city": "Buenos Aires",
   "category": "Buenos Aires",
   "oldimage": "coldplay.jpg",
-  "description": " Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
+  "description": "  Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
   "id": 1,
-  "image": "coldplay.jpg",
-  "video" :"coldplay.mp4"
- },
- {
-  "id": 2,
-  "name": "Cirque do Soleil Alegria",
-  "price": "350",
-  "discount": "5",
-  "date": "1/7/22",
-  "address": "Movistar Arena",
-  "city": "Buenos Aires",
-  "category": "Buenos Aires",
-  "description": "es un buen show",
-  "image": "cds3.jpg",
-  "video": "cdsa.mp4"
+  "image": "coldplay.jpg"
  },
  {
   "id": 3,
@@ -65,16 +51,17 @@
   "video": "pinkFloyd.mp4"
  },
  {
-  "id": 6,
-  "name": "Cariño en Niceto",
-  "description": "AIRE SPLIT 3200W TACA-3200WCHSA/KC FC TCL. Capacidad frio 3200 Watts. Capacidad calor 3300 Watts. Potencia Electrica(W)frio 996. Potencia Electrica(W)calor 1028. Eficiencia energética calor C. Eficiencia energética frio A. Frigorias 2750 UNIDAD INTERIOR. Peso Bruto 10kg. Peso Neto 7 kg",
-  "price": 200,
-  "discount": 12,
+  "name": "Cariño en Niceto Vega",
+  "price": "200",
+  "discount": "12",
   "date": "1/6/22",
   "address": "Estadio Salta",
   "city": "Salta",
-  "image": "carino-en-niceto-club-120980-rec.jpg",
-  "category": "Otras Provincias"
+  "category": "",
+  "oldimage": "carino-en-niceto-club-120980-rec.jpg",
+  "description": " AIRE SPLIT 3200W TACA-3200WCHSA/KC FC TCL. Capacidad frio 3200 Watts. Capacidad calor 3300 Watts. Potencia Electrica(W)frio 996. Potencia Electrica(W)calor 1028. Eficiencia energética calor C. Eficiencia energética frio A. Frigorias 2750 UNIDAD INTERIOR. Peso Bruto 10kg. Peso Neto 7 kg",
+  "id": 6,
+  "image": "carino-en-niceto-club-120980-rec.jpg"
  },
  {
   "id": 7,
@@ -113,16 +100,17 @@
   "category": "Cordoba"
  },
  {
-  "id": 10,
-  "name": "Topa",
-  "description": "Uso más cómodo para la mano derecha gracias a la forma contorneada con recubrimiento de goma blanda. Duración de las pilas hasta 18 meses, gracias al diseño para ahorrar energía.El M280 entra automáticamente en estado de suspensión cuando no se está usando.",
-  "price": 120,
-  "discount": 10,
+  "name": "Topa 2",
+  "price": "120",
+  "discount": "10",
   "date": "10/4/22",
   "address": "Orfeo",
   "city": "Cordoba",
-  "image": "topa.jpg",
-  "category": "Cordoba"
+  "category": "Cordoba",
+  "oldimage": "topa.jpg",
+  "description": " Uso más cómodo para la mano derecha gracias a la forma contorneada con recubrimiento de goma blanda. Duración de las pilas hasta 18 meses, gracias al diseño para ahorrar energía.El M280 entra automáticamente en estado de suspensión cuando no se está usando.",
+  "id": 10,
+  "image": "topa.jpg"
  },
  {
   "id": 11,
@@ -304,5 +292,17 @@
   "category": "Buenos Aires",
   "image": "evento1653265236475.jpg",
   "description": "45454545"
+ },
+ {
+  "id": 220,
+  "name": "tini",
+  "price": 2000,
+  "discount": null,
+  "date": "2022-07-15",
+  "address": "Hipodromo san isidro",
+  "city": "Buenos Aires",
+  "category": "Buenos Aires",
+  "image": "evento1656713030382.jpg",
+  "description": "sdfsadafdaf"
  }
 ]

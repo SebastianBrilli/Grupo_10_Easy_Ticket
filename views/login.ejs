@@ -1,81 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', {title: 'Formulario de creación'}) %>
-<body>
-  <div class="contenedor_header">
-    <header>
-        <!-- Logo -->
-        <div class="logo">
-                <img src="/images/logo_tnt.png" alt="">
-        </div>
-        <!-- Icono para menu en celular -->
-        <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-        </div>
-        <!-- menu para tablet y pc -->  
-        <div class="menu_header">
-          <div class="elemento_menu"><a href="/">HOME</a></div>
-          <div class="elemento_menu"><a href="/productDetail">PRODUCTOS</a></div>
-          <div class="elemento_menu"><a href="/register">REGISTRATE</a></div>
-          <div class="elemento_menu"><a href="/carro">CARRITO</a></div>
-          <div class="elemento_menu"><a href="/productDetail/create">CREAR EVENTO</a></div>
-        </div>
-  
-        <!-- boton para crear evento -->    
-        <div class="crea_un_evento">
-                
-           <p><a href="/login"><i class="far fa-id-card"></i> INICIA SESION</a></p>
-                     
-        </div>
-   
-</div>
-<main>
-    <div class="create-container">
+<%- include('./partials/head', {title: 'Formulario de creación' }) %>
 
-        <div class="form-title">
+  <body>
+
+    <%-include('./partials/header')%>
+
+      <main>
+        <div class="create-container">
+
+          <div class="form-title">
             <h2>Iniciar Sesion:</h2>
-        </div>
+          </div>
 
-        <div class="form-container">
+          <div class="form-container">
             <form action="/login" method="POST">
-                
-                <label class='form-label' for=userName" >Ingrese su Usuario:</label>
-                <input
-                class="form-input"
-                  type="text"
-                  id="userName"
-                  name="userName"
-                  placeholder="Nombre de usuario"
-                />
-          
-                <label class='form-label' for="pasword">Ingrese su Contraseña:</label>
-                <input
-                class="form-input"
-                  type="password"
-                  id="pasword"
-                  name="pasword"
-                  placeholder="Contraseña"
-                />
-      
-                <label class='form-label' for="passwordConfirm" >Repita su Contraseña:</label>
-                <input
-                class="form-input"
-                  type="password"
-                  id="passwordConfirm"
-                  name="passwordConfirm"
-                  placeholder="Repita Contraseña"
-                />
-             
-          <div class='purchase-detail' >
-            <button type="submit">
-                Confirmar
-            </button>
-         </div>
-                
+
+              <label class='form-label' for=userName">Ingrese su Usuario:</label>
+              <input class="form-input" type="text" id="userName" name="userName" placeholder="Nombre de usuario" />
+
+              <label class='form-label' for="pasword">Ingrese su Contraseña:</label>
+              <input class="form-input" type="password" id="pasword" name="pasword" placeholder="Contraseña" />
+
+
+              <div class='purchase-detail'>
+                <button type="submit">
+                  Confirmar
+                </button>
+              </div>
             </form>
+          </div>
         </div>
-    </div>
-  </main>
-    <%-include('./partials/footer')%>
-</body>
+      </main>
+      <%-include('./partials/footer')%>
+  </body>
+
 </html>

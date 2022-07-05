@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head', {title: 'Detalle de usuario' }) %>
+
+    <body>
+        <%-include('./partials/header')%>
+            <main>
+
+                <h1>Detalle de Usuario</h1>
+                <br>
+                <br>
+                <article class="card">
+                    <div class="card-left">
+                        <figure>
+                            <img src="/images/users/<%= user.image ? user.image : 'default.png' %>" alt="">
+                        </figure>
+                        <h3>#<%= user.id %>
+                        </h3>
+                    </div>
+                    <div class="card-content">
+                        <h3>
+                            <%= user.first_name %>
+                                <%= user.last_name %>
+                        </h3>
+                        <h2>Categoría: <%= user.category %>
+                        </h2>
+                        <h2>Email: <%= user.email %>
+                        </h2>
+
+                        <div class="botones_detalle">
+                            <a href="/"><button type="button">Editar</button></a>
+                            <a href="/"><button type="button">Borrar</button></a>
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+
+            <%-include('./partials/footer')%>
+    </body>
+
+</html>

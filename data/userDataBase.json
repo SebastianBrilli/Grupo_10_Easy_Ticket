@@ -1,182 +1,315 @@
 [
-  {
-    "id": 1,
-    "first_name": "Jodi",
-    "last_name": "Ambrogi",
-    "email": "jambrogi0@baidu.com",
-    "password": "n6WJf01",
-    "category": "user",
-    "image": "user_1.jpg"
-  },
-  {
-    "id": 2,
-    "first_name": "Karin",
-    "last_name": "Kristof",
-    "email": "kkristof1@dropbox.com",
-    "password": "tplVv9mhG",
-    "category": "user",
-    "image": "user_2.jpg"
-  },
-  {
-    "id": 3,
-    "first_name": "Brade",
-    "last_name": "Medlen",
-    "email": "bmedlen2@smugmug.com",
-    "password": "Zzn4goGT",
-    "category": "user",
-    "image": "user_3.jpg"
-  },
-  {
-    "id": 4,
-    "first_name": "Betty",
-    "last_name": "De Ortega",
-    "email": "bdeortega3@hao123.com",
-    "password": "xloACBJ",
-    "category": "user",
-    "image": "user_4.jpg"
-  },
-  {
-    "id": 5,
-    "first_name": "Murial",
-    "last_name": "Brader",
-    "email": "mbrader4@freewebs.com",
-    "password": "UVwsBD",
-    "category": "user",
-    "image": "user_5.jpg"
-  },
-  {
-    "id": 6,
-    "first_name": "Babbette",
-    "last_name": "Bril",
-    "email": "bbril5@amazon.com",
-    "password": "0JSB8hHGIiJE",
-    "category": "user",
-    "image": "user_6.jpg"
-  },
-  {
-    "id": 7,
-    "first_name": "Hope",
-    "last_name": "MacNeachtain",
-    "email": "hmacneachtain6@foxnews.com",
-    "password": "z4lSvKFCtCkc",
-    "category": "user",
-    "image": "user_7.jpg"
-  },
-  {
-    "id": 8,
-    "first_name": "Alasteir",
-    "last_name": "Maffia",
-    "email": "amaffia7@cyberchimps.com",
-    "password": "6ohZlZnL",
-    "category": "user",
-    "image": "user_8.jpg"
-  },
-  {
-    "id": 9,
-    "first_name": "Pinchas",
-    "last_name": "Thumnel",
-    "email": "pthumnel8@epa.gov",
-    "password": "3ed6Ub2f3ya",
-    "category": "user",
-    "image": "user_9.jpg"
-  },
-  {
-    "id": 10,
-    "first_name": "Isidore",
-    "last_name": "Elnough",
-    "email": "ielnough9@army.mil",
-    "password": "fPeTYOj69Br2",
-    "category": "user",
-    "image": "user_10.jpg"
-  },
-  {
-    "id": 11,
-    "first_name": "Dayle",
-    "last_name": "Lardier",
-    "email": "dlardiera@godaddy.com",
-    "password": "WcUE1uh2tKDg",
-    "category": "user",
-    "image": "user_11.jpg"
-  },
-  {
-    "id": 12,
-    "first_name": "Kippar",
-    "last_name": "Buterton",
-    "email": "kbutertonb@vimeo.com",
-    "password": "WT2mVtYF2w",
-    "category": "user",
-    "image": "user_12.jpg"
-  },
-  {
-    "id": 13,
-    "first_name": "Dill",
-    "last_name": "Kalaher",
-    "email": "dkalaherc@github.com",
-    "password": "UBRwruAvP",
-    "category": "user",
-    "image": "user_13.jpg"
-  },
-  {
-    "id": 14,
-    "first_name": "Waylan",
-    "last_name": "Biddles",
-    "email": "wbiddlesd@sciencedaily.com",
-    "password": "L6yNO4",
-    "category": "user",
-    "image": "user_14.jpg"
-  },
-  {
-    "id": 15,
-    "first_name": "Jena",
-    "last_name": "Howgill",
-    "email": "jhowgille@newyorker.com",
-    "password": "cHCGnApN",
-    "category": "user",
-    "image": "user_15.jpg"
-  },
-  {
-    "id": 16,
-    "first_name": "Hobey",
-    "last_name": "Glenwright",
-    "email": "hglenwrightf@sourceforge.net",
-    "password": "yIeLMyYsW1D8",
-    "category": "user",
-    "image": "user_16.jpg"
-  },
-  {
-    "id": 17,
-    "first_name": "Michal",
-    "last_name": "Partner",
-    "email": "mpartnerg@usgs.gov",
-    "password": "b2aY5wjE",
-    "category": "user",
-    "image": "user_17.jpg"
-  },
-  {
-    "id": 18,
-    "first_name": "Ave",
-    "last_name": "Arrandale",
-    "email": "aarrandaleh@who.int",
-    "password": "Q2Hp5jLk9Oht",
-    "category": "user",
-    "image": "user_18.jpg"
-  },
-  {
-    "id": 19,
-    "first_name": "Ailey",
-    "last_name": "Bissell",
-    "email": "abisselli@lycos.com",
-    "password": "G2wGRy8JT",
-    "category": "user",
-    "image": "user_19.jpg"
-  },
-  {
-    "id": 20,
-    "first_name": "Jonah",
-    "last_name": "Pavolini",
-    "email": "jpavolinij@bandcamp.com",
-    "password": "yuMlBJk",
-    "category": "user",
-    "image": "user_20.jpg"
-  }
+ {
+  "id": 3,
+  "first_name": "Brade",
+  "last_name": "Medlen",
+  "email": "bmedlen2@smugmug.com",
+  "password": "Zzn4goGT",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "first_name": "Betty",
+  "last_name": "De Ortega",
+  "email": "bdeortega3@hao123.com",
+  "password": "xloACBJ",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 5,
+  "first_name": "Murial",
+  "last_name": "Brader",
+  "email": "mbrader4@freewebs.com",
+  "password": "UVwsBD",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "first_name": "Babbette",
+  "last_name": "Brillamte",
+  "email": "bbril5@amazon.com",
+  "category": "user",
+  "oldimage": "user_6.jpg",
+  "id": 6,
+  "image": "usuario1656673544661.png"
+ },
+ {
+  "id": 7,
+  "first_name": "Hope",
+  "last_name": "MacNeachtain",
+  "email": "hmacneachtain6@foxnews.com",
+  "password": "z4lSvKFCtCkc",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 8,
+  "first_name": "Alasteir",
+  "last_name": "Maffia",
+  "email": "amaffia7@cyberchimps.com",
+  "password": "6ohZlZnL",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 9,
+  "first_name": "Pinchas",
+  "last_name": "Thumnel",
+  "email": "pthumnel8@epa.gov",
+  "password": "3ed6Ub2f3ya",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 10,
+  "first_name": "Isidore",
+  "last_name": "Elnough",
+  "email": "ielnough9@army.mil",
+  "password": "fPeTYOj69Br2",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 11,
+  "first_name": "Dayle",
+  "last_name": "Lardier",
+  "email": "dlardiera@godaddy.com",
+  "password": "WcUE1uh2tKDg",
+  "category": "user",
+  "image": "user_11.jpg"
+ },
+ {
+  "id": 12,
+  "first_name": "Kippar",
+  "last_name": "Buterton",
+  "email": "kbutertonb@vimeo.com",
+  "password": "WT2mVtYF2w",
+  "category": "user",
+  "image": "user_12.jpg"
+ },
+ {
+  "id": 13,
+  "first_name": "Dill",
+  "last_name": "Kalaher",
+  "email": "dkalaherc@github.com",
+  "password": "UBRwruAvP",
+  "category": "user",
+  "image": "user_13.jpg"
+ },
+ {
+  "id": 14,
+  "first_name": "Waylan",
+  "last_name": "Biddles",
+  "email": "wbiddlesd@sciencedaily.com",
+  "password": "L6yNO4",
+  "category": "user",
+  "image": "user_14.jpg"
+ },
+ {
+  "id": 15,
+  "first_name": "Jena",
+  "last_name": "Howgill",
+  "email": "jhowgille@newyorker.com",
+  "password": "cHCGnApN",
+  "category": "user",
+  "image": "user_15.jpg"
+ },
+ {
+  "id": 16,
+  "first_name": "Hobey",
+  "last_name": "Glenwright",
+  "email": "hglenwrightf@sourceforge.net",
+  "password": "yIeLMyYsW1D8",
+  "category": "user",
+  "image": "user_16.jpg"
+ },
+ {
+  "id": 17,
+  "first_name": "Michal",
+  "last_name": "Partner",
+  "email": "mpartnerg@usgs.gov",
+  "password": "b2aY5wjE",
+  "category": "user",
+  "image": "user_17.jpg"
+ },
+ {
+  "id": 18,
+  "first_name": "Ave",
+  "last_name": "Arrandale",
+  "email": "aarrandaleh@who.int",
+  "password": "Q2Hp5jLk9Oht",
+  "category": "user",
+  "image": "user_18.jpg"
+ },
+ {
+  "id": 19,
+  "first_name": "Ailey",
+  "last_name": "Bissell",
+  "email": "abisselli@lycos.com",
+  "password": "G2wGRy8JT",
+  "category": "user",
+  "image": "user_19.jpg"
+ },
+ {
+  "id": 20,
+  "first_name": "Jonah",
+  "last_name": "Pavolini",
+  "email": "jpavolinij@bandcamp.com",
+  "password": "yuMlBJk",
+  "category": "user",
+  "image": "user_20.jpg"
+ },
+ {
+  "id": 21
+ },
+ {
+  "id": 22
+ },
+ {
+  "id": 23
+ },
+ {
+  "id": 24
+ },
+ {
+  "id": 25
+ },
+ {
+  "first_name": "Sebas 4",
+  "last_name": "Fernandez",
+  "email": "sbrilli@gasei.com.ar",
+  "category": "user",
+  "oldimage": "",
+  "id": 26,
+  "userImage": ""
+ },
+ {
+  "id": 27,
+  "first_name": "Sebi",
+  "last_name": "Brillo",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$ONBX9rt.E62/voVOfqrYiOwuN3azze70ZkMehgFyQ2Ndb3tM423LK",
+  "category": "admin",
+  "image": "usuario1656592204710.png"
+ },
+ {
+  "first_name": "Sebo 5",
+  "last_name": "Casco",
+  "email": "sbrilli@gasei.com.ar",
+  "category": "user",
+  "oldimage": "usuario1656600074908.jpg",
+  "id": 28,
+  "image": "usuario1656600074908.jpg"
+ },
+ {
+  "id": 29,
+  "first_name": "roberto",
+  "last_name": "perfumo",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$72ELkjs1z1JCpk025nv/geNBWF0wwA5SADZFwQtwACmGrbmTOkGfS",
+  "category": "admin",
+  "image": "usuario1656600475476.jpg"
+ },
+ {
+  "id": 30,
+  "first_name": "sebas",
+  "last_name": "brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$wrh31KHGJ10askb2CyzJS.4rnude7yh9I36Z7wwtNXKEp7O2x7xTq",
+  "category": "user",
+  "image": "usuario1656600811689.jpg"
+ },
+ {
+  "id": 31,
+  "first_name": "sebas",
+  "last_name": "brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$ZuWHHSz7LAMp1lUPKifqAONDBiIuKRzSkTjSS8K11oEEZMU.YQKoO",
+  "category": "admin",
+  "image": "usuario1656601112016.jpg"
+ },
+ {
+  "id": 32,
+  "first_name": "Sebastian",
+  "last_name": "Brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$m8MVFwM0rmQVO432cFeeleX7R.SJHEdZJQ4Nl3Qe.XmOHHMUyprzG",
+  "category": "admin",
+  "image": "usuario1656601153692.jpg"
+ },
+ {
+  "id": 33,
+  "first_name": "sebastian",
+  "last_name": "brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$f.1jCoDcrlzjM6G/Hrm1muNlHynvE.iTngR8AW0xoWV6is/QKDczy",
+  "category": "user",
+  "image": "usuario1656601374525.png"
+ },
+ {
+  "id": 34,
+  "first_name": "sebasto",
+  "last_name": "perez",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$yLlsMrltD1BBm7KdWalmJ.9yskI7ldUGtAPjdhQbqO1l5/JoVFnO.",
+  "category": "user",
+  "image": "usuario1656601545806.jpg"
+ },
+ {
+  "id": 35,
+  "first_name": "franco",
+  "last_name": "brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$iAloGQgZtbhAWd.ekJUnqeHWmrWgqPlidgU4mYv2bVHfqc46YeOYK",
+  "category": "admin",
+  "image": "usuario1656601690531.jpg"
+ },
+ {
+  "id": 36,
+  "first_name": "sebas",
+  "last_name": "bri",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$5Ee2kWcK4ecAp5DIwaoAdemMzSLXUurhgUK46D12BP700nHEIj6Ye",
+  "category": "user",
+  "image": "usuario1656601792398.png"
+ },
+ {
+  "id": 37,
+  "first_name": "seba",
+  "last_name": "Brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$bMzm4AvWRRnXX9ckcSEZsuTSvZLcRoqz5nndpFJvcbeLlNRsYg62W",
+  "category": "user",
+  "image": "usuario1656602543170.jpg"
+ },
+ {
+  "id": 38,
+  "first_name": "Anto",
+  "last_name": "Brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$ipkkrFWg0QxXK3w7dwYUwOXd1Uaovw2ap7PFpmdFyQMDbMizZoBTm",
+  "category": "user",
+  "image": "usuario1656617358562.jpg"
+ },
+ {
+  "id": 39,
+  "first_name": "Sebastian",
+  "last_name": "Brilli",
+  "email": "sbrilli@gasei.com.ar",
+  "password": "$2b$10$QL4A/j045JkXC6WPaGEZo.7avDnhuKLL/scy6zvplX7DjldhR7QPe",
+  "category": "user",
+  "image": "usuario1656634913198.jpg"
+ },
+ {
+  "first_name": "Sebastian 40",
+  "last_name": "Brilli",
+  "email": "sbrilli@gmail.com",
+  "password": "$2b$10$EkTrbMFLh9YiJ6nMJH0zcOk54.VyzvX8wyu4paHx5ggd3qNApTEO2",
+  "category": "admin",
+  "oldimage": "usuario1656684636919.jpg",
+  "id": 40,
+  "image": "usuario1656684636919.jpg"
+ }
 ]
