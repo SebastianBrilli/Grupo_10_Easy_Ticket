@@ -10,7 +10,39 @@
   "oldimage": "coldplay.jpg",
   "description": "  Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
   "id": 1,
+<<<<<<< HEAD
   "image": "coldplay.jpg"
+=======
+  "image": "coldplay.jpg",
+  "video" :"coldplay.mp4"
+ },
+ {
+    "name": "THE WEEKEND",
+    "price": "200",
+    "discount": "13",
+    "date": "13/07/22",
+    "address": "Luna Park",
+    "city": "Buenos Aires",
+    "category": "Buenos Aires",
+    "oldimage": "theWeekend.jpeg",
+    "description": " Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
+    "id": 88,
+    "image": "theWeekend.jpeg",
+    "video" :"theWeekend.mp4"
+   },
+ {
+  "id": 2,
+  "name": "Cirque do Soleil Alegria",
+  "price": "350",
+  "discount": "5",
+  "date": "1/7/22",
+  "address": "Movistar Arena",
+  "city": "Buenos Aires",
+  "category": "Buenos Aires",
+  "description": "es un buen show",
+  "image": "cds3.jpg",
+  "video": "cdsa.mp4"
+>>>>>>> 057790733bbe845c16a8cd38b14550c83f27e7ba
  },
  {
   "id": 3,
