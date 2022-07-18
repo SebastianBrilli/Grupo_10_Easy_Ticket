@@ -11,7 +11,6 @@
           <h2>Registrate:</h2>
         </div>
 
-
         <%if (locals.errors){%>
           <ul>
           <%for(let i=0;i < errors.length;i++){%>         
@@ -19,7 +18,10 @@
           <%}%>
         </ul>
         <%}%>
-      
+
+        <%if (locals.errors && errors.email){%>
+          <p class="msgError"><%=errors.email.msg%> </p>
+        <%}%>
 
         <div class="form-container">
           <form action="/register" enctype="multipart/form-data" method="POST">

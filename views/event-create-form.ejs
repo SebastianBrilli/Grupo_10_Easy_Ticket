@@ -10,7 +10,7 @@
         <div class="create-container">
 
           <div class="form-title">
-            <h2>Formulario de creación de productos</h2>
+            <h2>Formulario de creación de eventos</h2>
           </div>
 
           <%if (locals.errors){%>
@@ -22,7 +22,7 @@
           <%}%>
 
           <div class="form-container">
-            <form action="/productDetail/create" enctype="multipart/form-data" method="POST">
+            <form action="/events/create" enctype="multipart/form-data" method="POST">
 
               <label class='form-label' for="name">Nombre del Evento:</label>
               <input class="form-input" type="text" id="name" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>

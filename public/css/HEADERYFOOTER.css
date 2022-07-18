@@ -15,6 +15,7 @@ header{
   }
   .crea_un_evento{
     display: none;
+    background: white;
   }
   .menu_header{
     display: none;
@@ -143,7 +144,7 @@ div.burger-menu {
     display: flex;
     justify-content: space-between;
     text-align: center;align-items: center;
-    border-bottom: 1px dotted yellow;
+    border-bottom: 2px solid white;
     background-color: black;
     
   }
@@ -197,13 +198,18 @@ color: black;
 .crea_un_evento {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: white;
   margin-right: 50px;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 7px;
   
   
+}
+
+.crea_un_evento .elemento_menu {
+  background-color: white;
+  color: black
 }
 
 .crea_un_evento:hover {

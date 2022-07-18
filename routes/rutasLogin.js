@@ -3,14 +3,16 @@ const router = express.Router();
 
 const loginController = require('../controllers/loginController')
 
-//Primera ruta de pruductDetail
-router.get('/', loginController.login);
+// Requerimos el middleware
 
-//Segunda ruta de pruductDetail
-//router.get('/', controller.???);
+const guestMiddleware = require ('../middlewares/guestMiddleware')
 
-//Tercera ruta de pruductDetail
-//router.get('/', controller.???);
+
+router.get('/', guestMiddleware, loginController.login);
+router.post('/', loginController.loginProcess);
+
+router.get('/logout', loginController.logOut);
+
 
 
 

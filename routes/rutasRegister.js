@@ -8,6 +8,10 @@ const path = require('path');
 
 const registerController = require('../controllers/registerController')
 
+// Requerimos el middleware
+
+const guestMiddleware = require ('../middlewares/guestMiddleware')
+
 // Mediante destructuracion requerimos la propiedad body de express-validator
 
 const {body}= require ('express-validator');
@@ -39,12 +43,12 @@ body('category').notEmpty().withMessage('Debes seleccionar una opcion')
 
 // Definimos las rutas con sus respectivos metodos
 
-router.get('/', registerController.create);
-router.post('/', fileUpload.single("userImage") , validateRegister,  registerController.storeNew);
+router.get('/', guestMiddleware, registerController.showCreate);
+router.post('/', fileUpload.single("userImage") , validateRegister,  registerController.storeCreate);
 
 router.get('/list', registerController.list);
 
-router.get('/edit/:id', registerController.edit);
+router.get('/edit/:id', registerController.showEdit);
 router.put('/edit/:id', fileUpload.single('image'), validateRegister, registerController.storeEdit);
 
 router.delete('/delete/:id', registerController.remove);

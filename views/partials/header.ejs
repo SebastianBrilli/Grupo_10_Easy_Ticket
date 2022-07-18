@@ -1,7 +1,8 @@
 <header>
+  <link href="/css/HEADERYFOOTER.css" rel="stylesheet" />
   <!-- Logo -->
   <div class="logo">
-    <img src="/images/logo_tnt.png" alt="" />
+    <a href="/"><img src="/images/logo_tnt.png" alt="" ></a>
   </div>
   <!-- Icono para menu en celular -->
   <div class="burger-menu">
@@ -10,16 +11,31 @@
   <!-- menu para tablet y pc -->
   <div class="menu_header">
     <div class="elemento_menu"><a href="/">HOME</a></div>
-    <div class="elemento_menu"><a href="/productDetail">PRODUCTOS</a></div>
-    <div class="elemento_menu"><a href="/register">REGISTRATE</a></div>
+    <div class="elemento_menu"><a href="/events">EVENTOS</a></div>
     <div class="elemento_menu"><a href="/carro">CARRITO</a></div>
-    <div class="elemento_menu"><a href="/productDetail/create">CREAR EVENTO</a></div>
+    <div class="elemento_menu"><a href="/events/create">CREAR EVENTO</a></div>
+  </div>
+  
+  <% if(locals.isLogged) {%>
+
+    <div class="crea_un_evento">
+      <img src="/images/users/<%=locals.userLogged.image%>" width="40" style="border-radius: 100%;"/>
+      <div class="elemento_menu">
+            <p>Hola, <%=locals.userLogged.first_name%> </p>
+      </div>
+  </div>
+  
+  <div class="elemento_menu"><a href="/login/logout"> LOGOUT </a> </div>
+
+  <% } else { %>
+
+  <div class="menu_header">  
+    <div class="elemento_menu"><a href="/register">REGISTRATE</a></div>
+    <div class="elemento_menu"><a href="/login"> INICIA SESION</a></div>  
   </div>
 
-  <!-- boton para crear evento -->
-  <div class="crea_un_evento">
-    <p>
-      <a href="/login"> INICIA SESION</a>
-    </p>
-  </div>
+
+
+  <% } %>
+
 </header>

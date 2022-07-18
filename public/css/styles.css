@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center; 
   margin: auto;
-  margin-top: 10vw ;
+  margin-top: 5vw ;
   flex-wrap: wrap;
   width: 90%;
 }
@@ -477,12 +477,8 @@ h3{
   main {
     text-align: center;
     background-color: black;
-<<<<<<< HEAD
-    padding-top: 2rem ;
+    /* padding-top: 10rem ; */
     
-=======
-    padding-top: 12rem ;
->>>>>>> 057790733bbe845c16a8cd38b14550c83f27e7ba
   }
   
   
@@ -1428,7 +1424,7 @@ font-size: 14px;
     main {
       text-align: center;
       background-color: black;
-      padding-top: 1.5rem ;
+      padding-top: 3rem ;
     }
     /*HEADER*/
     div.burger-menu {
@@ -1491,11 +1487,12 @@ header a {
   .crea_un_evento {
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: white;
     margin-right: 50px;
     margin-left: 8px;
     margin-bottom: 8px;
-    padding: 7px; 
+    padding: 7px;
+    color:black 
  }
   .crea_un_evento:hover {
    background-color:#ffff00

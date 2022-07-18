@@ -1,50 +1,5 @@
 [
  {
-  "name": "Coldplay 45",
-  "price": "200",
-  "discount": "13",
-  "date": "13/07/22",
-  "address": "Luna Park",
-  "city": "Buenos Aires",
-  "category": "Buenos Aires",
-  "oldimage": "coldplay.jpg",
-  "description": "  Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
-  "id": 1,
-<<<<<<< HEAD
-  "image": "coldplay.jpg"
-=======
-  "image": "coldplay.jpg",
-  "video" :"coldplay.mp4"
- },
- {
-    "name": "THE WEEKEND",
-    "price": "200",
-    "discount": "13",
-    "date": "13/07/22",
-    "address": "Luna Park",
-    "city": "Buenos Aires",
-    "category": "Buenos Aires",
-    "oldimage": "theWeekend.jpeg",
-    "description": " Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda Excelente banda",
-    "id": 88,
-    "image": "theWeekend.jpeg",
-    "video" :"theWeekend.mp4"
-   },
- {
-  "id": 2,
-  "name": "Cirque do Soleil Alegria",
-  "price": "350",
-  "discount": "5",
-  "date": "1/7/22",
-  "address": "Movistar Arena",
-  "city": "Buenos Aires",
-  "category": "Buenos Aires",
-  "description": "es un buen show",
-  "image": "cds3.jpg",
-  "video": "cdsa.mp4"
->>>>>>> 057790733bbe845c16a8cd38b14550c83f27e7ba
- },
- {
   "id": 3,
   "name": "Cirque do Soleil",
   "price": "15000",
@@ -217,19 +172,6 @@
   "image": "la-jam-nacional-mie-06-abr-zapada-en-vivo-94326-rec.jpg"
  },
  {
-  "name": "Gasei",
-  "price": "1500",
-  "discount": "15",
-  "date": "16/07/22",
-  "address": "La Bombonera",
-  "city": "Buenos Aires",
-  "category": "Buenos Aires",
-  "oldimage": "evento1652913729893.png",
-  "description": "  El el logo de GA",
-  "id": 17,
-  "image": "evento1652913729893.png"
- },
- {
   "name": "Alef",
   "price": "1800",
   "discount": "10",
@@ -326,15 +268,16 @@
   "description": "45454545"
  },
  {
-  "id": 220,
-  "name": "tini",
-  "price": 2000,
-  "discount": null,
-  "date": "2022-07-15",
-  "address": "Hipodromo san isidro",
-  "city": "Buenos Aires",
+  "name": "asdasd",
+  "price": "2000",
+  "discount": "10",
+  "date": "2022-07-14",
+  "address": "4545",
+  "city": "Buenos aires",
   "category": "Buenos Aires",
-  "image": "evento1656713030382.jpg",
-  "description": "sdfsadafdaf"
+  "oldimage": "LOGO_AMARILLO_FINAL.png",
+  "description": " jhsjkhjkdshkjd",
+  "id": 220,
+  "image": "evento1657587510808.jpg"
  }
 ]
