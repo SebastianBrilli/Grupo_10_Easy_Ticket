@@ -269,5 +269,14 @@
   "password": "$2b$10$fSZHja01dRhfkxOEMmtpzuVyqeUBPqgF4O9DMXlBgmqawRI5.O/au",
   "category": "user",
   "image": "usuario1656420095672.jpg"
+ },
+ {
+  "id": 33,
+  "first_name": "Abril",
+  "last_name": "Massoia",
+  "email": "abril_anto@hotmail.com",
+  "password": "$2b$10$ybTrF3nVKsAwSIAMJWTZIukWWK/gnahlBptB1Y9XwzmPWgkOskB3W",
+  "category": "admin",
+  "image": "default.png"
  }
 ]

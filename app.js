@@ -6,7 +6,7 @@ const session=require("express-session");
 const cookies=require("cookie-parser");
 const path =require("path");
 
-const publicPath=path.resolve(__dirname,"./public");
+const publicPath = path.resolve(__dirname,"./public");
 const methodOverride = require('method-override');
 
 //Importamos las rutas
