@@ -42,16 +42,23 @@
             <input class="form-input" type="password" name="password" placeholder="Contraseña" 
             value= "<%= locals.old && old.password ? old.password : ''  %>"/>
 
-            <label class='form-label' for="category">Categoria:</label>
-            <select name="category" id="category" class="form-input">
-              <option value="">Elegí</option>
-              <option value="user" <%= locals.old && old.category ==='user' ? 'selected' : ''  %> >Usuario</option>
-              <option value="admin" <%= locals.old && old.category ==='admin' ? 'selected' : ''  %>>Administrador</option>
-
+            <label class='form-label' >Categoria:</label>
+            <select name="category_id" class="form-input">
+            
+              <% for (let i=0; i < categorias.length; i++) {%>
+            
+                <option value = "<%= categorias[i].id %>" >
+                  <%=categorias[i].category%>
+                </option>
+            
+                <%}%>
+                  <!-- <option value="user" <%= locals.old && old.category ==='user' ? 'selected' : ''  %> >Usuario</option>
+                          <option value="admin" <%= locals.old && old.category ==='admin' ? 'selected' : ''  %>>Administrador</option> -->
+            
             </select>
 
             <label class='form-label' for="userImage">Imagen de usuario</label>
-            <input class="form-input" type="file" id="userImage" name="userImage" />
+            <input class="form-input" type="file"  name="userImage" />
 
             <div class='purchase-detail'>
               <button type="submit">

@@ -1,20 +1,21 @@
-let fs = require('fs');
-const path = require('path');
 
-const eventFilePath = path.join(__dirname, '../data/eventDataBase.json');
-let event = JSON.parse(fs.readFileSync(eventFilePath, 'utf-8'));
+let db = require('../database/models')
 
-const homeController={
+const homeController = {
 
-    index: (req,res)=>{
-        const buenosAires = event.filter(elemento => elemento.category === 'Buenos Aires');
-        const cordoba = event.filter(elemento => elemento.category === 'Cordoba');
-        const rosario = event.filter(elemento => elemento.category === 'Rosario');
-        const otrasProvincias = event.filter(elemento => elemento.category === 'Otras Provincias');
-		
-    res.render("home",{buenosAires,cordoba,rosario,otrasProvincias})
+    index: (req, res) => {
+
+        let eventRequest = db.Event.findAll()
+        let categoryRequest = db.CategoryEvent.findAll()
+        Promise.all([eventRequest, categoryRequest])
+            .then(([event, category]) => {
+                return res.render("home", { event, category });
+
+            })
+            .catch(e => console.log(e))
+
     }
 
 }
 
-module.exports=homeController
+module.exports = homeController

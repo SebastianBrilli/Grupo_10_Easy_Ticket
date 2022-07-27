@@ -12,48 +12,67 @@
       <div class="create-container">
 
         <div class="form-title">
-          <h2>Formulario de edicion de eventos</h2>
+          <h1>Formulario de edicion de eventos</h1>
         </div>
+
+        <%if (locals.errors){%>
+          <ul>
+              <%for(let i=0;i < errors.length;i++){%>
+                  <li class="msgError">
+                      <%=errors[i].msg%>
+                  </li>
+                  <%}%>
+          </ul>
+          <%}%>
+
 
         <div class="form-container">
           <form action="/events/<%=selectedEvent.id%>/edit?_method=PUT" enctype="multipart/form-data"
             method="POST">
 
-            <label class='form-label' for="name">Nombre del Evento:</label>
-            <input class="form-input" type="text" id="name" name="name" value="<%=selectedEvent.name%>" />
+            <label class='form-label'>Nombre del Evento:</label>
+            <input class="form-input" type="text" name="name" value="<%=selectedEvent.name%>" />
 
             <label class='form-label' for="price">Precio de la entrada:</label>
-            <input class="form-input" type="number" id="price" name="price" value="<%=selectedEvent.price%>" />
+            <input class="form-input" type="number" name="price" value="<%=selectedEvent.price%>" />
 
-            <label class='form-label' for="discount">Descuento:</label>
-            <input class="form-input" type="number" id="discount" name="discount" value="<%=selectedEvent.discount%>" />
+            <label class='form-label' >Stock de entradas disponible:</label>
+            <input class="form-input" type="number" name="stock" value="<%=selectedEvent.stock%>" />
 
-            <label class='form-label' for="date">Fecha:</label>
-            <input class="form-input" type="text" id="date" name="date" value="<%=selectedEvent.date%>" />
+            <label class='form-label' >Fecha:</label>
+            <input class="form-input" type="date"  name="date" value="<%=selectedEvent.date%>" />
 
-            <label class='form-label' for="address">Lugar:</label>
-            <input class="form-input" type="text" id="address" name="address" value="<%=selectedEvent.address%>" />
+            <label class='form-label' >Lugar:</label>
+            <input class="form-input" type="text" name="address" value="<%=selectedEvent.address%>" />
 
-            <label class='form-label' for="city">Ciudad:</label>
-            <input class="form-input" type="text" id="city" name="city" value="<%=selectedEvent.city%>" /> -->
+            <label class='form-label' >Ciudad:</label>
+            <input class="form-input" type="text" name="city" value="<%=selectedEvent.city%>" /> -->
 
-            <label class='form-label' for="category">Categoria:</label>
-            <select name="category" id="category" class="form-input">
-              <option value="">Elegí</option>
-              <option value="Buenos Aires">Buenos Aires</option>
-              <option value="Cordoba">Cordoba</option>
-              <option value="Rosario">Rosario</option>
-              <option value="Otras Provincias">Otras Provincias</option>
+
+            <label class='form-label' >Categoria:</label>
+            <select name="category_id"  type="number" class="form-input">
+
+              <% for(let i=0; i< categorias.length ; i++) { %>
+
+                <% if (categorias[i].id === selectedEvent.category_id) {%>
+                  <option value="<%=categorias[i].id%>" selected ><%=categorias[i].category%></option>
+                <% } else { %>
+                  <option value="<%=categorias[i].id%>" ><%=categorias[i].category%></option>
+                <% } %>
+              <% } %>
+
             </select>
 
-            <label class='form-label' for="image">Imagen del evento:</label>
+
+
+            <label class='form-label' >Imagen del evento:</label>
             <input class="form-input" type="hidden" name="oldimage" value="<%=selectedEvent.image%>" />
-            <input class="form-input" type="file" id="image" name="image" />
+            <input class="form-input" type="file"  name="image" />
 
-            <label class='form-label' for="description">Descipción:</label>
-            <textarea name="description" id="description" class="form-input"> <%=selectedEvent.description%></textarea>
+            <label class='form-label' >Descipción:</label>
+            <textarea name="description" class="form-input"> <%=selectedEvent.description%></textarea>
 
-            <div class='purchase-detail'>
+            <div class='purchased-etail'>
               <button type="submit">
                 Guardar evento
               </button>

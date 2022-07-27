@@ -1,29 +1,31 @@
 
-const users=require('../models/Users.js')
 const bcrypt = require('bcrypt');
+let db = require('../database/models')
 
-const loginController= {
+const loginController = {
     login: (req, res) => {
-        console.log (req.cookies)
+
         res.render('login')
     },
 
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
 
-        let userToLogin = users.findByField('email', req.body.email)
-
+        let userToLogin = await db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
 
         if (userToLogin) {
 
             let isOkPass = bcrypt.compareSync(req.body.password, userToLogin.password)
 
-
             if (isOkPass) {
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
 
-                if (req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000*60)*60})
+                if (req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                 }
 
                 res.redirect('/')
@@ -38,8 +40,6 @@ const loginController= {
                 })
 
             }
-
-
 
         } else {
 
@@ -60,7 +60,6 @@ const loginController= {
         res.redirect('/')
     }
 
-
 }
 
-module.exports=loginController;
+module.exports = loginController;

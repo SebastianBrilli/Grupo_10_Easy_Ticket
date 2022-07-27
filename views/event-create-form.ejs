@@ -24,35 +24,35 @@
           <div class="form-container">
             <form action="/events/create" enctype="multipart/form-data" method="POST">
 
-              <label class='form-label' for="name">Nombre del Evento:</label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
+              <label class='form-label' >Nombre del Evento:</label>
+              <input class="form-input" type="text" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
 
-              <label class='form-label' for="price">Precio de la entrada:</label>
-              <input class="form-input" type="number" id="price" name="price" placeholder="Ej: 199" value= "<%= locals.old && old.price ? old.price : ''  %>" />
+              <label class='form-label' >Precio de la entrada:</label>
+              <input class="form-input" type="number" name="price" placeholder="Ej: 20" value= "<%= locals.old && old.price ? old.price : ''  %>" />
 
-              <label class='form-label' for="discount">Descuento:</label>
-              <input class="form-input" type="number" id="discount" name="discount" placeholder="Ej: 15" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
+              <label class='form-label' >Stock de entradas disponibles:</label>
+              <input class="form-input" type="number" name="stock" placeholder="Ej: 1000" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
 
               <label class='form-label' for="date">Fecha:</label>
-              <input class="form-input" type="date" id="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
+              <input class="form-input" type="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
 
               <label class='form-label' for="address">Lugar:</label>
-              <input class="form-input" type="text" id="address" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
+              <input class="form-input" type="text" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
 
-              <label class='form-label' for="city">Ciudad:</label>
-              <input class="form-input" type="text" id="city" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" /> -->
+              <label class='form-label' >Ciudad:</label>
+              <input class="form-input" type="text" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" /> -->
 
-              <label class='form-label' for="category">Categoria:</label>
-              <select name="category" id="category" class="form-input">
-                <option value="">Elegí</option>
-                <option value="Buenos Aires" <%= locals.old && old.category ==='Buenos Aires' ? 'selected' : ''  %> >Buenos Aires</option>
-                <option value="Cordoba" <%= locals.old && old.category ==='Cordoba' ? 'selected' : ''  %> >Cordoba</option>
-                <option value="Rosario" <%= locals.old && old.category ==='Rosario' ? 'selected' : ''  %> >Rosario</option>
-                <option value="Otras Provincias" <%= locals.old && old.category ==='Otras Provincias' ? 'selected' : ''  %> >Otras Provincias</option>
+              <label class='form-label' >Categoria:</label>
+              <select name="category_id"  type="number" class="form-input">
+
+                <%for (let i=0; i< categorias.length ; i++){ %>
+                  <option value="<%=categorias[i].id%>"><%=categorias[i].category%></option>
+                <% } %>
+
               </select>
 
-              <label class='form-label' for="image">Imagen del evento:</label>
-              <input class="form-input" type="file" id="image" name="image" />
+              <label class='form-label' >Imagen del evento:</label>
+              <input class="form-input" type="file" name="image" />
 
               <label class='form-label' for="description">Descipción:</label>
               <textarea name="description" id="description" class="form-input" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>

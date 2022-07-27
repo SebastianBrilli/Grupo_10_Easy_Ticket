@@ -5,7 +5,7 @@
     <body>
         <%-include('./partials/header')%>
             <main>
-                
+
                 <h1>Edicion de Usuario</h1>
 
                 <%if (locals.errors){%>
@@ -43,15 +43,29 @@
                                     <label class='form-label-inv' for="email">Email:</label>
                                     <input class="form-input" type="text" name="email" value="<%=user.email%>" />
 
-                                    <input class="form-input" type="hidden" name="password" value="<%=user.password%>" />
+                                    <input class="form-input" type="hidden" name="password"
+                                        value="<%=user.password%>" />
 
-                                    <label class='form-label-inv' for="category">Categoria:</label>
-                                    <select name="category" class="form-input">
-                                        <option value="">Elegí</option>
-                                        <option value="user" <%=user.category==='user' ? 'selected' : '' %> >Usuario
-                                        </option>
-                                        <option value="admin" <%=user.category==='admin' ? 'selected' : '' %>
-                                            >Administrador</option>
+                                    <label class='form-label'>Categoria:</label>
+                                    <select name="category_id" class="form-input">
+
+                                        <% for (let i=0; i < categorias.length; i++) { %>
+                                            <% if(categorias[i].id===user.category_id) { %>
+
+                                                <option value="<%= categorias[i].id %>" selected>
+                                                    <%=categorias[i].category%>
+                                                </option>
+
+                                            <% } else { %>
+
+                                                 <option value="<%= categorias[i].id %>">
+                                                    <%=categorias[i].category%>
+                                                </option>
+
+                                             <% } %>
+
+                                        <% } %>
+
                                     </select>
 
                                     <label class='form-label-inv' for="userImage">Imagen de usuario</label>

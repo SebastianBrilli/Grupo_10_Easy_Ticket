@@ -47,7 +47,6 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.set('view engine', 'ejs'); 
 
 
-
 //Ponemos a correr el servidor
 app.listen( process.env.PORT || 3000,()=>{
     console.log("Servidor funcionando en el puerto 3000")

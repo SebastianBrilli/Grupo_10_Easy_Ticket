@@ -5,7 +5,7 @@ const loginController = require('../controllers/loginController')
 
 // Requerimos el middleware
 
-const guestMiddleware = require ('../middlewares/guestMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware')
 
 
 router.get('/', guestMiddleware, loginController.login);
