@@ -18,30 +18,29 @@ let errApellido= this.document.querySelector(".erroresApellidoRegister")
 //ERRORES CAMPO EMAIL
 let campoEmail = document.getElementById("email")
 let errEmail = this.document.querySelector(".erroresEmailRegister")
-//ERRORES CAMPO fecha
-let campoFecha = document.getElementById("date")
-let errFecha = this.document.querySelector(".erroresFecha")
-//ERRORES CAMPO Lugar
-let campoLugar = document.getElementById("address")
-let errLugar= this.document.querySelector(".erroresLugar")
-//ERRORES CAMPO Ciudad
-let campoCiudad = document.getElementById("city")
-let errCiudad= this.document.querySelector(".erroresCiudad")
-//ERRORES CAMPO Categoria
-let campoCategoria = document.getElementById("category")
-let errCategoria= this.document.querySelector(".erroresCategoria")
-//ERRORES CAMPO Descipcion
-let campoDescripcion = document.getElementById("description")
-let errDescripcion= this.document.querySelector(".erroresDescripcion")
+//ERRORES CAMPO Password
+let campoPassword = document.getElementById("Password")
+let errPassword = this.document.querySelector(".erroresContraseñaRegister")
+//ERRORES CAMPO Category
+let campoCategory = document.getElementById("category")
+let errCategory = this.document.querySelector(".erroresCategoriaRegister")
 
-
+let campoImagen = document.getElementById("userImage")
+let errImagen = this.document.querySelector(".erroresImagenRegister")
   
-//ERRORES CAMPO NOMBRE
+//Declaracion de objetos donde se guardan los errores
+const errores={};
+const erroresApellido={};
+const erroresEmail={}; 
+const erroresPassword={};
+const erroresCategoria={};
+const erroresImagen={}; 
 
 botonSubmint.addEventListener("click", function(e){
     e.preventDefault();
    
-    const errores={};
+//ERRORES CAMPO NOMBRE
+
     if(campoNombre.value.length<1){
         errores.first_name="Debes poner un nombre"
         campoNombre.style.background="rgb(254, 95, 95)"
@@ -53,7 +52,7 @@ botonSubmint.addEventListener("click", function(e){
     }else{
         errores.first_name=""
         campoNombre.style.color="black"
-        campoNombre.style.background="white"
+        campoNombre.style.background="green"
     }
     if(Object.keys(errores).length >=1){
         errName.innerHTML =(errores.first_name) ? errores.first_name:"";
@@ -61,7 +60,7 @@ botonSubmint.addEventListener("click", function(e){
     }
 
  //ERRORES CAMPO APELLIDO
-const erroresApellido={};    
+  
     if(campoApellido.value.length<1){
         erroresApellido.last_name="Debes poner un Apellido"
         campoApellido.style.background="rgb(254, 95, 95)"
@@ -73,7 +72,7 @@ const erroresApellido={};
     }else{
         erroresApellido.last_name=""
         campoApellido.style.color="black"
-        campoApellido.style.background="white"
+        campoApellido.style.background="green"
     }
     if(Object.keys(erroresApellido).length >=1){
         errApellido.innerHTML =(erroresApellido.last_name) ? erroresApellido.last_name:"";
@@ -81,42 +80,99 @@ const erroresApellido={};
     }
 
 
-
-const erroresEmail={};
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
  //ERRORES CAMPO EMAIL
- 
+
+ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     
     if(campoEmail.value.length<1){
         erroresEmail.email="Debes poner un email"
         campoEmail.style.background="rgb(254, 95, 95)"
+        
 //Email valido 
     }else if(!campoEmail.value.match(mailformat)){
-    erroresEmail.email="Email invalido"
-}else{
-    erroresEmail.email=""
-    campoEmail.style.color="black"
-    campoEmail.style.background="white"
+        erroresEmail.email="Email invalido"
+
+}
+    else{
+        erroresEmail.email=""
+        campoEmail.style.color="black"
+        campoEmail.style.background="white"
 }  
 
     //No puede repertise
 
     if(Object.keys(erroresEmail).length >=1){
         errEmail.innerHTML =(erroresEmail.email) ? erroresEmail.email:"";
-    console.log(erroresEmail)
-    }
     
- else{
-    formulario.submit();
- }
+//Campo Password
+
+    }if(campoPassword.value.length<1){
+        erroresPassword.Password="Debes poner una contraseña"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if(campoPassword.value.length>0 && campoPassword.value.length<8){
+        erroresPassword.Password="La contraseña debe tener al menos 8 caracteres"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if ( !campoPassword.value.match(/[A-z]/) ) { //validar letra
+        erroresPassword.Password="La contraseña debe contener una letra"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if ( !campoPassword.value.match(/[A-Z]/) ) {
+        erroresPassword.Password="La contraseña debe contener una letra mayúscula"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if (!campoPassword.value.match(/\d/) ) {
+        erroresPassword.Password="La contraseña debe contener un numero"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else{
+        erroresPassword.Password=""
+        campoPassword.style.color="black"
+        campoPassword.style.background="white"
+}
+
+    if(Object.keys(erroresPassword).length >=1){
+        errPassword.innerHTML =(erroresPassword.Password) ? erroresPassword.Password:"";}
+//Campo Categoria
+
+if(campoCategory.value.length<1){
+    erroresCategoria.category="Debes poner una categoria"
+    campoCategory.style.background="rgb(254, 95, 95)"
+
+}else{
+    erroresCategoria.category=""
+    campoCategory.style.color="black"
+    campoCategory.style.background="white"
+}
+if(Object.keys(erroresCategoria).length >=1){
+    errCategory.innerHTML =(erroresCategoria.category) ? erroresCategoria.category:"";}
+//Imagen
+
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    if(!allowedExtensions.exec(campoImagen.value ) && campoImagen.value.length>1){
+        erroresImagen.userImage="'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'"
+        campoImagen.style.background="rgb(254, 95, 95)"
+    }
+    if(Object.keys(erroresImagen).length >=1){
+        errImagen.innerHTML =(erroresImagen.userImage) ? erroresImagen.userImage:"";}
+
+    const finalResult = {...errores,...erroresApellido,...erroresEmail,...erroresPassword};
+    console.log(finalResult)
+
+    if(finalResult.first_name === "" && finalResult.last_name ==="" && finalResult.email ==="" && finalResult.Password ===""){
+
+    formulario.submit()
+}
+
 })
 
 
 
-//const finalResult = Object.assign(errores);
-//const finalResult2 = Object.assign(erroresApellido);
-//const finalResult3 = Object.assign(erroresEmail);
-//const Finalfinal= Object.assign(errores,erroresApellido,erroresEmail)
+
+// const finalResult2 = Object.assign(erroresApellido);
+// const finalResult3 = Object.assign(erroresEmail);
+// const Finalfinal= Object.assign(errores,erroresApellido,erroresEmail)
 
 
 //if(Object.keys(Finalfinal).length <1){

@@ -22,27 +22,49 @@
           <%}%>
 
           <div class="form-container">
-            <form action="/events/create" enctype="multipart/form-data" method="POST">
-
+            <form class="Formulario"action="/productDetail/create" enctype="multipart/form-data" method="POST">
+              
               <label class='form-label' for="name">Nombre del Evento:</label>
+              <div class="erroresName">
+                <p class="errores"></p>
+               </div>
               <input class="form-input" type="text" id="name" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
 
-              <label class='form-label' for="price">Precio de la entrada:</label>
+              <label class='form-label' for="price">Precio de la entrada</label>
+              <div class="erroresPrecio">
+                <p class="errores"></p>
+               </div>
               <input class="form-input" type="number" id="price" name="price" placeholder="Ej: 199" value= "<%= locals.old && old.price ? old.price : ''  %>" />
 
-              <label class='form-label' for="discount">Descuento:</label>
+              
+              <label class='form-label' for="discount">Cantidad disponible de entradas</label>
+              <div class="erroresEntradas">
+                <p class="errores"></p>
+               </div>
               <input class="form-input" type="number" id="discount" name="discount" placeholder="Ej: 15" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
 
-              <label class='form-label' for="date">Fecha:</label>
+              <label class='form-label' for="date">Fecha</label>
+              <div class="erroresFecha">
+                <p class="errores"></p>
+               </div>
               <input class="form-input" type="date" id="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
 
-              <label class='form-label' for="address">Lugar:</label>
+              <label class='form-label' for="address">Lugar</label>
+              <div class="erroresLugar">
+                <p class="errores"></p>
+               </div>
               <input class="form-input" type="text" id="address" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
 
-              <label class='form-label' for="city">Ciudad:</label>
-              <input class="form-input" type="text" id="city" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" /> -->
+              <label class='form-label' for="city">Ciudad</label>
+              <div class="erroresCiudad">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="text" id="city" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" />
 
-              <label class='form-label' for="category">Categoria:</label>
+              <label class='form-label' for="category">Categoria</label>
+              <div class="erroresCategoria">
+                <p class="errores"></p>
+               </div>
               <select name="category" id="category" class="form-input">
                 <option value="">Elegí</option>
                 <option value="Buenos Aires" <%= locals.old && old.category ==='Buenos Aires' ? 'selected' : ''  %> >Buenos Aires</option>
@@ -50,15 +72,23 @@
                 <option value="Rosario" <%= locals.old && old.category ==='Rosario' ? 'selected' : ''  %> >Rosario</option>
                 <option value="Otras Provincias" <%= locals.old && old.category ==='Otras Provincias' ? 'selected' : ''  %> >Otras Provincias</option>
               </select>
+              <div class="custom-input-file">
+                <label class='form-label-file' for="image">Imagen del evento</label>
+                <div class="erroresImagen">
+                  <p class="errores"></p>
+                 </div>
+                <input class="input-file" type="file" id="image" name="image" />
+              </div>
+              
 
-              <label class='form-label' for="image">Imagen del evento:</label>
-              <input class="form-input" type="file" id="image" name="image" />
+              <label class='form-label' for="description">Descipción</label>
+              <div class="erroresDescripcion">
+                <p class="errores"></p>
+               </div>
+              <textarea name="description" id="description" class="textarea" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>
 
-              <label class='form-label' for="description">Descipción:</label>
-              <textarea name="description" id="description" class="form-input" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>
-
-              <div class='purchase-detail'>
-                <button type="submit">
+              <div class="purchase-detail">
+                <button class="boton_guardar_evento"type="submit">
                   Guardar evento
                 </button>
               </div>
@@ -69,7 +99,7 @@
 
       </main>
 
-      <%-include('./partials/footer')%>
+      <script src="../js/crearEvento.js"></script>
   </body>
 
 </html>

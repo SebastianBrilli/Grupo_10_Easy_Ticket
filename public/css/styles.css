@@ -10,7 +10,109 @@
     background-color: black;
     
   }
-  
+  /* ERRORES VALIDACIONES FRONT END */
+
+.erroresName{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresEmail{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresPassword{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresPrecio{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresEntradas{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresFecha{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+
+.erroresLugar{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+
+.erroresCiudad{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+
+.erroresCategoria{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+
+.erroresDescripcion{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+
+.erroresNombreRegister{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresApellidoRegister{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresEmailRegister{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresContraseñaRegister{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresImagenRegister{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
+.erroresCategoriaRegister{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: red;
+  font-weight: lighter;
+}
   /*====== Formularios ======*/
 .create-container{
   display: flex;

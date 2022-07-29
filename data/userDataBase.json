@@ -269,5 +269,68 @@
   "password": "$2b$10$fSZHja01dRhfkxOEMmtpzuVyqeUBPqgF4O9DMXlBgmqawRI5.O/au",
   "category": "user",
   "image": "usuario1656420095672.jpg"
+ },
+ {
+  "id": 33,
+  "first_name": "1",
+  "last_name": "1",
+  "email": "manu_jacu@hotmail.com",
+  "password": "$2b$10$4wU48.VJjEaJYca3Us.wpOWFBT4PPY1YHKrOvO5qIaSZBaxL6h8G6",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 34,
+  "first_name": "Manuel",
+  "last_name": "Jacubowicz",
+  "email": "manu1_1jacu@hotmail.com",
+  "password": "$2b$10$a8cNEO0c5IoWLJU0/W4hgefCIwPRu9N9/hHscvA8I/bD2naIoZL1W",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 35,
+  "first_name": "Manuel",
+  "last_name": "Jacubowicz",
+  "email": "manu_sdasdjacu@hotmail.com",
+  "password": "$2b$10$Pw2S4eC9.kkpYgSXlG6XKOBze.mqfCoJ/73el5JfmuYVl3AcShxiy",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 36,
+  "first_name": "Manuel",
+  "last_name": "Jacubowicz",
+  "email": "manu12_jacu@hotmail.com",
+  "password": "$2b$10$AziPXSjEl2Gf4nhOa4NYk.DvaF313gURiZT4ed0ZEI.P77Z5yBN7C",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 37,
+  "first_name": "Manuel",
+  "last_name": "Jacubowicz",
+  "email": "manu1_jacu@hotmail.com",
+  "password": "$2b$10$T7y.ZtA7tQxx1D1k5VM2RuGoZWkAkVzoRCvFokyP/fJWwRl2k1cYa",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 38,
+  "first_name": "Manuel",
+  "last_name": "Jacubowicz",
+  "email": "manu123_jacu@hotmail.com",
+  "password": "$2b$10$W4/AvkREwjNf3kZUafybOeOJzg0RlbTKPd.PB.gWjDwNl139T3Zk.",
+  "category": "user",
+  "image": "default.png"
+ },
+ {
+  "id": 39,
+  "first_name": "Manuel",
+  "last_name": "Jacubowicz",
+  "email": "manu1233_jacu@hotmail.com",
+  "password": "$2b$10$8qaJF1xFu/viid4KlhI4XO2yMTIoHdQ5k5ShLpJGtrJ9OyLJxGYS6",
+  "category": "user",
+  "image": "default.png"
  }
 ]
