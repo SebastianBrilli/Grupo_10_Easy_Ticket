@@ -46,7 +46,13 @@
               <div class="erroresFecha">
                 <p class="errores"></p>
                </div>
-              <input class="form-input" type="date" id="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
+              <input class="form-input" 
+              id="date"
+              type="date" 
+              name="date" 
+              min= "2022-07-16"
+              max="2024-07-16"
+              placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
 
               <label class='form-label' for="address">Lugar:</label>
               <div class="erroresLugar">

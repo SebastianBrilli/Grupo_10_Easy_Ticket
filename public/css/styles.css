@@ -197,7 +197,7 @@ textarea.form-input {
   width: 60%;
   margin-bottom: 4vw;
   height: 8vw;  
-  font-size: 1vw;
+  font-size: 2vw;
   font-weight: bold;
   text-align: center;
 }
@@ -234,6 +234,8 @@ textarea.form-input {
     display: flex;
     justify-content: space-around;
     padding: 2vw;
+    width: 100%;
+    font-size: 2vw;
   }
   .resumen-total{
     font-weight: bold;
@@ -1249,6 +1251,7 @@ font-size: 14px;
 
 .botones_detalle {
   display: flex;
+
   
 }
 
@@ -1463,7 +1466,12 @@ font-size: 14px;
     font-size: 5vw; 
   }
   .resumen-item-detalle{
-    font-size: 3vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+    width: 100%;
+    font-size: 2vw;
+    
   }
   .boton-resumen{
       font-size: 2vw;
@@ -2010,7 +2018,7 @@ h1{
   width: 60%;
   margin-bottom: 0vw;
   height: 3vw;  
-  font-size: 1vw;
+  font-size: 2vw;
   font-weight: bold;
   text-align: center;
 }
@@ -2226,14 +2234,14 @@ h1{
   border: none;
   border-radius: 4px;
   margin: 30px;
-  background-color: rgba(40, 38, 38, 0.5);
-  color: white;
+  background-color:white;
+  color: black;
   font-weight: bold;
   font-size: 1.5vw;
   cursor: pointer;
-  width: 120px;
+  width: 200px;
   font-family: 'Staatliches', cursive;
-  height: 30px;
+  height: 50px;
   transition: background, 500ms;
 }
 

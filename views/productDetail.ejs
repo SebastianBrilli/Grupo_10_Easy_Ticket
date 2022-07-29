@@ -18,7 +18,13 @@
       <div class="contenedor_banner_3">
          <div class="c_t_pd"> <p class="titulo_banner_2"><%=selectedEvent.name%></p>  </div>
          <div class="c_i_pd"><p class="info_banner_2"><%=selectedEvent.address%> </p> </div>
-         <div class="c_f_pd"><p class="info_banner_2">  <%=selectedEvent.date%></p> </div>
+         <div class="c_f_pd">
+          <p class="info_banner_2">  
+          <%=selectedEvent.date.getUTCDate()%> /
+          <%=selectedEvent.date.getMonth()+1%> /
+          <%=selectedEvent.date.getFullYear()%>
+        </p> 
+        </div>
          <div class="c_h_pd"><p class="info_banner_2">  <%=selectedEvent.hora%></p> </div>
          
          <div class="c_d_pd"> <p class="description_banner_2"> <%=selectedEvent.description%></p> </div>
@@ -32,15 +38,12 @@
             
             <div class="c_bs_pd">
                 <div class="botones_detalle">
-                  <a href="/carro"><button type="button" >Comprar</button></a>
+                  <a href="/carro/<%=selectedEvent.id%>"><button type="button" >Comprar</button></a>
                 </div>
-                <div class="botones_detalle">
+                <!-- <div class="botones_detalle">
                     <a href="/events/<%=selectedEvent.id%>/edit"><button type="button" >Editar Evento</button></a> 
-                </div>
+                </div> -->
             </div>      
-            
-              
-
 
         </div>       
          
@@ -72,14 +75,6 @@
                 </article>
                 <%}%>     
               </div>
-
-
-            <!-- <div class="option-container">
-                    <img src="/images/lola-en-la-tangente-120498-rec.jpg" alt="Opcion 1">
-                    <img src="/images/meet-greet-juicy-bae-95274-rec.jpg" alt="Opcion 2">
-                    <img src="/images/carino-en-niceto-club-120980-rec.jpg" alt="Opcion 3">
-                    <img src="/images/presentacion-del-nuevo-disco-de-martin-garcia-15-seis-120505-rec.jpg" alt="Opcion 4">        
-            </div> -->
            
         </section>
     </main>  

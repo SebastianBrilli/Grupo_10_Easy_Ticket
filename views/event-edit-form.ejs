@@ -40,7 +40,12 @@
             <input class="form-input" type="number" name="stock" value="<%=selectedEvent.stock%>" />
 
             <label class='form-label' >Fecha:</label>
-            <input class="form-input" type="date"  name="date" value="<%=selectedEvent.date%>" />
+            <input class="form-input" 
+            type="date"  
+            name="date" 
+            min= "2022-07-16"
+            max="2024-07-16"
+            value="<%=selectedEvent.date%>" />
 
             <label class='form-label' >Lugar:</label>
             <input class="form-input" type="text" name="address" value="<%=selectedEvent.address%>" />

@@ -7,86 +7,126 @@
     <%-include('./partials/header')%>
    
 <main>
- <section class="contenedor-sections"> 
-    <div class="foto">
-        <img class="Holapuqui"src="/images/alanWalker.jpg" alt="foto de alanWalker">
-    </div>
-    <div class="formulario-resumen">
-        <div class="tabla-formulario">
-            <form class="formularios1" action="" method="">
-                <select class="desplegables" name="evento" >
-                    <option disabled="disabled" selected>
-                        FECHAS
-                    </option>
-                    <option value="Alan Walker 16/07">
-                        Alan Walker 16/07
-                    </option>
-                    <option value="Alan Walker 17/07">
-                        Alan Walker 17/07
-                    </option>
-                </select>
-                <select class="desplegables" name="tipo-de-entrada">
-                    <option disabled="disabled" selected>
-                        SECTOR
-                    </option>
-                    <option value="general">GENERAL</option>
-                    <option value="vip">VIP</option>
-                </select>
-                <select class="desplegables" name="tarifa" id="">
-                    <option disabled="disabled" selected>
-                        TARIFA
-                    </option>
-                    <option value="general">
-                        $1200
-                    </option>
-                    <option value="vip">
-                        $2000
-                    </option>
-                </select>
-                <select  class="desplegables" name="cantidad-entradas" id="">
-                    <option disabled="disabled" selected>
-                        CANTIDAD
-                    </option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                    <option value="">5</option>
-                    <option value="">6</option>
-                    <option value="">7</option>
-                    <option value="">8</option>
-                    <option value="">9</option>
-                    <option value="">10</option>
-                </select>
-                <button class="boton-compra" type="button">APLICAR</button>
-            </form>
-
+    <section class="contenedor-sections">
+        <div class="foto">
+            <img class="Holapuqui" src="/images/<%= selectedEvent.image %>" alt="Imagen del Evento">
         </div>
-        <section class="resumen-contenedor">
-            <h1 class="resumen-titulo">Resumen de compra</h1>
-            <div class="resumen-body">
-                <div class="resumen-item">
-                    <h3 class="titulo-entradas">Entradas</h3>
-                <div class="resumen-item-detalle">
-                    <div>GENERAL</div>
-                    <div class="precio">$1.300</div>
-                </div>
-                <div class="resumen-item-detalle">
-                    <div>GENERAL</div>
-                    <div class="precio">$1.300</div>
-                </div>
-                </div>
-            </div>
-            <div class="resumen-footer">
-                <div class="resumen-total">
-                    <div>Total</div>
-                    <div class="suma-total">$2.600</div>
-                </div>
-                <button class="boton-resumen">Confirmar compra</button>
-            </div>
-        </section>
-    </div>
- </section>
+        <!-- <div class="formulario-resumen">
+            <div class="tabla-formulario">
+                <form class="formularios1" action="" method="">
+                    <select class="desplegables" name="evento">
+                        <option disabled="disabled" selected>
+                            FECHAS
+                        </option>
+                        <option value="Alan Walker 16/07">
+                            Alan Walker 16/07
+                        </option>
+                        <option value="Alan Walker 17/07">
+                            Alan Walker 17/07
+                        </option>
+                    </select>
+                    <select class="desplegables" name="tipo-de-entrada">
+                        <option disabled="disabled" selected>
+                            SECTOR
+                        </option>
+                        <option value="general">GENERAL</option>
+                        <option value="vip">VIP</option>
+                    </select>
+                    <select class="desplegables" name="tarifa" id="">
+                        <option disabled="disabled" selected>
+                            TARIFA
+                        </option>
+                        <option value="general">
+                            $1200
+                        </option>
+                        <option value="vip">
+                            $2000
+                        </option>
+                    </select>
+                    <select class="desplegables" name="cantidad-entradas" id="">
+                        <option disabled="disabled" selected>
+                            CANTIDAD
+                        </option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                    </select>
+                    <button class="boton-compra" type="button">APLICAR</button>
+                </form> -->
+
+            <!-- </div> -->
+            <section class="resumen-contenedor">
+                <h1 class="c_i_pd">Resumen de compra</h1>
+                <div class="resumen-body">
+                    <div class="c_i_pd">
+                        <p class="info_banner_2">
+                            <%=selectedEvent.name%>
+                        </p>
+                    </div>
+                    <div class="c_f_pd">
+                        <p class="info_banner_2">
+                            <%=selectedEvent.address%>
+                        </p>
+                    </div>
+                    <div class="resumen-item">
+            
+            
+            
+            
+                        <div class="resumen-item-detalle">
+                            <div class="c_f_pd">Fecha: </div>
+                            <div class="c_f_pd">
+                                <%=selectedEvent.date.getUTCDate()%> /
+                                    <%=selectedEvent.date.getMonth()+1%> /
+                                        <%=selectedEvent.date.getFullYear()%>
+                                            <div>
+                                            </div>
+            
+                                            <div class="resumen-item-detalle">
+                                                <div class="c_f_pd">Precio: </div>
+                                                <div class="c_f_pd">
+                                                    <%= selectedEvent.price %> $
+                                                </div>
+                                            </div>
+                                            <div class="resumen-item-detalle">
+                                            <label class="c_f_pd">Selecciona la cantidad:</label>
+                                            <form action="/carro/<%=selectedEvent.id%>" enctype="multipart/form-data"
+                                                method="POST" >
+                                                <select name="cantidad-entradas" type="number" class="desplegables">
+            
+                                                    <%for (let i=0; i< 10 ; i++){ %>
+                                                        <option value="<%= i %>">
+                                                            <%= i %>
+                                                        </option>
+                                                        <% } %>
+                                                </select>
+                                                
+                                            </form>
+
+
+                                            </div>
+                            </div>
+                        </div>
+            
+                        <div class="resumen-item-detalle">
+                            <div class="c_f_pd">Total</div>
+                            <div class="c_f_pd"> </div>
+                        </div>
+                        <div class="botones_detalle">
+                            <button type="submit" class="boton-resumen">Confirmar compra</button>
+                        </div>
+                        
+                    </div>
+            </section>
+        </div>
+    </section>
 </main>
 
 <%-include('./partials/footer')%>
