@@ -24,7 +24,7 @@
         <%}%>
 
         <div class="form-container">
-          <form action="/register" enctype="multipart/form-data" method="POST">
+          <form action="/register" enctype="multipart/form-data" method="POST" class="formulario">
 
             <label class='form-label' for="first_name">Ingresa tu Nombre:</label>
             <div class="erroresNombreRegister">
@@ -76,10 +76,10 @@
             <div class="erroresImagenRegister">
               <p class="errores"></p>
              </div>
-            <input class="form-input" type="file"  name="userImage" />
+            <input class="form-input" type="file"  name="userImage" id="userImage"/>
 
             <div class='purchase-detail'>
-              <button type="submit">
+              <button class="boton_guardar_evento" type="submit">
                 Confirmar
               </button>
             </div>
@@ -87,7 +87,7 @@
           </form>
         </div>
       </div>
-      <script src="../js/register.js"></script>
+      <script src="js/register.js"></script>
       <%-include('./partials/footer')%>
   </body>
 

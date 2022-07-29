@@ -193,7 +193,12 @@ var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 if(!allowedExtensions.exec(campoImagen.value ) && campoImagen.value.length>1){
     erroresImagen.image="'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'"
     campoImagen.style.background="rgb(254, 95, 95)"
+}else{
+    erroresImagen.image=""
+    campoImagen.style.color="black"
+    campoImagen.style.background="green"
 }
+
 if(Object.keys(erroresImagen).length >=1){
     errImagen.innerHTML =(erroresImagen.image) ? erroresImagen.image:"";}
 
@@ -209,8 +214,9 @@ if(Object.keys(erroresImagen).length >=1){
     const finalResult = {...erroresNombre,...erroresDescripcion,...erroresPrecio,...erroresEntradas,...erroresFecha,...erroresLugar,...erroresCiudad,...erroresCategoria,...erroresImagen};
     console.log(finalResult)
 
-    if(finalResult.name ==="" && finalResult.description ===""&& finalResult.price ===""&& finalResult.discount ==="" && finalResult.date ===""&& finalResult.address ===""&& finalResult.city ===""&& finalResult.category ==="" && finalResult.image ===""){
+    if(finalResult.name ==="" && finalResult.description ===""&& finalResult.price ===""&& finalResult.discount ==="" && finalResult.date ===""&& finalResult.address ===""&& finalResult.city ===""&& finalResult.category ==="" && finalResult.image ==="" ){
         console.log(finalResult)
+        console.log('hola')
     formulario.submit()
 }
 

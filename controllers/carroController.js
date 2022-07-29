@@ -1,3 +1,4 @@
+const session = require('express-session')
 let db = require('../database/models')
 
 const carroController={
@@ -17,12 +18,20 @@ const carroController={
             .catch(e => console.log(e))
     },
 
-    confirm: (req,res)=>{
+    confirm: async (req,res)=>{
+
+        let confirmedEvent = await db.Event.findByPk(req.params.id)
+            .then(events => {
+                return res.render('productIndex', { event: events })
+            })
+            .catch(e => console.log(e))
+
+
 
         db.Sale.create({
             date: date.now(),
             event_id: parseInt(req.body.price),
-            user_id: parseInt(req.body.stock),
+            user_id: session.userLogged.id,
             quantity: req.body.date,
             total: req.body.address,
         })

@@ -22,7 +22,7 @@
           <%}%>
 
           <div class="form-container">
-            <form action="/events/create" enctype="multipart/form-data" method="POST">
+            <form action="/events/create" enctype="multipart/form-data" method="POST" class="Formulario">
 
               <label class='form-label' >Nombre del Evento:</label>
               <div class="erroresName">
@@ -91,7 +91,7 @@
               <textarea name="description" id="description" class="form-input" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>
 
               <div class='purchase-detail'>
-                <button type="submit">
+                <button type="submit" class="boton_guardar_evento">
                   Guardar evento
                 </button>
               </div>
