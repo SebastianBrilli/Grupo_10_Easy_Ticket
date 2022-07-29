@@ -7,7 +7,8 @@ const carroController = require('../controllers/carroController')
 router.get('/', carroController.carro);
 
 //Segunda ruta de pruductDetail
-//router.get('/', controller.???);
+router.get('/:id', carroController.show);
+router.post('/:id', carroController.confirm);
 
 //Tercera ruta de pruductDetail
 //router.get('/', controller.???);

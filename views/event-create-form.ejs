@@ -34,7 +34,12 @@
               <input class="form-input" type="number" name="stock" placeholder="Ej: 1000" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
 
               <label class='form-label' for="date">Fecha:</label>
-              <input class="form-input" type="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
+              <input class="form-input" 
+              type="date" 
+              name="date" 
+              min= "2022-07-16"
+              max="2024-07-16"
+              placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
 
               <label class='form-label' for="address">Lugar:</label>
               <input class="form-input" type="text" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
