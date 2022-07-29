@@ -25,25 +25,46 @@
             <form action="/events/create" enctype="multipart/form-data" method="POST">
 
               <label class='form-label' >Nombre del Evento:</label>
-              <input class="form-input" type="text" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
+              <div class="erroresName">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
 
               <label class='form-label' >Precio de la entrada:</label>
-              <input class="form-input" type="number" name="price" placeholder="Ej: 20" value= "<%= locals.old && old.price ? old.price : ''  %>" />
+              <div class="erroresPrecio">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="number" id="price" name="price" placeholder="Ej: 20" value= "<%= locals.old && old.price ? old.price : ''  %>" />
 
               <label class='form-label' >Stock de entradas disponibles:</label>
-              <input class="form-input" type="number" name="stock" placeholder="Ej: 1000" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
+              <div class="erroresEntradas">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="number" id="discount" name="stock" placeholder="Ej: 1000" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
 
               <label class='form-label' for="date">Fecha:</label>
-              <input class="form-input" type="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
+              <div class="erroresFecha">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="date" id="date" name="date" placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
 
               <label class='form-label' for="address">Lugar:</label>
-              <input class="form-input" type="text" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
+              <div class="erroresLugar">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" id="address" type="text" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
 
               <label class='form-label' >Ciudad:</label>
-              <input class="form-input" type="text" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" /> -->
+              <div class="erroresCiudad">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" id="city" type="text" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" /> -->
 
               <label class='form-label' >Categoria:</label>
-              <select name="category_id"  type="number" class="form-input">
+              <div class="erroresCategoria">
+                <p class="errores"></p>
+               </div>
+              <select name="category_id" id="category" type="number" class="form-input">
 
                 <%for (let i=0; i< categorias.length ; i++){ %>
                   <option value="<%=categorias[i].id%>"><%=categorias[i].category%></option>
@@ -52,9 +73,15 @@
               </select>
 
               <label class='form-label' >Imagen del evento:</label>
-              <input class="form-input" type="file" name="image" />
+              <div class="erroresImagen">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" id="image" type="file" name="image" />
 
               <label class='form-label' for="description">Descipción:</label>
+              <div class="erroresDescripcion">
+                <p class="errores"></p>
+               </div>
               <textarea name="description" id="description" class="form-input" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>
 
               <div class='purchase-detail'>
@@ -68,7 +95,7 @@
         </div>
 
       </main>
-
+      <script src="../js/crearEvento.js"></script>
       <%-include('./partials/footer')%>
   </body>
 

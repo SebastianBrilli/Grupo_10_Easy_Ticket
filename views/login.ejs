@@ -17,13 +17,20 @@
             <form action="/login" method="POST">
 
               <label class='form-label'">Ingrese su Email:</label>
-              <input class="form-input" type="email" name="email" placeholder="Email" />
+
+              <div class="erroresEmailRegister">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="email" id="email" name="email" placeholder="Email" />
               <%if (locals.errors && errors.email){%>
                 <p class="msgError"><%=errors.email.msg%> </p>
               <%}%>
 
               <label class='form-label'>Ingrese su Contraseña:</label>
-              <input class="form-input" type="password"  name="password" placeholder="Contraseña" />
+              <div class="erroresContraseñaRegister">
+                <p class="errores"></p>
+               </div>
+              <input class="form-input" type="password" id="password" name="password" placeholder="Contraseña" />
 
           
                
@@ -42,6 +49,7 @@
           </div>
         </div>
       </main>
+      <script src="../js/login.js"></script>
       <%-include('./partials/footer')%>
   </body>
 
