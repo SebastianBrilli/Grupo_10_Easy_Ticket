@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head',{title: 'Carrito de compras'})%>
+    
+<body>
+   
+    <%-include('./partials/header')%>
+   
+<main>
+    <section class="contenedor-sections">
+        <div class="foto">
+            <img class="Holapuqui" src="/images/<%= selectedEvent.image %>" alt="Imagen del Evento">
+        </div>
+
+            <section class="resumen-contenedor">
+            <p class="c_f_pd">Muchas Gracias por tu compra!</p>
+            <div class="resumen-body">
+                <div class="c_i_pd">
+                    <p class="info_banner_2">
+                        <%=selectedEvent.name%>
+                    </p>
+                </div>
+                <div class="c_f_pd">
+                    <p class="info_banner_2">
+                        <%=selectedEvent.address%>
+                    </p>
+                </div>
+                <div class="resumen-item">
+            
+                    <div class="resumen-item-detalle">
+                        <div class="c_f_pd">
+                            Fecha:
+                        </div>
+                        <div class="c_f_pd">
+                            <%=selectedEvent.date.getUTCDate()%> /
+                                <%=selectedEvent.date.getMonth()+1%> /
+                                    <%=selectedEvent.date.getFullYear()%>
+                        </div>
+                    </div>
+            
+            
+            
+                    <div class="resumen-item-detalle">
+                        <div class="c_f_pd">
+                            Te enviaremos la factura a:
+                        </div>
+                        <div class="c_f_pd">
+                            <%= user.email %>
+                        </div>
+                    </div>
+            
+                    <div class="resumen-item-detalle" class="botones_detalle">
+                        <a href="/events"><button class="boton-resumen">Ver mas eventos</button></a>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </div>
+    </section>
+</main>
+
+<%-include('./partials/footer')%>
+</body>
+</html>

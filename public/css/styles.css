@@ -315,7 +315,7 @@ textarea.form-input {
 /*====== Carro ======*/
  
 .contenedor-sections{
-  margin-top: 15vw;
+  margin-top: 2vw;
 }
 
 .foto{
@@ -334,7 +334,7 @@ textarea.form-input {
   font-size: 1vw;
 }
 .desplegables{
-  width: 60%;
+  width: 40%;
   margin-bottom: 4vw;
   height: 8vw;  
   font-size: 2vw;
@@ -372,7 +372,7 @@ textarea.form-input {
   }
   .resumen-item-detalle{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 2vw;
     width: 100%;
     font-size: 2vw;
@@ -392,6 +392,7 @@ textarea.form-input {
     height: 12vw;
     border: #FAFF10;
     margin-top: 2vw;
+    border-radius: 16px;
   
   }
   
@@ -1450,7 +1451,7 @@ font-size: 14px;
   }
   .resumen-item-detalle{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 2vw;
     width: 100%;
     font-size: 2vw;
@@ -1797,7 +1798,7 @@ font-size: 14px;
  .contenedor-sections{
   display: flex;
   margin-bottom: 2vw;
-  margin-top: 12vw;
+  margin-top: 2vw;
 }
 .formulario-resumen{
   width: 60vw;
@@ -1825,12 +1826,23 @@ font-size: 14px;
   font-size: 1vw;
 }
 .desplegables{
-  width: 60%;
-  margin-bottom: 0vw;
+  width: 20%;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
   height: 3vw;  
   font-size: 2vw;
   font-weight: bold;
   text-align: center;
+
+
+
+}
+
+.form-select{
+  width: 60%;
+  height: 4vw;  
+  text-align: center
+
 }
 
 .boton-compra{
@@ -1867,7 +1879,7 @@ font-size: 14px;
   }
   .resumen-item-detalle{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 2vw;
     width: 100%;
     font-size: 2vw;
