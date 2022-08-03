@@ -21,29 +21,21 @@ const carroController={
     confirm: async (req,res)=>{
 
         let confirmedEvent = await db.Event.findByPk(req.params.id)
-            .then(events => {
-                return res.render('productIndex', { event: events })
-            })
-            .catch(e => console.log(e))
-
+        let date = new Date();
 
 
         db.Sale.create({
-            date: date.now(),
-            event_id: parseInt(req.body.price),
-            user_id: session.userLogged.id,
-            quantity: req.body.date,
-            total: req.body.address,
+
+            date: date.toISOString().split('T')[0],
+            event_id: confirmedEvent.id,
+            user_id: req.session.userLogged.id,
+            quantity: parseInt(req.body.quantity),
+            total: (confirmedEvent.price * parseInt(req.body.quantity)),
         })
 
-
-
-
-        res.render('carroDeCompras')
+        res.render('event-confirmed', {selectedEvent: confirmedEvent, user: req.session.userLogged})
     }
 
-
 }
-
 
 module.exports=carroController
