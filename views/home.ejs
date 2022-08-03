@@ -1,42 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head',{title: 'Bienvenidos'}) %>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/owl.theme.default.min.css" rel="stylesheet" >
+  <link href="css/carousel-home.css" rel="stylesheet" />
   <body>
     <%-include('./partials/header')%>
     
-    <main>
-      <section class="banner">
-        
-          <article class="banner_section">
-            
-              <img
-                class="img_evento_principal"
-                src="/images/LollaArgentina2022_A.jpeg"
-                width="150"
-                alt="Imagen principal"
-              />
-              <p class="description_banner">
-                Lollapalooza​ es un festival musical de los Estados Unidos que
-                originalmente ofrecía bandas de rock alternativo, indie y punk
-                rock; también hay actuaciones cómicas y de danza. Concebido en
-                1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza
-                se realizó anualmente hasta 1997
-              </p>
-              <p class="titulo_banner">Lolla Pallooza</p>
-              <a class="info_banner" href="/register">
-                Mas informacion</a>
-            
+    <section id="main-banner">
+      <div id="carousel-home" class="owl-carousel owl-theme">
+
+        <article>
+          <div class="container">
+            <div class="caption">
+                <h5>Eventos principales</h5>
+                <h3>Lolla Pallooza</h3>
+                <p>Lollapalooza​ es un festival musical de los Estados Unidos que originalmente ofrecía bandas de rock alternativo, indie y punk rock;también hay actuaciones cómicas y de danza. Concebido en 1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza se realizó anualmente hasta 1997</p>
+                <div class="container-btn">
+                    <a href="/register" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/banner/banner-home-a.jpg"/>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="container">
+            <div class="caption">
+                <h5>Eventos principales</h5>
+                <h3>Lolla Pallooza</h3>
+                <p>Lollapalooza​ es un festival musical de los Estados Unidos que originalmente ofrecía bandas de rock alternativo, indie y punk rock;también hay actuaciones cómicas y de danza. Concebido en 1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza se realizó anualmente hasta 1997</p>
+                <div class="container-btn">
+                    <a href="/register" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/banner/banner-home-b.jpg"/>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="container">
+            <div class="caption">
+                <h5>Eventos principales</h5>
+                <h3>Lolla Pallooza</h3>
+                <p>Lollapalooza​ es un festival musical de los Estados Unidos que originalmente ofrecía bandas de rock alternativo, indie y punk rock;también hay actuaciones cómicas y de danza. Concebido en 1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza se realizó anualmente hasta 1997</p>
+                <div class="container-btn">
+                    <a href="/register" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/banner/banner-home-c.jpg"/>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <%for (let j=0;j< category.length; j++) {%>
+
+    <section class="carousel-events">
+
+      <h2>Eventos en <%= category[j].category%></h2>
+
+      <div id="carousel-events-a" class="owl-carousel owl-theme">
+        <div class="item">
+          <article>
+            <div class="caption">
+              <a href="/register" class="btn">Más información</a>
+            </div>
           </article>
-        
-      </section>
-     <!-- Eventos Provincia 1-->
+          <div class="image">
+            <img src="images/banner/banner-home-a.jpg"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-btn">
+        <a class="btn btn-sm btn-red">Ver todos los eventos</a>
+      </div>
+
+    </section>
+
+    <% } %>
 
      <%for (let j=0;j< category.length; j++) {%>
      
       <section class="eventos">
         <h3>Eventos en <%= category[j].category%></h3>
+
         <% let  seleccion = event.filter(elemento => elemento.category_id === category[j].id)%>
         <div class="products">
+          
+          
           <% for (let i=0; i < seleccion.length; i++) {%>
           <article>
             <div class="main-article">
@@ -54,16 +116,21 @@
                 Mas informacion</a>
             </div>
           </article>
-          <%}%>     
+          <%}%>  
+          
+          
         </div>
+
       </section>
 
       <% } %>
 
 
     </main>
-  
+    
     <%-include('./partials/footer')%>
+    <script src="/js/home.js"></script>
   
   </body>
+
 </html>

@@ -43,16 +43,19 @@ botonSubmint.addEventListener("click", function(e){
 
     if(campoNombre.value.length<1){
         errores.first_name="Debes poner un nombre"
-        campoNombre.style.background="rgb(254, 95, 95)"
+        campoNombre.style.borderColor="rgb(254, 95, 95)"
+        campoNombre.style.backgroundColor="rgb(58, 41, 41)"
 
     }else if(campoNombre.value.length>0 && campoNombre.value.length<2){
         errores.first_name="El nombre debe tener al menos 2 caracteres"
-        campoNombre.style.background="rgb(254, 95, 95)"
+        campoNombre.style.borderColor="rgb(254, 95, 95)"
+        campoNombre.style.backgroundColor="rgb(58, 41, 41)"
 
     }else{
         errores.first_name=""
-        campoNombre.style.color="black"
-        campoNombre.style.background="green"
+        campoNombre.style.borderColor=null
+        campoNombre.style.backgroundColor=null
+        campoNombre.style.borderColor="rgb(80, 189, 46)"
     }
     if(Object.keys(errores).length >=1){
         errName.innerHTML =(errores.first_name) ? errores.first_name:"";
@@ -63,16 +66,19 @@ botonSubmint.addEventListener("click", function(e){
   
     if(campoApellido.value.length<1){
         erroresApellido.last_name="Debes poner un Apellido"
-        campoApellido.style.background="rgb(254, 95, 95)"
+        campoApellido.style.borderColor="rgb(254, 95, 95)"
+        campoApellido.style.backgroundColor="rgb(58, 41, 41)"
 
     }else if(campoApellido.value.length>0 && campoApellido.value.length<2){
         erroresApellido.last_name="El nombre debe tener al menos 2 caracteres"
-        campoApellido.style.background="rgb(254, 95, 95)"
+        campoApellido.style.borderColor="rgb(254, 95, 95)"
+        campoApellido.style.backgroundColor="rgb(58, 41, 41)"
 
     }else{
         erroresApellido.last_name=""
-        campoApellido.style.color="black"
-        campoApellido.style.background="green"
+        campoApellido.style.borderColor=null
+        campoApellido.style.backgroundColor=null
+        campoApellido.style.borderColor="rgb(80, 189, 46)"
     }
     if(Object.keys(erroresApellido).length >=1){
         errApellido.innerHTML =(erroresApellido.last_name) ? erroresApellido.last_name:"";
@@ -86,17 +92,20 @@ botonSubmint.addEventListener("click", function(e){
     
     if(campoEmail.value.length<1){
         erroresEmail.email="Debes poner un email"
-        campoEmail.style.background="rgb(254, 95, 95)"
+        campoEmail.style.borderColor="rgb(254, 95, 95)"
+        campoEmail.style.backgroundColor="rgb(58, 41, 41)"
         
 //Email valido 
     }else if(!campoEmail.value.match(mailformat)){
         erroresEmail.email="Email invalido"
-
+        campoEmail.style.borderColor="rgb(254, 95, 95)"
+        campoEmail.style.backgroundColor="rgb(58, 41, 41)"
 }
     else{
         erroresEmail.email=""
-        campoEmail.style.color="black"
-        campoEmail.style.background="white"
+        campoEmail.style.borderColor=null
+        campoEmail.style.backgroundColor=null
+        campoEmail.style.borderColor="rgb(80, 189, 46)"
 }  
 
     //No puede repertise
@@ -108,28 +117,34 @@ botonSubmint.addEventListener("click", function(e){
 
     }if(campoPassword.value.length<1){
         erroresPassword.Password="Debes poner una contraseña"
-        campoPassword.style.background="rgb(254, 95, 95)"
+        campoPassword.style.borderColor="rgb(254, 95, 95)"
+        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
 
     }else if(campoPassword.value.length>0 && campoPassword.value.length<8){
         erroresPassword.Password="La contraseña debe tener al menos 8 caracteres"
-        campoPassword.style.background="rgb(254, 95, 95)"
+        campoPassword.style.borderColor="rgb(254, 95, 95)"
+        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
 
     }else if ( !campoPassword.value.match(/[A-z]/) ) { //validar letra
         erroresPassword.Password="La contraseña debe contener una letra"
-        campoPassword.style.background="rgb(254, 95, 95)"
+        campoPassword.style.borderColor="rgb(254, 95, 95)"
+        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
 
     }else if ( !campoPassword.value.match(/[A-Z]/) ) {
         erroresPassword.Password="La contraseña debe contener una letra mayúscula"
-        campoPassword.style.background="rgb(254, 95, 95)"
+        campoPassword.style.borderColor="rgb(254, 95, 95)"
+        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
 
     }else if (!campoPassword.value.match(/\d/) ) {
         erroresPassword.Password="La contraseña debe contener un numero"
-        campoPassword.style.background="rgb(254, 95, 95)"
+        campoPassword.style.borderColor="rgb(254, 95, 95)"
+        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
 
     }else{
         erroresPassword.Password=""
-        campoPassword.style.color="black"
-        campoPassword.style.background="white"
+        campoPassword.style.borderColor=null
+        campoPassword.style.backgroundColor=null
+        campoPassword.style.borderColor="rgb(80, 189, 46)"
 }
 
     if(Object.keys(erroresPassword).length >=1){
@@ -138,12 +153,14 @@ botonSubmint.addEventListener("click", function(e){
 
 if(campoCategory.value.length<1){
     erroresCategoria.category="Debes poner una categoria"
-    campoCategory.style.background="rgb(254, 95, 95)"
+    campoCategory.style.borderColor="rgb(254, 95, 95)"
+    campoCategory.style.backgroundColor="rgb(58, 41, 41)"
 
 }else{
     erroresCategoria.category=""
-    campoCategory.style.color="black"
-    campoCategory.style.background="white"
+    campoCategory.style.borderColor=null
+    campoCategory.style.backgroundColor=null
+    campoCategory.style.borderColor="rgb(80, 189, 46)"
 }
 if(Object.keys(erroresCategoria).length >=1){
     errCategory.innerHTML =(erroresCategoria.category) ? erroresCategoria.category:"";}
@@ -152,7 +169,8 @@ if(Object.keys(erroresCategoria).length >=1){
     var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
     if(!allowedExtensions.exec(campoImagen.value ) && campoImagen.value.length>1){
         erroresImagen.userImage="'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'"
-        campoImagen.style.background="rgb(254, 95, 95)"
+        campoImagen.style.borderColor="rgb(254, 95, 95)"
+        campoImagen.style.backgroundColor="rgb(58, 41, 41)"
     }
     if(Object.keys(erroresImagen).length >=1){
         errImagen.innerHTML =(erroresImagen.userImage) ? erroresImagen.userImage:"";}

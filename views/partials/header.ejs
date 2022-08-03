@@ -1,41 +1,42 @@
+<link href="/css/HEADERYFOOTER.css" rel="stylesheet" />
+
 <header>
-  <link href="/css/HEADERYFOOTER.css" rel="stylesheet" />
-  <!-- Logo -->
-  <div class="logo">
-    <a href="/"><img src="/images/logo_tnt.png" alt="" ></a>
-  </div>
-  <!-- Icono para menu en celular -->
-  <div class="burger-menu">
-    <i class="fa fa-bars burger"></i>
-  </div>
-  <!-- menu para tablet y pc -->
-  <div class="menu_header">
-    <div class="elemento_menu"><a href="/">HOME</a></div>
-    <div class="elemento_menu"><a href="/events">EVENTOS</a></div>
-    <div class="elemento_menu"><a href="/carro">CARRITO</a></div>
-    <div class="elemento_menu"><a href="/events/create">CREAR EVENTO</a></div>
-  </div>
   
-  <% if(locals.isLogged) {%>
+  <div class="container">
+    
+    <div class="logo">
+      <a href="/"><img src="/images/logo_tnt.png" alt="" ></a>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/events">EVENTOS</a></li>
+        <li><a href="/carro">CARRITO</a></li>
+        <% if(locals.isLogged) {%>
+        <li><a href="/events/create">CREAR EVENTO</a></li>
+        <% } %>
+      </ul>
+    </nav>
+    
+    <% if(locals.isLogged) {%>
 
-    <div class="crea_un_evento">
-      <img src="/images/users/<%=locals.userLogged.image%>" width="40" style="border-radius: 100%;"/>
-      <div class="elemento_menu">
-            <p>Hola, <%=locals.userLogged.first_name%> </p>
+      <div class="right-box">
+        <div class="profile-pic" style="background-image: url(/images/users/<%=locals.userLogged.image%>);">
+        </div>
+        <div class="user-box">
+          <span>Hola, <%=locals.userLogged.first_name%></span>
+          <a href="/login/logout"> LOGOUT </a>
+        </div>
       </div>
+
+    <% } else { %>
+      
+      <div class="right-box">
+        <a class="btn register" href="/register">REGISTRATE</a>
+        <a class="btn login" href="/login">INICIA SESION</a>
+      </div>
+
+    <% } %>
   </div>
-  
-  <div class="elemento_menu"><a href="/login/logout"> LOGOUT </a> </div>
-
-  <% } else { %>
-
-  <div class="menu_header">  
-    <div class="elemento_menu"><a href="/register">REGISTRATE</a></div>
-    <div class="elemento_menu"><a href="/login"> INICIA SESION</a></div>  
-  </div>
-
-
-
-  <% } %>
-
 </header>

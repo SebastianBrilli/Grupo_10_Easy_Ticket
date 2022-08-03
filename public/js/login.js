@@ -36,17 +36,21 @@ botonSubmint.addEventListener("click", function(e){
     
     if(campoEmail.value.length<1){
         erroresEmail.email="Debes poner un email"
-        campoEmail.style.background="rgb(254, 95, 95)"
+        campoEmail.style.borderColor="rgb(254, 95, 95)"
+        campoEmail.style.backgroundColor="rgb(58, 41, 41)"
         
 //Email valido 
     }else if(!campoEmail.value.match(mailformat)){
         erroresEmail.email="Email invalido"
+        campoEmail.style.borderColor="rgb(254, 95, 95)"
+        campoEmail.style.backgroundColor="rgb(58, 41, 41)"
 
 }
     else{
         erroresEmail.email=""
-        campoEmail.style.color="black"
-        campoEmail.style.background="white"
+        campoEmail.style.borderColor=null
+        campoEmail.style.backgroundColor=null
+        campoEmail.style.borderColor="rgb(80, 189, 46)"
 }  
 
     //No puede repertise
@@ -58,12 +62,14 @@ botonSubmint.addEventListener("click", function(e){
 
     }if(campoPassword.value.length<1){
         erroresPassword.password="Debes poner una contraseña"
-        campoPassword.style.background="rgb(254, 95, 95)"
+        campoPassword.style.borderColor="rgb(254, 95, 95)"
+        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
 
     }else{
         erroresPassword.password=""
-        campoPassword.style.color="black"
-        campoPassword.style.background="white"
+        campoPassword.style.borderColor=null
+        campoPassword.style.backgroundColor=null
+        campoPassword.style.borderColor="rgb(80, 189, 46)"
 }
 
     if(Object.keys(erroresPassword).length >=1){

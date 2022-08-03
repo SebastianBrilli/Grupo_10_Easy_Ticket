@@ -1,116 +1,249 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  background-color: black;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: 'Nunito', sans-serif;
+  color:white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* CONTENEDORES */
+
+.container {
+  padding: 0 15px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* ROW COL */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.row .col {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.row .col:last-child {
+  padding-right: 0;
+}
+
+/* ALERTS */
+
+.alert {
+  position: relative;
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background-color: rgb(58, 41, 41);
+  border: solid 1px rgb(254, 95, 95);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: rgb(254, 95, 95);
+}
+
+.alert li {margin-bottom: 5px;}
+.alert li:last-child {margin-bottom: 0;}
+
+/* SECTIONS */
+
+section.banner-home {
+  background-color: orange;
+  padding: 3rem 0;
+}
+
+section.banner-home h2 {
+  text-align: center;  
+}
+
+/**/
+
+section.carousel-events {
+  padding: 4rem 0 3rem 0;
+}
+
+section.carousel-events h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/**/
+
+section.section-login-register h2 {
+  margin-bottom: 1rem;
+}
+
+section.section-login-register {
+  padding: 3rem 0;
+}
+
+section.section-login-register .form-container {
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  background-color: #222;
+}
+
+section.section-login-register .form-container.register {
+  width: 800px;
+}
+
+section.section-login-register .form-container.login {
+  width: 350px;
+}
+
+section.section-login-register .row .col {
+  margin-bottom: 1rem;
+}
+section.section-login-register .btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: solid 1px #ffffff22;
+}
+
+section.section-login-register .boton_guardar_evento {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 8px 12px;
+  color: yellow;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   
-  body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    background-color: black;
-    
-  }
-    /* ERRORES VALIDACIONES FRONT END */
+  background-color: yellow;
+  color: black;
+}
+/* ERRORES VALIDACIONES FRONT END */
 
 .erroresName{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresEmail{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresPassword{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresPrecio{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresEntradas{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresFecha{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 
 .erroresLugar{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 
 .erroresCiudad{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 
 .erroresCategoria{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 
 .erroresDescripcion{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 
 .erroresNombreRegister{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresApellidoRegister{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresEmailRegister{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresContraseñaRegister{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresImagenRegister{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
 .erroresCategoriaRegister{
   font-family: 'Nunito', sans-serif;
-  font-size: 1vw;
-  color: red;
+  font-size: 14px;
+  color: rgb(255, 131, 131);
   font-weight: lighter;
 }
   /*====== Formularios ======*/
@@ -123,10 +256,7 @@
   width: 90%;
 }
 
-.form-container {
-  width: 90%;
-  
-}
+
 
 .form-title{
   text-align: center;
@@ -136,11 +266,21 @@
 }
 
 .form-label {
+  display: block;
+  color: #919191;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.form-label.radio-check {
   display: flex;
-  margin: 0.3em;
-  font-size: 1.5em;
-  align-items: flex-start;
-  color: white;
+  flex-direction: row;
+}
+
+.radio-check input {
+  width: 16px ;
+  height: 16px ;
+  margin-right: 1rem;
 }
 
 .form-label-inv {
@@ -154,14 +294,14 @@
 .form-input {
   display: block;
   width: 100%;
-  height: 45px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 1.2em;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
-  border: solid 1px var(--gray);
-  padding: 0 15px;
-  color: gray;
+  border: solid 1px #363636;
+  padding: 12px 12px;
+  color: white;
+  background-color: #363636;
 }
 
 textarea.form-input {
@@ -255,72 +395,6 @@ textarea.form-input {
   
   }
   
-  
-  
-  /*HEADER*/
-  .contenedor_header{
-    z-index:10000;
-    position: fixed;
-  }
-  header{
-    background-color: rgba(0, 7, 0, 0.8);
-    width: 100vw;
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-      
-  }
-  
-  div.burger-menu {
-    text-align: center;
-    margin-top: 10px;
-  
-    
-  }
-  .crea_un_evento{
-    display: none;
-  }
-  .menu_header{
-    display: none;
-  }
-  
-  div.burger-menu i {
-    border-radius: 5px;
-    background-color: yellow;
-    color: rgb(0, 0, 0);
-    padding: 8px 10px;   
-    font-size: 20px;
-    width: 40;
-    margin-bottom: 3vw;
-  }
-  
-  
- 
-  .logo{
-    text-align: center;
-    margin-right: 1vw;
-  }
-  .logo img{
-   
-    width: 45vw;
-    text-align: center;
-    
-
-   
-}
-nav{
-  display: none;
-}
-header a{
-    text-decoration: none;
-    color: yellow;
-    
-}
-
-header nav a:hover{
-    color: #fff;
-}
-  /*HEADER*/
  
   
   /*BANNER*/
@@ -569,8 +643,6 @@ header nav a:hover{
 h3{
   color:white;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
   font-size: 7vw;
 }
 /*Fin titulo Eventos*/
@@ -796,80 +868,6 @@ main section article:hover .info_otros_eventos{
 main section article:hover .titulo_producto_otros_eventos{
   display: block;
 }
-
-  
-  /*FOOTER*/
-  footer {
-    background-color:rgba(54, 54, 54,0.30);
-    
-    
-  }
-  .contenedor_logo-footer{
-text-align: center;
-  }
-  .ft-sector{
-    display: flex;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    margin-left: 30vw;
-  }
-
-  .iconos-footer{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 2vw;
-    
-    
-
-  }
-  
-  .iconos-footer img{
-    width: 7vw;
-    height: 7vw;
-    filter: grayscale(100%)
-  }
-  .iconos-footer img:hover{
-    filter: none;
-  }
-  
- .logo_footer{
-   width: 30vw;
-   text-align: center;
- } 
- 
-  
-  h4.subtitulo-footer {
-    font-size: 11px;
-    text-align: center;
-    text-decoration: dotted;
-    margin: 3px;
-    margin-top: 5vw;
-    color: white;
-  }
-  
-  footer p {
-    text-align: center;
-    margin-top: 5px;
-    color: white;
-  }
-  
-  footer h4 {
-    text-align: center;
-    font-size: 10px;
-    color: white;
-  }
-  
-    
-    /*FIN FOOTER*/
-  
-  
-
-
-
-
-
-
-
 
 /* Detail product*/
  
@@ -1428,21 +1426,6 @@ font-size: 14px;
       }
   
  }
-  
-   /*footer*/ 
- .ft-sector{
-  display: flex;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
-  margin-left: 30vw;
-}
-
-
-
-
-
-
-
 
  /*CARRO COMPRAS*/ 
 
@@ -1536,81 +1519,6 @@ font-size: 14px;
       background-color: black;
       padding-top: 3rem ;
     }
-    /*HEADER*/
-    div.burger-menu {
-      display: none;
-    }
-    .contenedor_header{
-      z-index:1000;
-      position: fixed;
-    }
-    header{
-      height: 10vw;
-      display: flex;
-      justify-content: space-between;
-      text-align: center;align-items: center;
-      border-bottom: 1px dotted yellow;
-      background-color:rgba(0, 7, 0, 0.8);
-      
-    }
-    .logo{
-      text-align: center;
-      margin-left: 1vw;
-      margin-bottom:1vw;
-      
-      
-      
-    }
-    .logo img{
-     
-      width: 9vw;
-      text-align: center;
-    
-  
-     
-  }
-.menu_header{
-  display: flex;   
-}
-.elemento_menu {
- display:flex;
- background-color: rgba(0, 7, 0, 0.0);
- margin-left: 8px;
- margin-bottom: 8px;
- padding: 7px;
-}
-header a {
- color: white;
- text-decoration:none;
- font-size: 1vw;
- font-family: 'Roboto', sans-serif;
- font-weight: bold;
- margin:0 6px;
-}
-.elemento_menu:hover {
- color: black;
- background-color:yellow;
-}
-.elemento_menu:hover a{
-  color: black;
- }
-  .crea_un_evento {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    margin-right: 50px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    padding: 7px;
-    color:black 
- }
-  .crea_un_evento:hover {
-   background-color:#ffff00
-  }
-  .crea_un_evento:hover a{
-    color:black
-   }
-/* FIN HEADER*/
 
 
  /*BANNER*/
@@ -1721,7 +1629,6 @@ header a {
       font-size: 20px;
       font-family: 'Roboto', sans-serif;
       color: white;
-      margin-left: 19px;
       
       font-weight: bold;
     }
@@ -1884,103 +1791,6 @@ header a {
 
     
     
-  
-   /*FOOTER*/
-   footer {
-    background-color:rgba(54, 54, 54,0.30);
-    
-    
-    
-    
-  }
-  .contenedor_logo-footer{
-text-align: center;
-margin-left: 5vw;
-  }
-  .ft-sector{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin: 10px;
-    margin-top: 2vw;
-    
-    
-    
-  }
-  .ft-sector1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .iconos-footer{
-    display: flex;
-    justify-content: space-around;
-    
-   
-    
-    
-
-  }
-  .iconos-footer img{
-    width: 2vw;
-    height: 2vw;
-    filter: grayscale(100%)
-  }
-  .iconos-footer img:hover{
-    filter: none;
-  }
- 
- 
-  
-  h4.subtitulo-footer {
-   
-    text-decoration: dotted;
-   font-size: 10px;
-    color: white;
-    display: flex;
-    margin-top: 3vw;
-    margin-left: 25px;
-    margin-right: 25px;
-    
-  }
-  
-  footer p {
-    text-align: center;
-    font-size: 10px;
-    color: white;
-    display: flex;
-    margin-top: 3vw;
-    margin-left: 9px;
-  }
-  
-  footer h4 {
-   text-align: center;
-   margin-left: 2.5vw;;
-   margin-top: 2vw;;
-   color: white;
-   text-align: center;
-   display: block;
-  }
-  
-  .logo_footer{
-    width: 10vw;
-    margin-top: 15px;
-  }
-    
-
-h1{
-  color: wheat;
-  display: block;
-}
-
-
-
-
-
-
-
-
 
 
  /*CARRO COMPRAS*/ 
@@ -2088,14 +1898,7 @@ h1{
     align-self: center;
     width: 100%;
   }
-
-
-
-
-
-
-
-
+  
 
 /*DETALLE PRODUCTO*/ 
 
@@ -2117,10 +1920,6 @@ h1{
 }
 
 
-
-.form-container¨{
-  margin-top: 40vw;
-}
 /*BANNER222222222222222222222*/
   
 .banner_section_2{

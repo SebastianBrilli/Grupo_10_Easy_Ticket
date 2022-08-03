@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: 'Formulario de creación' }) %>
+<%- include('./partials/head', {title: 'Ingresar' }) %>
 
   <body>
-
+    
     <%-include('./partials/header')%>
+    
+    <section class="section-login-register">
+      <div class="container">
 
-      <main>
-        <div class="create-container">
-
-          <div class="form-title">
-            <h2>Iniciar Sesion:</h2>
-          </div>
-
-          <div class="form-container">
+          <div class="form-container login">
+            
+            <h2>Ingresar:</h2>
             <form action="/login" method="POST" class="Formulario">
 
-              <label class='form-label'">Ingrese su Email:</label>
+              <div class="row">
+                <div class="col">
+                  <label class='form-label'">Ingrese su Email:</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="Email" />
+                  <%if (locals.errors && errors.email){%>
+                    <p class="msgError"><%=errors.email.msg%> </p>
+                  <%}%>
+                  <div class="erroresEmailRegister">
+                    <p class="errores"></p>
+                  </div>
+                </div>
+              </div>
 
-              <div class="erroresEmailRegister">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" type="email" id="email" name="email" placeholder="Email" />
-              <%if (locals.errors && errors.email){%>
-                <p class="msgError"><%=errors.email.msg%> </p>
-              <%}%>
+              <div class="row">
+                <div class="col">
+                  <label class='form-label'>Ingrese su Contraseña:</label>
+                  <input class="form-input" type="password" id="password" name="password" placeholder="Contraseña" />
+                  <div class="erroresContraseñaRegister">
+                    <p class="errores"></p>
+                  </div>
+                </div>
+              </div>
 
-              <label class='form-label'>Ingrese su Contraseña:</label>
-              <div class="erroresContraseñaRegister">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" type="password" id="password" name="password" placeholder="Contraseña" />
+              <div class="row">
+                <div class="col">
+                  <label class="form-label radio-check">
+                    <input type="checkbox" class="form-input" name="remember_user"> Recordar mi usuario
+                  </label>
+                </div>
+              </div>
 
-          
-               
-              <label class="form-label">
-                    <input type="checkbox" class="form-input" name="remember_user">Recordar mi usuario
-              </label>
-                
-              
-
-              <div class='purchase-detail'>
+              <div class="btn-container">
                 <button type="submit" class="boton_guardar_evento">
-                  Confirmar
+                  Ingresar
                 </button>
               </div>
+              
             </form>
           </div>
+
         </div>
-      </main>
-      <script src="js/login.js"></script>
+      </section>
+            
       <%-include('./partials/footer')%>
+      <script src="js/login.js"></script>
   </body>
 
 </html>

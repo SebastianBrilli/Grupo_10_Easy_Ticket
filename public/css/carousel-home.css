@@ -1,0 +1,127 @@
+#main-banner * {
+    color: #eaeaea;
+}
+
+#main-banner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+    background-image: url(/images/banner/bg-home-banner.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+#main-banner article {
+}
+
+#main-banner article .container {
+    box-sizing: border-box;
+    display: flex;
+}
+
+#main-banner article .container .image img {
+    width: 256px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#main-banner article .container .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 3rem;
+}
+
+#main-banner article .container .caption *{
+    text-align: left;
+}
+
+#main-banner article .container .caption h3{
+    font-size: 3rem;
+}
+
+#main-banner article .container .caption h5{
+    font-size: 1.5rem;
+}
+
+#main-banner article .container .caption p{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#main-banner article .container .caption .container-btn {
+    display: flex;
+}
+
+#main-banner article .container .caption .container-btn .btn{
+    background-color: yellow;
+    color: black;
+    padding: 0.75rem 2rem;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#main-banner article .container .caption .container-btn .btn:hover {
+    background-color: black;
+    color: yellow;
+}
+
+/* Lista de eventos */
+
+#carousel-events-a {
+    margin-bottom: 2rem;
+}
+
+#carousel-events-a .item {
+    cursor: pointer;
+}
+
+#carousel-events-a .item article .caption {
+    position: absolute;
+    z-index: 100;
+    background-color: #00000000;
+    top: 0;
+    bottom: 0;
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+#carousel-events-a .item .image {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    overflow: hidden;    
+}
+
+#carousel-events-a .item article .caption:hover {
+    background-color: #00000088;
+}
+
+#carousel-events-a .item article .caption:hover .btn {
+    opacity: 1;
+}
+
+#carousel-events-a .item article .caption .btn {
+    background-color: yellow;
+    color: black;
+    padding: 0.75rem 2rem;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    opacity: 0;
+}
+
+#carousel-events-a .item article .caption .btn:hover {
+    background-color: black;
+    color: yellow;
+}

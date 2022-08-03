@@ -1,94 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: 'Formulario de registro de usuario' }) %>
-
+  <%- include('./partials/head', {title: 'Registrate' }) %>
+  
   <body>
-
+    
     <%-include('./partials/header')%>
 
-      <div class="create-container">
-        <div class="form-title">
+    <section class="section-login-register">
+      <div class="container">
+
+        <div class="form-container register">
           <h2>Registrate:</h2>
-        </div>
+          <%if (locals.errors){%>
+          <ul class="alert">
+            <%for(let i=0;i < errors.length;i++){%>
+            <li><%=errors[i].msg%></li>
+            <% } %>
+          </ul>
+          <% } %>
+          <%if (locals.errors && errors.email){%>
+          <ul class="alert">
+            <li><%=errors.email.msg%></li>
+          </ul>
+          <% } %>
 
-        <%if (locals.errors){%>
-          <ul>
-          <%for(let i=0;i < errors.length;i++){%>         
-              <li class="msgError"><%=errors[i].msg%> </li>
-          <%}%>
-        </ul>
-        <%}%>
-
-        <%if (locals.errors && errors.email){%>
-          <p class="msgError"><%=errors.email.msg%> </p>
-        <%}%>
-
-        <div class="form-container">
           <form action="/register" enctype="multipart/form-data" method="POST" class="formulario">
 
-            <label class='form-label' for="first_name">Ingresa tu Nombre:</label>
-            <div class="erroresNombreRegister">
-              <p class="errores"></p>
-             </div>
-            <input class="form-input" type="text" id="first_name" name="first_name" placeholder="Nombre" 
-            value= "<%= locals.old && old.first_name ? old.first_name : ''  %>" />
- 
-            <label class='form-label' for="last_name">Ingresa tu Apellido:</label>
-            <div class="erroresApellidoRegister">
-              <p class="errores"></p>
-             </div>
-            <input class="form-input" type="text" id="last_name" name="last_name" placeholder="Apellido"
-            value= "<%= locals.old && old.last_name ? old.last_name : ''  %>" />
-
-            <label class='form-label' for="email">Ingresa tu email:</label>
-            <div class="erroresEmailRegister">
-              <p class="errores"></p>
-             </div>
-            <input class="form-input" type="email" id="email" name="email" placeholder="aaa@bbbb.com" 
-            value= "<%= locals.old && old.email ? old.email: ''  %>"/>
-
-            <label class='form-label' for="password">Ingresa tu Contraseña:</label>
-            <div class="erroresContraseñaRegister">
-              <p class="errores"></p>
-             </div>
-            <input class="form-input" id="Password" type="password" name="password" placeholder="Contraseña" 
-            value= "<%= locals.old && old.password ? old.password : ''  %>"/>
-
-            <label class='form-label' >Categoria:</label>
-            <div class="erroresCategoriaRegister">
-              <p class="errores"></p>
-             </div>
-            <select name="category_id" id="category" class="form-input">
-            
-              <% for (let i=0; i < categorias.length; i++) {%>
-            
-                <option value = "<%= categorias[i].id %>" >
-                  <%=categorias[i].category%>
-                </option>
-            
-                <%}%>
-                  <!-- <option value="user" <%= locals.old && old.category ==='user' ? 'selected' : ''  %> >Usuario</option>
-                          <option value="admin" <%= locals.old && old.category ==='admin' ? 'selected' : ''  %>>Administrador</option> -->
-            
-            </select>
-
-            <label class='form-label' for="userImage">Imagen de usuario</label>
-            <div class="erroresImagenRegister">
-              <p class="errores"></p>
-             </div>
-            <input class="form-input" type="file"  name="userImage" id="userImage"/>
-
-            <div class='purchase-detail'>
-              <button class="boton_guardar_evento" type="submit">
-                Confirmar
-              </button>
+            <div class="row">
+              <div class="col">
+                <label class='form-label' for="first_name">Ingresa tu Nombre:</label>
+                <input class="form-input" type="text" id="first_name" name="first_name" placeholder="Nombre" value= "<%= locals.old && old.first_name ? old.first_name : ''  %>" />
+                <div class="erroresNombreRegister">
+                  <p class="errores"></p>
+                </div>
+              </div>
+              <div class="col">
+                <label class='form-label' for="last_name">Ingresa tu Apellido:</label>
+                <input class="form-input" type="text" id="last_name" name="last_name" placeholder="Apellido" value= "<%= locals.old && old.last_name ? old.last_name : ''  %>" />
+                <div class="erroresApellidoRegister">
+                  <p class="errores"></p>
+                </div>
+              </div>
             </div>
 
+            <div class="row">
+              <div class="col">
+                <label class='form-label' for="email">Ingresa tu email:</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="aaa@bbbb.com" 
+                value= "<%= locals.old && old.email ? old.email: ''  %>"/>
+                <div class="erroresEmailRegister">
+                  <p class="errores"></p>
+                </div>
+              </div>
+              <div class="col">
+                <label class='form-label' for="password">Ingresa tu Contraseña:</label>
+                <input class="form-input" id="Password" type="password" name="password" placeholder="Contraseña" value= "<%= locals.old && old.password ? old.password : ''  %>"/>
+                <div class="erroresContraseñaRegister">
+                  <p class="errores"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label class='form-label' >Categoria:</label>
+                <select name="category_id" id="category" class="form-input">
+                <% for (let i=0; i < categorias.length; i++) {%>
+                  <option value = "<%= categorias[i].id %>" >
+                    <%=categorias[i].category%>
+                  </option>
+                <%}%>
+                <!-- <option value="user" <%= locals.old && old.category ==='user' ? 'selected' : ''  %> >Usuario</option>
+                <option value="admin" <%= locals.old && old.category ==='admin' ? 'selected' : ''  %>>Administrador</option> -->
+                </select>
+                <div class="erroresCategoriaRegister">
+                  <p class="errores"></p>
+                </div>
+              </div>
+              <div class="col">
+                <label class='form-label' for="userImage">Imagen de usuario</label>
+                <input class="form-input" type="file"  name="userImage" id="userImage"/>
+                <div class="erroresImagenRegister">
+                  <p class="errores"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-container ">
+              <button class="boton_guardar_evento" type="submit">
+                Crear Usuario
+              </button>
+            </div>
+            
           </form>
+
         </div>
       </div>
-      <script src="js/register.js"></script>
-      <%-include('./partials/footer')%>
-  </body>
+    </section>
+    
+    <%-include('./partials/footer')%>
+    <script src="/js/register.js"></script>
 
+  </body>
 </html>
