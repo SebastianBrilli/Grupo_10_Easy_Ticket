@@ -9,12 +9,17 @@ const path =require("path");
 const publicPath=path.resolve(__dirname,"./public");
 const methodOverride = require('method-override');
 
+
 //Importamos las rutas
 const rutasHome=require('./routes/rutasHome.js')
 const rutasEvents=require('./routes/rutasEvents.js')
 const rutasCarroDeCompras=require('./routes/rutasCarroDeCompras.js')
 const rutasLogin=require('./routes/rutasLogin.js')
 const rutasRegister=require('./routes/rutasRegister.js')
+//IMPORTAMOS APIS
+const rutasUsers=require("./routes/api/rutasUsers")
+const rutasProducts=require("./routes/api/rutasProducts")
+
 
 // Requerimos el middleware
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
@@ -59,6 +64,9 @@ app.use("/carro",rutasCarroDeCompras);
 app.use("/login",rutasLogin);
 app.use("/register",rutasRegister);
 
+//APIS
+app.use("/api",rutasUsers);
+app.use("/api",rutasProducts);
 
 
 
