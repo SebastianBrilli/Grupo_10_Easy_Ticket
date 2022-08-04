@@ -1,5 +1,4 @@
 window.addEventListener("load", function(){
-    console.log('hola')
 
     let cantidadEntradas= document.getElementById("cantidad-entradas")
     let precio= document.getElementById("price")
@@ -18,12 +17,6 @@ window.addEventListener("load", function(){
         total.innerText=(valorTotal)+' $'
     })
 
-
-    // botonConfirmar.addEventListener("submit", function(e){
-    // e.preventDefault();
-
-
-    // })
 })
      
 

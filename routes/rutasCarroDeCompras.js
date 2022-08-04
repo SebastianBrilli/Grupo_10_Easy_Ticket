@@ -5,15 +5,8 @@ const carroController = require('../controllers/carroController')
 
 const guestToBuy = require('../middlewares/guestToBuy')
 
-//Primera ruta de pruductDetail
-router.get('/', carroController.carro);
+router.get('/:id', guestToBuy, carroController.show);
 
-//Segunda ruta de pruductDetail
-router.get('/:id', carroController.show);
-router.post('/:id', guestToBuy, carroController.confirm);
-
-//Tercera ruta de pruductDetail
-//router.get('/', controller.???);
-
+router.post('/:id', carroController.confirm);
 
 module.exports = router;
