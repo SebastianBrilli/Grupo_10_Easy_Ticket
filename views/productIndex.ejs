@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head',{title: 'Todos los eventos'}) %>
-  <body>
-    <%-include('./partials/header')%>
-        <main>
-            <section class="eventos">
-                <h3>Todos los eventos</h3>
+    <%- include('./partials/head',{title: 'Eventos'}) %>
+    <body>
+        <%-include('./partials/header')%>
+        
+        <section class="section-common">
+            <div class="container">
+                <h2>Todos los eventos</h2>
 
-                <div class="products">
+                <div class="event-container">
                 <% for (let i=0; i < event.length; i++) {%>
-                <article>
-                    <div class="main-article">
-                    <img
-                        class="img_evento"
-                        src="/images/<%= event[i].image%>"
-                        width="360"
-                        alt="Imagen evento"
-                    />
-                    <p class="titulo_producto"><%= event[i].name%></p>
-                    <p class="description"> <%= event[i].description%> $</p>
-                    <a class="info" href="/events/<%=event[i].id%>">
-                        Mas informacion ></a>
-                    </div>
-                </article>
-                <%}%>     
+                    <article style="background-image: url('/images/<%= event[i].image %>');" >
+                        <div class="caption">
+                            <h4 class="title"><%= event[i].name%></h4>
+                            <p class="desc"> <%= event[i].description.slice(0,80).concat('...'); %></p>
+                            <a class="btn" href="/events/<%=event[i].id%>">
+                                Mas informacion
+                            </a>
+                        </div>
+                    </article>
+                <%}%>
                 </div>
-            </section>
-        </main>
 
-    <%-include('./partials/footer')%>
-  
-</body>
+            </div>
+        </section>
+        <%-include('./partials/footer')%>
+
+    </body>
 </html>

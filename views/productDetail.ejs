@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', {title: 'Detalle del evento'}) %>
-<body>
+  <%- include('./partials/head', {title: selectedEvent.name}) %>
+  
+  <body>
+    
+    <%-include('./partials/header')%>
 
-  <%-include('./partials/header')%>
-           
-<main>    
-    <article class="banner_section_2">
-      <div class="c_tc_pd"> <p class="titulo_banner_2"><%=selectedEvent.name%></p>  </div>
-        <div class="contenedor_imagen_banner_pd">
+    <section class="section-common product-detail">
+      <div class="container">
 
-          <img class="img_evento_principal_2" src="/images/<%=selectedEvent.image%>" width="50" alt="Imagen evento" class="product_img"> 
-          
-              
-         </div>
+        <div class="row">
+          <div class="col">
+            <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">
+            </div>
+          </div>
+          <div class="col">
 
-      <div class="contenedor_banner_3">
-         <div class="c_t_pd"> <p class="titulo_banner_2"><%=selectedEvent.name%></p>  </div>
-         <div class="c_i_pd"><p class="info_banner_2"><%=selectedEvent.address%> </p> </div>
-         <div class="c_f_pd">
-          <p class="info_banner_2">  
-          <%=selectedEvent.date.getUTCDate()%> /
-          <%=selectedEvent.date.getMonth()+1%> /
-          <%=selectedEvent.date.getFullYear()%>
-        </p> 
-        </div>
-         <div class="c_h_pd"><p class="info_banner_2">  <%=selectedEvent.hora%></p> </div>
-         
-         <div class="c_d_pd"> <p class="description_banner_2"> <%=selectedEvent.description%></p> </div>
-         
-         <div class="c_descuentos_pd">
-            <div class="c_banco_pd"> <img src="/images/visa.png" alt=""> </div>
-            <div class="c_banco_pd"> <img src="/images/AEX.png" alt=""> </div>
-            <div class="c_banco_pd"> <img src="/images/master.png" alt=""> </div>
-        </div> 
-           
-            
-            <div class="c_bs_pd">
-                <div class="botones_detalle">
-                  <a href="/carro/<%=selectedEvent.id%>"><button type="button" >Comprar</button></a>
+            <div class="header">
+              <div class="date">
+                <div class="calendar">
+                  <span><%=selectedEvent.date.getUTCDate()%>/<%=selectedEvent.date.getMonth()+1%></span>
+                  <span><%=selectedEvent.date.getFullYear()%></span>
                 </div>
-                <!-- <div class="botones_detalle">
-                    <a href="/events/<%=selectedEvent.id%>/edit"><button type="button" >Editar Evento</button></a> 
-                </div> -->
-            </div>      
-
-        </div>       
-         
-              
-      </article>
-      <div class="Video_Evento">
-      <video controls src="/images/<%=selectedEvent.video%>" ></video>
-     </div>
-       <section class="eventos">
-            <h3>Tambien podria interesarte</h3>
-            
-            <div class="products">
-                <% for (let i=0; i < recomendedEvent.length; i++) {%>
-                <article>
-                  <div class="main-article">
-                    <img
-                      class="img_evento"
-                      src="/images/<%= recomendedEvent[i].image%>"
-                      width="360"
-                      alt="Imagen evento"
-                    />
-                    <p class="titulo_producto"><%= recomendedEvent[i].name%></p>
-                    <p class="description">
-                      <%= recomendedEvent[i].description%>
-                    </p>
-                    <a class="info" href="/events/<%=recomendedEvent[i].id%>">
-                      Mas informacion ></a>
-                  </div>
-                </article>
-                <%}%>     
+                <div class="time">
+                  <p><%=selectedEvent.hora%></p>
+                </div>
               </div>
-           
-        </section>
-    </main>  
+              <h1><%=selectedEvent.name%></h1>
+              
+            </div>
+
+            <div class="location"><%=selectedEvent.address%></div>
+
+            <p class="desc"><%=selectedEvent.description%></p>
+
+            <hr>
+
+            <div class="payment-methods">
+              <h5>Tarjetas admitidas</h5>
+              <div class="cards">
+                <img src="/images/visa.png" alt="">
+                <img src="/images/AEX.png" alt="">
+                <img src="/images/master.png" alt="">
+              </div>
+            </div>
+
+            <hr>
+
+            <a href="/carro/<%=selectedEvent.id%>" class="btn">Comprar</a>
+            
+            <!--video controls src="/images/<%=selectedEvent.video%>" ></video-->
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-common">
+      <div class="container">
+        <h2>Tambien podria interesarte</h2>
+
+        <div class="event-container">
+        <% for (let i=0; i < recomendedEvent.length; i++) {%>
+            <article style="background-image: url('/images/<%= recomendedEvent[i].image %>');" >
+                <div class="caption">
+                    <h4 class="title"><%= recomendedEvent[i].name%></h4>
+                    <p class="desc"><%= recomendedEvent[i].description.slice(0,60).concat('...'); %></p>
+                    <a class="btn" href="/events/<%=recomendedEvent[i].id%>">
+                        Mas informacion
+                    </a>
+                </div>
+            </article>
+        <%}%>
+        </div>
+
+      </div>
+    </section>
+
     <%-include('./partials/footer')%>
-</body>
+  </body>
 </html>

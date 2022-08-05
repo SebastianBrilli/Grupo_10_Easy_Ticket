@@ -10,7 +10,6 @@ header {
   right: 0;
   top: 0;
   z-index: 10;
-  border-bottom: solid 3px yellow;
   backdrop-filter: blur(10px);
   background-color: #00000080;
 }
@@ -26,13 +25,13 @@ header .container .logo {
 }
 
 header .container .logo img {
-  max-width: 125px;
+  max-width: 64px;
 }
 
 header .container nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 1
 }
 
@@ -79,6 +78,8 @@ header .container nav ul li:last-child a {
 header .container .right-box {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 header .container .right-box .btn {

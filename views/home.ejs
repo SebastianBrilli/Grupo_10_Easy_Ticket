@@ -63,70 +63,63 @@
       </div>
     </section>
 
+    
+    <% let slug = ""; %>
     <%for (let j=0;j< category.length; j++) {%>
+    <% slug += "x"; %>
 
     <section class="carousel-events">
 
-      <h2>Eventos en <%= category[j].category%></h2>
+      <h2>Eventos en <%= category[j].category %></h2>
 
-      <div id="carousel-events-a" class="owl-carousel owl-theme">
+      <script>       
+      $(document).ready(function(){ 
+        $('#carousel-events-<%= slug.toString() %>').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                570:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                1024:{
+                    items:5
+                }
+            }
+        });
+      });
+      </script>
+
+      <div id="carousel-events-<%= slug.toString() %>" class="owl-carousel owl-theme owl-theme-a">
+        
+        <% let  seleccion = event.filter(elemento => elemento.category_id === category[j].id)%>
+        <% for (let i=0; i < seleccion.length; i++) {%>
         <div class="item">
           <article>
             <div class="caption">
-              <a href="/register" class="btn">Más información</a>
+              <h4 class="title"><%= seleccion[i].name %></h4>
+              <p class="desc"><%= seleccion[i].description.slice(0,80).concat('...'); %></p>
+              <a href="/events/<%=seleccion[i].id%>" class="btn">Más información</a>
             </div>
           </article>
           <div class="image">
-            <img src="images/banner/banner-home-a.jpg"/>
+            <img src="../images/<%= seleccion[i].image%>"/>
           </div>
-        </div>
-      </div>
+        </div>        
+        <% } %>  
 
-      <div class="container-btn">
-        <a class="btn btn-sm btn-red">Ver todos los eventos</a>
       </div>
 
     </section>
 
     <% } %>
-
-     <%for (let j=0;j< category.length; j++) {%>
-     
-      <section class="eventos">
-        <h3>Eventos en <%= category[j].category%></h3>
-
-        <% let  seleccion = event.filter(elemento => elemento.category_id === category[j].id)%>
-        <div class="products">
-          
-          
-          <% for (let i=0; i < seleccion.length; i++) {%>
-          <article>
-            <div class="main-article">
-              <img
-                class="img_evento"
-                src="/images/<%= seleccion[i].image%>"
-                width="360"
-                alt="Imagen evento"
-              />
-              <p class="titulo_producto"><%= seleccion[i].name%></p>
-              <p class="description">
-                <%= seleccion[i].description%>
-              </p>
-              <a class="info" href="/events/<%=seleccion[i].id%>">
-                Mas informacion</a>
-            </div>
-          </article>
-          <%}%>  
-          
-          
-        </div>
-
-      </section>
-
-      <% } %>
-
-
-    </main>
+      
     
     <%-include('./partials/footer')%>
     <script src="/js/home.js"></script>

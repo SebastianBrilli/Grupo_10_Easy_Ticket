@@ -11,6 +11,7 @@
 
         <div class="form-container register">
           <h2>Registrate:</h2>
+
           <%if (locals.errors){%>
           <ul class="alert">
             <%for(let i=0;i < errors.length;i++){%>
@@ -18,6 +19,7 @@
             <% } %>
           </ul>
           <% } %>
+          
           <%if (locals.errors && errors.email){%>
           <ul class="alert">
             <li><%=errors.email.msg%></li>

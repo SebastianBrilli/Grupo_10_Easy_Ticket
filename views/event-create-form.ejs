@@ -1,108 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {title: 'Formulario de creación' }) %>
-
+<%- include('./partials/head', {title: 'Crear Evento' }) %>
   <body>
 
     <%-include('./partials/header')%>
 
-      <main>
-        <div class="create-container">
+    <section class="section-login-register">
+      <div class="container">
 
-          <div class="form-title">
-            <h2>Formulario de creación de eventos</h2>
-          </div>
-
+        <div class="form-container register">
+        
+          <h2>Formulario de creación de eventos</h2>
+          
           <%if (locals.errors){%>
-            <ul>
-            <%for(let i=0;i < errors.length;i++){%>         
-                <li class="msgError"><%=errors[i].msg%> </li>
-            <%}%>
-          </ul>
+            <ul class="alert">
+              <%for(let i=0;i < errors.length;i++){%>
+                <li><%=errors[i].msg%></li>
+              <%}%>
+            </ul>
           <%}%>
 
-          <div class="form-container">
-            <form action="/events/create" enctype="multipart/form-data" method="POST" class="Formulario">
+          <form action="/events/create" enctype="multipart/form-data" method="POST">
 
-              <label class='form-label' >Nombre del Evento:</label>
-              <div class="erroresName">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" type="text" id="name" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
-
-              <label class='form-label' >Precio de la entrada:</label>
-              <div class="erroresPrecio">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" type="number" id="price" name="price" placeholder="Ej: 20" value= "<%= locals.old && old.price ? old.price : ''  %>" />
-
-              <label class='form-label' >Stock de entradas disponibles:</label>
-              <div class="erroresEntradas">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" type="number" id="discount" name="stock" placeholder="Ej: 1000" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
-
-              <label class='form-label' for="date">Fecha:</label>
-              <div class="erroresFecha">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" 
-              id="date"
-              type="date" 
-              name="date" 
-              min= "2022-07-16"
-              max="2024-07-16"
-              placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
-
-              <label class='form-label' for="address">Lugar:</label>
-              <div class="erroresLugar">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" id="address" type="text" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
-
-              <label class='form-label' >Ciudad:</label>
-              <div class="erroresCiudad">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" id="city" type="text" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" /> -->
-
-              <label class='form-label' >Categoria:</label>
-              <div class="erroresCategoria">
-                <p class="errores"></p>
-               </div>
-              <select name="category_id" id="category" type="number" class="form-input">
-
-                <%for (let i=0; i< categorias.length ; i++){ %>
-                  <option value="<%=categorias[i].id%>"><%=categorias[i].category%></option>
-                <% } %>
-
-              </select>
-
-              <label class='form-label' >Imagen del evento:</label>
-              <div class="erroresImagen">
-                <p class="errores"></p>
-               </div>
-              <input class="form-input" id="image" type="file" name="image" />
-
-              <label class='form-label' for="description">Descipción:</label>
-              <div class="erroresDescripcion">
-                <p class="errores"></p>
-               </div>
-              <textarea name="description" id="description" class="form-input" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>
-
-              <div class='purchase-detail'>
-                <button type="submit" class="boton_guardar_evento">
-                  Guardar evento
-                </button>
+            <div class="row">
+              <div class="col">
+                <label class='form-label' >Nombre del Evento:</label>
+                <div class="erroresName">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Ej: Recital Los Piojos" value= "<%= locals.old && old.name ? old.name : ''  %>"/>
               </div>
+              <div class="col">
+                <label class='form-label' >Precio de la entrada:</label>
+                <div class="erroresPrecio">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" type="number" id="price" name="price" placeholder="Ej: 20" value= "<%= locals.old && old.price ? old.price : ''  %>" />
+              </div>
+            </div>
 
-            </form>
-          </div>
+            <div class="row">
+              <div class="col">
+                <label class='form-label' >Stock de entradas disponibles:</label>
+                <div class="erroresEntradas">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" type="number" id="discount" name="stock" placeholder="Ej: 1000" value= "<%= locals.old && old.discount ? old.discount : ''  %>" />
+              </div>
+              <div class="col">
+                <label class='form-label' for="date">Fecha:</label>
+                <div class="erroresFecha">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" 
+                id="date"
+                type="date" 
+                name="date" 
+                min= "2022-07-16"
+                max="2024-07-16"
+                placeholder="Ej: 12/07/22" value= "<%= locals.old && old.date ? old.date : ''  %>" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label class='form-label' for="address">Lugar:</label>
+                <div class="erroresLugar">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" id="address" type="text" name="address" placeholder="Ej: Luna Park" value= "<%= locals.old && old.address ? old.address : ''  %>" />
+              </div>
+              <div class="col">
+                <label class='form-label' >Ciudad:</label>
+                <div class="erroresCiudad">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" id="city" type="text" name="city" placeholder="Rosario"  value= "<%= locals.old && old.city ? old.city : ''  %>" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label class='form-label' >Categoria:</label>
+                <div class="erroresCategoria">
+                  <p class="errores"></p>
+                </div>
+                <select name="category_id" id="category" type="number" class="form-input">
+
+                  <%for (let i=0; i< categorias.length ; i++){ %>
+                    <option value="<%=categorias[i].id%>"><%=categorias[i].category%></option>
+                  <% } %>
+
+                </select>
+              </div>
+              <div class="col">
+                <label class='form-label' >Imagen del evento:</label>
+                <div class="erroresImagen">
+                  <p class="errores"></p>
+                </div>
+                <input class="form-input" id="image" type="file" name="image" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label class='form-label' for="description">Descipción:</label>
+                <div class="erroresDescripcion">
+                  <p class="errores"></p>
+                </div>
+                <textarea name="description" id="description" class="form-input" value= "<%= locals.old && old.description ? old.description : ''  %>"></textarea>
+                  </div>
+                </div>
+
+            <div class="btn-container ">
+              <button type="submit" class="boton_guardar_evento">
+                Guardar evento
+              </button>
+            </div>
+
+          </form>
         </div>
 
-      </main>
-      <script src="js/crearEvento.js"></script>
-      <%-include('./partials/footer')%>
-  </body>
+      </div>
+    </section>
 
+    <%-include('./partials/footer')%>
+    
+    <script src="js/crearEvento.js"></script>
+
+  </body>
 </html>

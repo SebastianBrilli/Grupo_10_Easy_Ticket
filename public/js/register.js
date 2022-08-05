@@ -36,6 +36,155 @@ const erroresPassword={};
 const erroresCategoria={};
 const erroresImagen={}; 
 
+
+
+campoNombre.addEventListener('input', e => {
+    //guardamos el valor actual del input
+    const value = parseInt(e.currentTarget.value);
+
+    //si el valor se pasa de 100 lo reseteamos a 0 y mostramos la alerta
+    if(campoNombre.value.length<1){
+        errores.first_name="Debes poner un nombre"
+        campoNombre.style.background="rgb(254, 95, 95)"
+
+    }else if(campoNombre.value.length>0 && campoNombre.value.length<2){
+        errores.first_name="El nombre debe tener al menos 2 caracteres"
+        campoNombre.style.background="rgb(254, 95, 95)"
+
+    }else{
+        errores.first_name=""
+        campoNombre.style.color="black"
+        campoNombre.style.background="green"
+    }
+    if(Object.keys(errores).length >=1){
+        errName.innerHTML =(errores.first_name) ? errores.first_name:"";
+        
+    }
+  });
+
+  campoApellido.addEventListener('input', e => {
+      //guardamos el valor actual del input
+      const value = parseInt(e.currentTarget.value);
+
+      if(campoApellido.value.length<1){
+        erroresApellido.last_name="Debes poner un Apellido"
+        campoApellido.style.background="rgb(254, 95, 95)"
+
+    }else if(campoApellido.value.length>0 && campoApellido.value.length<2){
+        erroresApellido.last_name="El nombre debe tener al menos 2 caracteres"
+        campoApellido.style.background="rgb(254, 95, 95)"
+
+    }else{
+        erroresApellido.last_name=""
+        campoApellido.style.color="black"
+        campoApellido.style.background="green"
+    }
+    if(Object.keys(erroresApellido).length >=1){
+        errApellido.innerHTML =(erroresApellido.last_name) ? erroresApellido.last_name:"";
+        
+    }
+    });
+
+    campoEmail.addEventListener('input', e => {
+      //guardamos el valor actual del input
+      const value = parseInt(e.currentTarget.value);
+      
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
+    if(campoEmail.value.length<1){
+        erroresEmail.email="Debes poner un email"
+        campoEmail.style.background="rgb(254, 95, 95)"
+        
+//Email valido 
+    }else if(!campoEmail.value.match(mailformat)){
+        erroresEmail.email="Email invalido"
+
+}
+    else{
+        erroresEmail.email=""
+        campoEmail.style.color="black"
+        campoEmail.style.background="white"
+}  
+
+    //No puede repertise
+
+    if(Object.keys(erroresEmail).length >=1){
+        errEmail.innerHTML =(erroresEmail.email) ? erroresEmail.email:"";}
+    });
+
+    campoPassword.addEventListener('input', e => {
+      //guardamos el valor actual del input
+      const value = parseInt(e.currentTarget.value);
+      
+      if(campoPassword.value.length<1){
+        erroresPassword.Password="Debes poner una contraseña"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if(campoPassword.value.length>0 && campoPassword.value.length<8){
+        erroresPassword.Password="La contraseña debe tener al menos 8 caracteres"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if ( !campoPassword.value.match(/[A-z]/) ) { //validar letra
+        erroresPassword.Password="La contraseña debe contener una letra"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if ( !campoPassword.value.match(/[A-Z]/) ) {
+        erroresPassword.Password="La contraseña debe contener una letra mayúscula"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else if (!campoPassword.value.match(/\d/) ) {
+        erroresPassword.Password="La contraseña debe contener un numero"
+        campoPassword.style.background="rgb(254, 95, 95)"
+
+    }else{
+        erroresPassword.Password=""
+        campoPassword.style.color="black"
+        campoPassword.style.background="white"
+}
+
+    if(Object.keys(erroresPassword).length >=1){
+        errPassword.innerHTML =(erroresPassword.Password) ? erroresPassword.Password:"";}
+    });
+
+    campoCategory.addEventListener('input', e => {
+      //guardamos el valor actual del input
+      const value = parseInt(e.currentTarget.value);
+      
+      if(campoCategory.value.length<1){
+        erroresCategoria.category="Debes poner una categoria"
+        campoCategory.style.background="rgb(254, 95, 95)"
+    
+    }else{
+        erroresCategoria.category=""
+        campoCategory.style.color="black"
+        campoCategory.style.background="white"
+    }
+    if(Object.keys(erroresCategoria).length >=1){
+        errCategory.innerHTML =(erroresCategoria.category) ? erroresCategoria.category:"";}
+    });
+
+   
+
+    
+
+    campoImagen.addEventListener('input', e => {
+      //guardamos el valor actual del input
+      const value = parseInt(e.currentTarget.value);
+      
+      var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    if(!allowedExtensions.exec(campoImagen.value ) && campoImagen.value.length>1){
+        erroresImagen.userImage="'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'"
+        campoImagen.style.background="rgb(254, 95, 95)"
+    }
+    if(Object.keys(erroresImagen).length >=1){
+        errImagen.innerHTML =(erroresImagen.userImage) ? erroresImagen.userImage:"";}
+    });
+
+   
+
+
+
+
 botonSubmint.addEventListener("click", function(e){
     e.preventDefault();
    
@@ -43,19 +192,16 @@ botonSubmint.addEventListener("click", function(e){
 
     if(campoNombre.value.length<1){
         errores.first_name="Debes poner un nombre"
-        campoNombre.style.borderColor="rgb(254, 95, 95)"
-        campoNombre.style.backgroundColor="rgb(58, 41, 41)"
+        campoNombre.style.background="rgb(254, 95, 95)"
 
     }else if(campoNombre.value.length>0 && campoNombre.value.length<2){
         errores.first_name="El nombre debe tener al menos 2 caracteres"
-        campoNombre.style.borderColor="rgb(254, 95, 95)"
-        campoNombre.style.backgroundColor="rgb(58, 41, 41)"
+        campoNombre.style.background="rgb(254, 95, 95)"
 
     }else{
         errores.first_name=""
-        campoNombre.style.borderColor=null
-        campoNombre.style.backgroundColor=null
-        campoNombre.style.borderColor="rgb(80, 189, 46)"
+        campoNombre.style.color="black"
+        campoNombre.style.background="green"
     }
     if(Object.keys(errores).length >=1){
         errName.innerHTML =(errores.first_name) ? errores.first_name:"";
@@ -66,19 +212,16 @@ botonSubmint.addEventListener("click", function(e){
   
     if(campoApellido.value.length<1){
         erroresApellido.last_name="Debes poner un Apellido"
-        campoApellido.style.borderColor="rgb(254, 95, 95)"
-        campoApellido.style.backgroundColor="rgb(58, 41, 41)"
+        campoApellido.style.background="rgb(254, 95, 95)"
 
     }else if(campoApellido.value.length>0 && campoApellido.value.length<2){
         erroresApellido.last_name="El nombre debe tener al menos 2 caracteres"
-        campoApellido.style.borderColor="rgb(254, 95, 95)"
-        campoApellido.style.backgroundColor="rgb(58, 41, 41)"
+        campoApellido.style.background="rgb(254, 95, 95)"
 
     }else{
         erroresApellido.last_name=""
-        campoApellido.style.borderColor=null
-        campoApellido.style.backgroundColor=null
-        campoApellido.style.borderColor="rgb(80, 189, 46)"
+        campoApellido.style.color="black"
+        campoApellido.style.background="green"
     }
     if(Object.keys(erroresApellido).length >=1){
         errApellido.innerHTML =(erroresApellido.last_name) ? erroresApellido.last_name:"";
@@ -92,20 +235,17 @@ botonSubmint.addEventListener("click", function(e){
     
     if(campoEmail.value.length<1){
         erroresEmail.email="Debes poner un email"
-        campoEmail.style.borderColor="rgb(254, 95, 95)"
-        campoEmail.style.backgroundColor="rgb(58, 41, 41)"
+        campoEmail.style.background="rgb(254, 95, 95)"
         
 //Email valido 
     }else if(!campoEmail.value.match(mailformat)){
         erroresEmail.email="Email invalido"
-        campoEmail.style.borderColor="rgb(254, 95, 95)"
-        campoEmail.style.backgroundColor="rgb(58, 41, 41)"
+
 }
     else{
         erroresEmail.email=""
-        campoEmail.style.borderColor=null
-        campoEmail.style.backgroundColor=null
-        campoEmail.style.borderColor="rgb(80, 189, 46)"
+        campoEmail.style.color="black"
+        campoEmail.style.background="white"
 }  
 
     //No puede repertise
@@ -117,34 +257,28 @@ botonSubmint.addEventListener("click", function(e){
 
     }if(campoPassword.value.length<1){
         erroresPassword.Password="Debes poner una contraseña"
-        campoPassword.style.borderColor="rgb(254, 95, 95)"
-        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
+        campoPassword.style.background="rgb(254, 95, 95)"
 
     }else if(campoPassword.value.length>0 && campoPassword.value.length<8){
         erroresPassword.Password="La contraseña debe tener al menos 8 caracteres"
-        campoPassword.style.borderColor="rgb(254, 95, 95)"
-        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
+        campoPassword.style.background="rgb(254, 95, 95)"
 
     }else if ( !campoPassword.value.match(/[A-z]/) ) { //validar letra
         erroresPassword.Password="La contraseña debe contener una letra"
-        campoPassword.style.borderColor="rgb(254, 95, 95)"
-        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
+        campoPassword.style.background="rgb(254, 95, 95)"
 
     }else if ( !campoPassword.value.match(/[A-Z]/) ) {
         erroresPassword.Password="La contraseña debe contener una letra mayúscula"
-        campoPassword.style.borderColor="rgb(254, 95, 95)"
-        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
+        campoPassword.style.background="rgb(254, 95, 95)"
 
     }else if (!campoPassword.value.match(/\d/) ) {
         erroresPassword.Password="La contraseña debe contener un numero"
-        campoPassword.style.borderColor="rgb(254, 95, 95)"
-        campoPassword.style.backgroundColor="rgb(58, 41, 41)"
+        campoPassword.style.background="rgb(254, 95, 95)"
 
     }else{
         erroresPassword.Password=""
-        campoPassword.style.borderColor=null
-        campoPassword.style.backgroundColor=null
-        campoPassword.style.borderColor="rgb(80, 189, 46)"
+        campoPassword.style.color="black"
+        campoPassword.style.background="white"
 }
 
     if(Object.keys(erroresPassword).length >=1){
@@ -153,14 +287,12 @@ botonSubmint.addEventListener("click", function(e){
 
 if(campoCategory.value.length<1){
     erroresCategoria.category="Debes poner una categoria"
-    campoCategory.style.borderColor="rgb(254, 95, 95)"
-    campoCategory.style.backgroundColor="rgb(58, 41, 41)"
+    campoCategory.style.background="rgb(254, 95, 95)"
 
 }else{
     erroresCategoria.category=""
-    campoCategory.style.borderColor=null
-    campoCategory.style.backgroundColor=null
-    campoCategory.style.borderColor="rgb(80, 189, 46)"
+    campoCategory.style.color="black"
+    campoCategory.style.background="white"
 }
 if(Object.keys(erroresCategoria).length >=1){
     errCategory.innerHTML =(erroresCategoria.category) ? erroresCategoria.category:"";}
@@ -169,8 +301,7 @@ if(Object.keys(erroresCategoria).length >=1){
     var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
     if(!allowedExtensions.exec(campoImagen.value ) && campoImagen.value.length>1){
         erroresImagen.userImage="'Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.'"
-        campoImagen.style.borderColor="rgb(254, 95, 95)"
-        campoImagen.style.backgroundColor="rgb(58, 41, 41)"
+        campoImagen.style.background="rgb(254, 95, 95)"
     }
     if(Object.keys(erroresImagen).length >=1){
         errImagen.innerHTML =(erroresImagen.userImage) ? erroresImagen.userImage:"";}

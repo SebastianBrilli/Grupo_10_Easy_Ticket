@@ -12,17 +12,23 @@
           <div class="form-container login">
             
             <h2>Ingresar:</h2>
+
+            <%if (locals.errors && errors.email){%>
+            <ul class="alert">
+              <li><%=errors.email.msg%></li>
+            </ul>
+            <% } %>
+
             <form action="/login" method="POST" class="Formulario">
 
               <div class="row">
                 <div class="col">
                   <label class='form-label'">Ingrese su Email:</label>
                   <input class="form-input" type="email" id="email" name="email" placeholder="Email" />
-                  <%if (locals.errors && errors.email){%>
-                    <p class="msgError"><%=errors.email.msg%> </p>
-                  <%}%>
+                  
                   <div class="erroresEmailRegister">
                     <p class="errores"></p>
+                    
                   </div>
                 </div>
               </div>
@@ -58,7 +64,7 @@
       </section>
             
       <%-include('./partials/footer')%>
-      <script src="js/login.js"></script>
+      <script src="../js/login.js"></script>
   </body>
 
 </html>

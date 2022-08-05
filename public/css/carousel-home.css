@@ -74,44 +74,71 @@
 
 /* Lista de eventos */
 
-#carousel-events-a {
+.owl-theme-a {
     margin-bottom: 2rem;
 }
 
-#carousel-events-a .item {
+.owl-theme-a .item {
     cursor: pointer;
 }
 
-#carousel-events-a .item article .caption {
+.owl-theme-a .item article .caption {
     position: absolute;
     z-index: 100;
     background-color: #00000000;
     top: 0;
     bottom: 0;
-    padding: 2rem 0;
+    padding: 2rem;
     width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     transition: 0.5s;
 }
 
-#carousel-events-a .item .image {
+.owl-theme-a .item .image {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
     overflow: hidden;    
 }
 
-#carousel-events-a .item article .caption:hover {
-    background-color: #00000088;
+.owl-theme-a .item article .caption:hover {
+    backdrop-filter: blur(3px);
+    background-color: #00000080;
 }
 
-#carousel-events-a .item article .caption:hover .btn {
+.owl-theme-a .item article .caption:hover .btn {
     opacity: 1;
+    transition: 0.5s;
 }
 
-#carousel-events-a .item article .caption .btn {
+.owl-theme-a .item article .caption h4{
+    font-size: 20px;
+    color: #ffffff00;
+}
+
+.owl-theme-a .item article:hover .caption h4{
+    color: #ffffffff;
+}
+
+.owl-theme-a .item article .caption p.desc {
+    position: relative;
+    padding-right: 16px;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    max-height: 62px;
+    overflow: hidden;
+    color: #ffffff00;
+}
+
+.owl-theme-a .item article:hover .caption p.desc {
+    color: #ffffffff;
+}
+
+.owl-theme-a .item article .caption .btn {
     background-color: yellow;
     color: black;
     padding: 0.75rem 2rem;
@@ -119,9 +146,10 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
     opacity: 0;
+    transition: 0.5s;
 }
 
-#carousel-events-a .item article .caption .btn:hover {
+.owl-theme-a .item article .caption .btn:hover {
     background-color: black;
     color: yellow;
 }

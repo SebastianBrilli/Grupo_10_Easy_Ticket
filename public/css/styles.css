@@ -7,7 +7,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  background-color: black;
+  background-color: #262628;
 }
 
 h2 {
@@ -22,6 +22,15 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-text-fill-color: white !important;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Buttons */
+
+button.btn, a.btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 /* CONTENEDORES */
@@ -84,12 +93,13 @@ section.banner-home h2 {
 /**/
 
 section.carousel-events {
-  padding: 4rem 0 3rem 0;
+  padding: 0;
 }
 
 section.carousel-events h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: 3rem;
+  margin: 8rem 0 8rem 0;
 }
 
 /**/
@@ -135,6 +145,7 @@ section.section-login-register .boton_guardar_evento {
   white-space: nowrap;
   padding: 8px 12px;
   color: yellow;
+  border: none;
 
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -143,6 +154,256 @@ section.section-login-register .boton_guardar_evento {
   background-color: yellow;
   color: black;
 }
+
+/**/
+
+section.section-common {
+  padding: 3rem 0;
+}
+
+section.section-common h2 {
+  text-align: center;
+  padding: 1rem 0 3rem 0;
+}
+
+/**/
+
+.event-container {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: top;
+  
+  grid-template-columns: repeat(5 , 1fr);
+  display: grid;    
+  gap: 1.5rem;
+}
+
+.event-container article {
+  position: relative;
+  width: 100%;
+  height: 21vw;
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.event-container article .caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+
+  background-color: #00000000;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  transition: 0.5s;
+}
+
+.event-container article .caption:hover {
+  backdrop-filter: blur(3px);
+  background-color: #00000080;
+}
+
+.event-container article .caption h4 {
+  font-size: 20px;
+  color: #ffffff00;
+  transition: 0.5s;
+}
+
+.event-container article .caption .desc {
+  position: relative;
+  padding-right: 16px;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  max-height: 62px;
+  overflow: hidden;
+  color: #ffffff00;
+  transition: 0.5s;
+}
+
+.event-container article .caption .btn {
+  background-color: yellow;
+  color: black;
+  padding: 0.75rem 2rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.event-container article .caption:hover h4,
+.event-container article .caption:hover .desc {  
+  color: #ffffffff;
+}
+
+.event-container article:hover .caption .btn {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+.event-container article .caption .btn:hover {
+  background-color: black;
+  color: yellow;
+}
+
+/**/
+
+.product-detail hr {
+  margin: 1.5rem 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.361);
+  border: None;
+}
+
+.product-detail h1 {
+  font-size: 3rem;
+  font-family: 'Nunito', sans-serif;
+  line-height: 3rem;
+}
+
+.product-detail h4 {
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+}
+
+.product-detail h1, .product-detail p {
+  color: white
+}
+
+.product-detail .row{
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.product-detail .row .col:first-child {
+  color: white;
+  display: flex;
+  justify-content: right;
+}
+
+.product-detail .img-event {
+  display: block;
+  width: 360px;
+  height: 480px;
+  overflow: hidden;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product-detail .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.product-detail .header .calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding-top: 0.5rem;
+  margin-right: 1rem ;
+  flex-direction: column;
+  background-image: url("/images/icon-calendar.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+
+.product-detail .header .calendar span {
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.product-detail .header .calendar span:first-child {
+  font-size: 1rem;
+  color: white;
+  text-indent: 1px;
+}
+
+.product-detail .location {
+  font-size: 1.5rem;
+  padding: 0 0 0 1.3rem;
+  background-position: left 5px;
+  background-size: auto 18px;
+  background-repeat: no-repeat;
+  background-image: url("/images/icon-location.png");  
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.product-detail .desc {
+  font-size: 1rem;
+}
+
+.product-detail .btn {
+  background-color: black;
+  color: yellow;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 4px yellow;
+  transition: 0.5s;
+}
+
+.product-detail .btn:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.product-detail .payment-methods h5 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.product-detail .payment-methods .cards {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.product-detail .payment-methods .cards img {
+  max-width: 48px;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ERRORES VALIDACIONES FRONT END */
 
 .erroresName{
