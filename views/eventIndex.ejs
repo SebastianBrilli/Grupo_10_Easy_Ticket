@@ -29,7 +29,10 @@
                                     <h3>
                                         <%= event.name %>
                                     </h3>
-                                    <h2>Fecha: <%= event.date %>
+                                    <h2>Fecha: 
+                                        <%=event.date.getUTCDate()%> /
+                                        <%=event.date.getMonth()+1%> /
+                                        <%=event.date.getFullYear()%>
                                     </h2>
                                     <h2>Lugar: <%= event.address %>, <%= event.city %>
                                     </h2>

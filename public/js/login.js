@@ -123,16 +123,6 @@ botonSubmint.addEventListener("click", function(e){
 })
 
 
-
-
-// const finalResult2 = Object.assign(erroresApellido);
-// const finalResult3 = Object.assign(erroresEmail);
-// const Finalfinal= Object.assign(errores,erroresApellido,erroresEmail)
-
-
-//if(Object.keys(Finalfinal).length <1){
-//    formulario.Submit();
-//}
     
 })
 
