@@ -4,46 +4,38 @@
 
     <body>
         <%-include('./partials/header')%>
+        
+        <section class="section-common product-detail list-event-user">
+            <div class="container">
+                <h2>Listado de Usuarios</h2>
 
-            <main>
-                <h1>Listado de Usuarios</h1>
-                <br>
-                <br>
-
-                <div class="container">
-                    <% users.forEach(user=> { %>
-                        <article class="card">
-                            <div class="card-left">
-                                <figure>
-                                    <img src="/images/users/<%= user.image ? user.image : 'default.png' %>" alt="">
-                                </figure>
-                                <h3>#<%= user.id %>
-                                </h3>
+                <% users.forEach(user=> { %>
+                    <div class="grid-elements">
+                        <div class="data-image">
+                            <img src="/images/users/<%= user.image ? user.image : 'default.png' %>" alt="">
+                        </div>
+                        <div class="data-info users">
+                            <div class="data-item">
+                                <span class="title"># <%= user.id %> - <%= user.first_name %> <%= user.last_name %></span>
+                                <span class="date">Categoría: <%= user.category %></span>
+                                <span class="address"><%= user.email %></span>
                             </div>
-                            <div class="card-content">
-                                <h3>
-                                    <%= user.first_name %>
-                                        <%= user.last_name %>
-                                </h3>
-                                <h2>Categoría: <%= user.category %>
-                                </h2>
-                                <h2>Email: <%= user.email %>
-                                </h2>
-                                <div class="botones_detalle">
-                                    <a href="edit/<%= user.id %>"><button type="button">Editar</button></a>
-
-                                    <form action="/register/delete/<%=user.id%>?_method=DELETE"
-                                        enctype="multipart/form-data" method="POST"> <button
-                                            type=" button">Borrar</button></form>
-
-                                </div>
+                            <div class="controls">
+                                <a class="btn" href="edit/<%= user.id %>">Editar</a>
+                                <form action="/register/delete/<%=user.id%>?_method=DELETE"
+                                    enctype="multipart/form-data" 
+                                    method="POST">
+                                    <button  class="btn btn-delete" type="button">Borrar</button>
+                                </form>
                             </div>
-                        </article>
-                        <% }) %>
-                </div>
-            </main>
+                        </div>
+                    </div>
+                    
+                <% }) %>
 
-            <%-include('./partials/footer')%>
+            </div>
+        </section>
+        <%-include('./partials/footer')%>
     </body>
 
 </html>

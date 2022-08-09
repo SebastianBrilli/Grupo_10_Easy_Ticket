@@ -1,129 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%-include('./partials/head',{title: 'Carrito de compras'})%>
-
+    <%-include('./partials/head',{title: 'Compra Finalizada'})%>
+    
     <body>
-        
         <%-include('./partials/header')%>
 
-        <section class="section-common product-detail">
-          <div class="container">
+        <section class="section-common product-detail sale">
+            <div class="container">
+                
+                <h2 class="icon-notif ">
+                  <span class="icon-ok"></span>
+                  Muchas gracias por tu compra!
+                </h2>
 
-            <div class="row">
-                <div class="col">
-                  <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">              
-                  </div>
+                <div class="btn-container">
+                  <a href="/events" class="btn">Volver a Eventos</a>
                 </div>
-                <div class="col">
-                  
-                  <% if(selectedEvent.featured){ %>
-                    <span class="featured">Evento Destacado</span>
-                  <% } %>
-      
-                  <div class="header">
-                    <div class="date">
-                      <div class="calendar">
-                        <span><%=selectedEvent.date.getUTCDate()%>/<%=selectedEvent.date.getMonth()+1%></span>
-                        <span><%=selectedEvent.date.getFullYear()%></span>
-                      </div>
-                      <div class="time">
-                        <p><%=selectedEvent.hora%></p>
-                      </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">
+                        </div>
                     </div>
-                    <h1><%=selectedEvent.name%></h1>
                     
-                  </div>
-      
-                  <div class="location"><%=selectedEvent.address%> - <%=selectedEvent.city%></div>
-      
-                  <p class="desc"><%=selectedEvent.description%></p>
-      
-                  <hr>
-      
-                  <div class="payment-methods">
-                    <h5>Tarjetas admitidas</h5>
-                    <div class="cards">
-                      <img src="/images/visa.png" alt="">
-                      <img src="/images/AEX.png" alt="">
-                      <img src="/images/master.png" alt="">
-                    </div>
-                  </div>
-      
-                  <hr>
-      
-                  <a href="/carro/<%=selectedEvent.id%>" class="btn">Comprar</a>
-                  
-                  <!--video controls src="/images/<%=selectedEvent.video%>" ></video-->
-      
-                </div>
-              </div>    
+                    <div class="col">
+                        <% if(selectedEvent.featured){ %>
+                        <span class="featured">Evento Destacado</span>
+                        <% } %>
+                        
+                        <div class="header">
+                            <div class="date">
+                                <div class="calendar">
+                                    <span><%=selectedEvent.date.getUTCDate()%>/<%=selectedEvent.date.getMonth()+1%></span>
+                                    <span><%=selectedEvent.date.getFullYear()%></span>
+                                </div>
+                                <div class="time">
+                                    <p><%=selectedEvent.hora%></p>
+                                </div>
+                            </div>
+                            <h1><%=selectedEvent.name%></h1>
+                        
+                        </div>
+                        
+                        <div class="location">
+                            <%=selectedEvent.address%> - <%=selectedEvent.city%>
+                        </div>
 
-          </div>
-        </section>
-   
-<main>
-    <section class="contenedor-sections">
-        <div class="foto">
-            <img class="Holapuqui" src="/images/<%= selectedEvent.image %>" alt="Imagen del Evento">
-        </div>
+                        <hr>
 
-            <section class="resumen-contenedor">
-            <p class="c_f_pd">Muchas Gracias por tu compra!</p>
-            <div class="resumen-body">
-                <div class="c_i_pd">
-                    <p class="info_banner_2">
-                        <%=selectedEvent.name%>
-                    </p>
-                </div>
-                <div class="c_f_pd">
-                    <p class="info_banner_2">
-                        <%=selectedEvent.address%>
-                    </p>
-                </div>
-                <div class="resumen-item">
-            
-                    <div class="resumen-item-detalle">
-                        <div class="c_f_pd">
-                            Fecha:
+                        <div class="payment-methods">
+                          <div class="price">
+                            <span class="text">Hemos enviado los datos de la operacion a tu correo:</span>
+                            <span class="text label-yellow"><%= user.email %></span>
+                            <hr>
+                            <span class="text">Número de operación:</span>
+                            <span class="text label-yellow">0000<%= sale.id %></span>
+                          </div>
                         </div>
-                        <div class="c_f_pd">
-                            <%=selectedEvent.date.getUTCDate()%> /
-                                <%=selectedEvent.date.getMonth()+1%> /
-                                    <%=selectedEvent.date.getFullYear()%>
-                        </div>
-                    </div>
 
-                    <div class="resumen-item-detalle">
-                        <div class="c_f_pd">
-                           El codigo de tu compra es:
+                        <hr class="separator">
+
+                        <div class="ticket-layout">
+                          <span class="label-address"><%=selectedEvent.address%></span>
+                          <span class="label-city"><%=selectedEvent.city%></span>
+                          <span class="label-name"><%=selectedEvent.name%></span>
+                          <span class="label-date"><%=selectedEvent.date.getUTCDate()%> / <%=selectedEvent.date.getMonth()+1%> / <%=selectedEvent.date.getFullYear()%></span>
+                          <span class="label-price">$<%=selectedEvent.price%></span>
+                          <span class="label-user-email"><%= user.email %></span>
+                          <span class="label-sale-id">0000<%= sale.id %></span>
+                
+                          <span class="label-sale-id-sm">0000<%= sale.id %></span>
+                          <span class="label-name-sm"><%=selectedEvent.name%></span>
+                          <span class="label-address-sm"><%=selectedEvent.address%></span>
+                          <span class="label-date-sm"><%=selectedEvent.date.getUTCDate()%> / <%=selectedEvent.date.getMonth()+1%> / <%=selectedEvent.date.getFullYear()%></span>
                         </div>
-                        <div class="c_f_pd">
-                          0000  <%= sale.id %>
-                        </div>
-                    </div>
-            
-            
-            
-                    <div class="resumen-item-detalle">
-                        <div class="c_f_pd">
-                            Enviaremos tus entradas a:
-                        </div>
-                        <div class="c_f_pd">
-                            <%= user.email %>
-                        </div>
-                    </div>
-            
-                    <div class="resumen-item-detalle" class="botones_detalle">
-                        <a href="/events"><button class="boton-resumen">Ver mas eventos</button></a>
+                        
+                        <!--video controls src="/images/<%=selectedEvent.video%>" ></video-->
                     </div>
                 </div>
+
             </div>
-            </section>
-        </div>
-    </section>
-</main>
+        </section>
 
-<%-include('./partials/footer')%>
-</body>
+        <script src= "/js/carro.js" ></script>
+        <%-include('./partials/footer')%>
+    </body>
 </html>

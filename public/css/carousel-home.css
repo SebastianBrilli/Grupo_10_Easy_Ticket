@@ -22,10 +22,11 @@
     width: 60%;
     box-sizing: border-box;
     display: flex;
+    margin-bottom: 2rem;
 }
 
 #main-banner article .container .image img {
-    max-width: 356px;
+    min-width: 356px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
@@ -46,6 +47,7 @@
 #main-banner article .container .caption h3{
     font-size: 3rem;
     font-family: 'Nunito', sans-serif;
+    line-height: 2.7rem;
     margin-bottom: 1rem;
 }
 
@@ -231,4 +233,75 @@
 .owl-theme-a .item article .caption .btn:hover {
     background-color: black;
     color: yellow;
+}
+
+@media only screen and (max-width: 1200px) {
+    #main-banner article .container .image img {
+        min-width: 220px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #main-banner article .container {
+        flex-direction: column ;
+    }
+
+    #main-banner article .container .image img {
+        max-width: 192px;
+        min-width: inherit;
+        margin: 0 auto 2rem auto;
+    }
+
+    #main-banner article .container .caption {
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    #main-banner article .container .caption *{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #main-banner article .container {
+        width: 80%;
+    }
+
+    #main-banner article .container .image img {
+        max-width: 128px;
+    }
+
+    #main-banner article .container .caption h3{
+        font-size: 2rem;
+    }
+
+    #main-banner article .container .caption p{
+        font-size: 1rem;
+    }
+
+    /**/
+
+    #main-banner .owl-carousel .owl-nav {
+        width: 99%;
+    }
+    
+    #main-banner .owl-carousel .owl-nav button {
+        height: 24px;
+        width: 24px;
+    }
+    
+    #main-banner .owl-carousel .owl-nav button span {
+        font-size: 32px;
+    }
+    
+    #main-banner .owl-carousel .owl-nav button.owl-next span {
+        top: -10px;
+        left: 8px;
+    }
+    
+    #main-banner .owl-carousel .owl-nav button.owl-prev span {
+        top: -10px;
+        left: 6px;
+    }
 }

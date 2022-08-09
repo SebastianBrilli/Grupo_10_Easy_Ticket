@@ -27,7 +27,6 @@
       <div id="carousel-home" class="owl-carousel owl-theme">
     
         <%for (let i=0;i < event.length;i++){ %>
-          <% console.log(event[i].featured) %>
           <% if(event[i].featured == 1){ %>
             <article>
               <div class="container">
@@ -36,20 +35,15 @@
                 </div>
                 <div class="caption">
                   <h5>Evento Destacado</h5>
-                  <h3>
-                    <%= event[i].name%>
-                  </h3>
-                  <p>
-                    <%= event[i].description%>
-                  </p>
+                  <h3><%= event[i].name%></h3>
+                  <p><%= event[i].description.slice(0,80).concat('...') %></p>
                   <div class="container-btn">
                     <a href="/events/<%= event[i].id%>" class="btn">Más información</a>
                   </div>
                 </div>
 
               </div>
-            </article>
-    
+            </article>   
     
             <% } %>
           <% } %>
@@ -64,26 +58,31 @@
 
         <section class="carousel-events">
 
-          <h2>Eventos en <%= category[j].category %></h2>
+          <h2><%= category[j].category %></h2>
 
       <script>       
       $(document).ready(function(){ 
         $('#carousel-events-<%= category[j].slug.toString() %>').owlCarousel({
             loop:true,
             margin:20,
-            nav:true,
             responsive:{
                 0:{
-                    items:1
+                    items: 1
                 },
-                570:{
-                    items:2
+                520:{
+                    items: 2
                 },
-                768:{
-                    items:3
+                820:{
+                    items: 3
                 },
                 1024:{
+                    items:4
+                },
+                1350:{
                     items:5
+                },
+                1700:{
+                    items:6
                 }
             }
         });
@@ -97,6 +96,9 @@
         <div class="item">
           <article>
             <div class="caption">
+              <% if(seleccion[i].featured){ %>
+                <span class="featured"></span>
+              <% } %>
               <h4 class="title"><%= seleccion[i].name %></h4>
               <p class="desc"><%= seleccion[i].description.slice(0,80).concat('...'); %></p>
               <a href="/events/<%=seleccion[i].id%>" class="btn">Más información</a>

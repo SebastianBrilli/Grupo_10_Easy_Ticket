@@ -3,60 +3,43 @@
 <%- include('./partials/head', {title: 'Listado de eventos' }) %>
 
     <body>
-
         <%-include('./partials/header')%>
+        
+        <section class="section-common product-detail list-event-user">
+            <div class="container">
+                <h2>Listado de Eventos</h2>
 
-            <main>
-                <div class="create-container">
-                    <div class="form-title">
-                        <h2>Listado de Eventos</h2>
+                <% event.forEach(event=> { %>
+                <div class="grid-elements">
+                    <div class="data-image">
+                        <img src="/images/<%= event.image ? event.image : 'LOGO_AMARILLO_FINAL.png' %>" alt="">
                     </div>
-
-                    <br>
-                    <br>
-                    <div class="container">
-                        <% event.forEach(event=> { %>
-                            <article class="card">
-                                <div class="card-left">
-                                    <figure>
-                                        <img src="/images/<%= event.image ? event.image : 'LOGO_AMARILLO_FINAL.png' %>"
-                                            alt="">
-                                    </figure>
-                                    <h3>#<%= event.id %>
-                                    </h3>
-                                </div>
-                                <div class="card-content">
-                                    <h3>
-                                        <%= event.name %>
-                                    </h3>
-                                    <h2>Fecha: 
-                                        <%=event.date.getUTCDate()%> /
-                                        <%=event.date.getMonth()+1%> /
-                                        <%=event.date.getFullYear()%>
-                                    </h2>
-                                    <h2>Lugar: <%= event.address %>, <%= event.city %>
-                                    </h2>
-                                    <br>
-                                    <br>
-                                    <p>
-                                        <%= event.description %>
-                                    </p>
-                                    <div class="botones_detalle">
-                                        <a href="<%= event.id %>/edit"><button type="button">Editar</button></a>
-
-                                        <form action="/events/delete/<%=event.id%>?_method=DELETE"
-                                            enctype="multipart/form-data" method="POST"> <button
-                                                type=" button">Borrar</button></form>
-
-                                    </div>
-                                </div>
-                            </article>
-                            <% }) %>
+                    <div class="data-info">
+                        <div class="data-item">
+                            <span class="title"># <%= event.id %> - <%= event.name %></span>
+                            <span class="date"><%=event.date.getUTCDate()%>/<%=event.date.getMonth()+1%>/<%=event.date.getFullYear()%></span>
+                            <span class="address"><%= event.address %>, <%= event.city %></span>
+                        </div>
+                        <div class="data-item-desc">
+                            <span class="desc"><%= event.description %></span>
+                        </div>
+                        <div class="controls">
+                            <a class="btn" href="<%= event.id %>/edit">Editar</a>
+                            <form action="/events/delete/<%=event.id%>?_method=DELETE"
+                                enctype="multipart/form-data" 
+                                method="POST">
+                                <button  class="btn btn-delete" type="button">Borrar</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </main>
+                <% }) %>
+                
+            </div>
+        </section>
 
-            <%-include('./partials/footer')%>
+        <%-include('./partials/footer')%>
+
     </body>
 
 </html>
