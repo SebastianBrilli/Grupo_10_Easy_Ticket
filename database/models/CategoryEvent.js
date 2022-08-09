@@ -13,6 +13,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
+        slug: {
+            type: dataTypes.STRING,
+            allowNull: false
+        }
     }
 
     let config = {

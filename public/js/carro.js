@@ -1,5 +1,6 @@
 window.addEventListener("load", function(){
 
+    let formulario=document.querySelector("form")
     let cantidadEntradas= document.getElementById("cantidad-entradas")
     let precio= document.getElementById("price")
     let total= document.getElementById("total")
@@ -17,6 +18,15 @@ window.addEventListener("load", function(){
         total.innerText=(valorTotal)+' $'
     })
 
+    formulario.addEventListener("submit", function(e){
+       
+
+        if (cantidadEntradas.value==0){
+            e.preventDefault();
+            alert("Debes seleccionar que cantidad de entradas deseas comprar")
+
+        }
+    })
 })
      
 

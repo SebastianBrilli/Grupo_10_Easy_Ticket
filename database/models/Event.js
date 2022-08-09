@@ -57,6 +57,11 @@ module.exports = (sequelize, dataTypes) => {
         video: {
             type: dataTypes.STRING,
         },
+        featured:{
+            type: dataTypes.BOOLEAN,
+            defaultValue: false
+
+        }
 
     }
 

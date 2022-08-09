@@ -3,7 +3,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "Matias13092005*",
-    "database": "easyTicketBd",
+    "database": "easyticketsdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

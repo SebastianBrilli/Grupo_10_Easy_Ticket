@@ -37,12 +37,21 @@
                                     <%=selectedEvent.date.getFullYear()%>
                         </div>
                     </div>
+
+                    <div class="resumen-item-detalle">
+                        <div class="c_f_pd">
+                           El codigo de tu compra es:
+                        </div>
+                        <div class="c_f_pd">
+                          0000  <%= sale.id %>
+                        </div>
+                    </div>
             
             
             
                     <div class="resumen-item-detalle">
                         <div class="c_f_pd">
-                            Te enviaremos la factura a:
+                            Enviaremos tus entradas a:
                         </div>
                         <div class="c_f_pd">
                             <%= user.email %>
