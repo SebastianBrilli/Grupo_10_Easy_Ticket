@@ -24,7 +24,7 @@ const carroController={
         let date = new Date();
 
 
-        db.Sale.create({
+        let sale = await db.Sale.create({
 
             date: date.toISOString().split('T')[0],
             event_id: confirmedEvent.id,
@@ -33,7 +33,7 @@ const carroController={
             total: (confirmedEvent.price * parseInt(req.body.quantity)),
         })
 
-        res.render('event-confirmed', {selectedEvent: confirmedEvent, user: req.session.userLogged})
+        res.render('event-confirmed', {selectedEvent: confirmedEvent, user: req.session.userLogged, sale:sale})
     }
 
 }

@@ -8,46 +8,63 @@
   <link href="css/carousel-home.css" rel="stylesheet" />
   <body>
     <%-include('./partials/header')%>
-
-    <%for (let j=0;j< category.length; j++) {%>      
-      <% if(category[j].slug == "destacados") {%>
-        <section id="main-banner">
-          <script>
-            $(document).ready(function(){
-              $('#carousel-home').owlCarousel({
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                nav:true,
-                responsive:{
-                  0:{
-                    items:1,
-                  }
-                }
-              });
-            });
-          </script>
-          <div id="carousel-home" class="owl-carousel owl-theme">
-
-            <% let  seleccion = event.filter(elemento => elemento.featured === true)%>
-            <% for (let i=0; i < seleccion.length; i++) {%>
     
+    <section id="main-banner">
+      <div id="carousel-home" class="owl-carousel owl-theme">
+
+        <% for (let i=0;i < event.length;i++){ %>
+          <% if(event[i].featured==1){ %>
             <article>
               <div class="container">
-                <div class="image">
-                    <img src="../images/<%= seleccion[i].image%>"/>
-                </div>
                 <div class="caption">
-                    <h5>Eventos Destacados</h5>
-                    <h3><%= seleccion[i].name %></h3>
-                    <p><%= seleccion[i].description.slice(0,80).concat('...'); %></p>
+                    <h5>Evento Destacado</h5>
+                    <h3><%= event[i].name%></h3>
+                    <p><%= event[i].description%></p>
                     <div class="container-btn">
-                        <a href="/events/<%=seleccion[i].id%>" class="btn">Más información</a>
+                        <a href="/events/<%= event[i].id%>" class="btn">Más información</a>
                     </div>
+                </div>
+                <div class="image">
+                    <img src="images/<%= event[i].image%>"/>
                 </div>
               </div>
             </article>
+
+
+            <% } %>
+         <% } %>
+
+        <!-- <article>
+          <div class="container">
+            <div class="caption">
+                <h5>Eventos principales</h5>
+                <h3>Lolla Pallooza</h3>
+                <p>Lollapalooza​ es un festival musical de los Estados Unidos que originalmente ofrecía bandas de rock alternativo, indie y punk rock;también hay actuaciones cómicas y de danza. Concebido en 1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza se realizó anualmente hasta 1997</p>
+                <div class="container-btn">
+                    <a href="/register" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/banner/banner-home-a.jpg"/>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <div class="container">
+            <div class="caption">
+                <h5>Eventos principales</h5>
+                <h3>Lolla Pallooza</h3>
+                <p>Lollapalooza​ es un festival musical de los Estados Unidos que originalmente ofrecía bandas de rock alternativo, indie y punk rock;también hay actuaciones cómicas y de danza. Concebido en 1991 por Perry Farrell, cantante de Jane's Addiction, Lollapalooza se realizó anualmente hasta 1997</p>
+                <div class="container-btn">
+                    <a href="/register" class="btn">Más información</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src=""/>
+            </div>
+          </div>
+        </article>
 
             <% } %>
     
@@ -64,62 +81,57 @@
 
           <h2>Eventos en <%= category[j].category %></h2>
 
-          <script>       
-          $(document).ready(function(){ 
-            $('#carousel-events-<%= category[j].slug.toString() %>').owlCarousel({
-                loop:true,
-                margin:20,
-                nav:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    570:{
-                        items:2
-                    },
-                    768:{
-                        items:3
-                    },
-                    1024:{
-                        items:5
-                    }
+      <script>       
+      $(document).ready(function(){ 
+        $('#carousel-events-<%= slug.toString() %>').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                570:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                1024:{
+                    items:5
                 }
-            });
-          });
-          </script>
+            }
+        });
+      });
+      </script>
 
-          <div id="carousel-events-<%= category[j].slug.toString() %>" class="owl-carousel owl-theme owl-theme-a">
-            
-            <% let  seleccion = event.filter(elemento => elemento.category_id === category[j].id)%>
-            <% for (let i=0; i < seleccion.length; i++) {%>
-            <div class="item">
-              <article>
-                <div class="caption">
-                  <% if(seleccion[i].featured){ %>
-                    <span class="featured"></span>
-                  <% } %>
-                  <h4 class="title"><%= seleccion[i].name %></h4>
-                  <p class="desc"><%= seleccion[i].description.slice(0,80).concat('...'); %></p>
-                  <a href="/events/<%=seleccion[i].id%>" class="btn">Más información</a>
-                </div>
-              </article>
-              <div class="image">
-                <img src="../images/<%= seleccion[i].image%>"/>
-              </div>
+      <div id="carousel-events-<%= slug.toString() %>" class="owl-carousel owl-theme owl-theme-a">
+        
+        <% let  seleccion = event.filter(elemento => elemento.category_id === category[j].id)%>
+        <% for (let i=0; i < seleccion.length; i++) {%>
+        <div class="item">
+          <article>
+            <div class="caption">
+              <h4 class="title"><%= seleccion[i].name %></h4>
+              <p class="desc"><%= seleccion[i].description.slice(0,80).concat('...'); %></p>
+              <a href="/events/<%=seleccion[i].id%>" class="btn">Más información</a>
             </div>
-            <% } %>  
-
+          </article>
+          <div class="image">
+            <img src="../images/<%= seleccion[i].image%>"/>
           </div>
+        </div>        
+        <% } %>  
 
-        </section>
+      </div>
 
-      <% } %>
+    </section>
 
-    <% } %><!-- Fin FOR Categorias -->
+    <% } %>
       
     
     <%-include('./partials/footer')%>
-    <script src="/js/share.js"></script>
+    <script src="/js/home.js"></script>
   
   </body>
 

@@ -19,6 +19,7 @@ const rutasRegister=require('./routes/rutasRegister.js')
 //IMPORTAMOS APIS
 const rutasUsers=require("./routes/api/rutasUsers")
 const rutasProducts=require("./routes/api/rutasProducts")
+const rutasSales=require("./routes/api/rutasSales")
 
 
 // Requerimos el middleware
@@ -67,6 +68,7 @@ app.use("/register",rutasRegister);
 //APIS
 app.use("/api",rutasUsers);
 app.use("/api",rutasProducts);
+app.use("/api",rutasSales);
 
 
 
