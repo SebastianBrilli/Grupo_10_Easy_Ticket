@@ -58,15 +58,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
         featured:{
-            type: dataTypes.BOOLEAN,
-            defaultValue: false
+            type: dataTypes.INTEGER,
+            defaultValue: 0
 
         }
-
-        featured: {
-            type: dataTypes.BOOLEAN,
-            defaultValue: false,
-        },
 
     }
 

@@ -25,15 +25,17 @@
       <ul>
         <li><a href="/">HOME</a></li>
         <li><a href="/events">EVENTOS</a></li>
-        <% if(locals.isLogged) {%>
+        <!-- <% if(locals.isLogged) {%>
         <li><a href="/events/create">CREAR EVENTO</a></li>
         <li><a href="/events/list">LISTA DE EVENTOS</a></li>
         <li><a href="/register/list">LISTA DE USUARIOS</a></li>
-        <% } %>
+        <% } %> -->
       </ul>
     </nav>
         
-
+    <div class="logo">
+      <a href="/"><img src="/images/logo_tnt.png" alt=""></a>
+    </div>
     
     <% if(locals.isLogged) {%>
 
