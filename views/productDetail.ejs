@@ -11,10 +11,14 @@
 
         <div class="row">
           <div class="col">
-            <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">
+            <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">              
             </div>
           </div>
           <div class="col">
+            
+            <% if(selectedEvent.featured){ %>
+              <span class="featured">Evento Destacado</span>
+            <% } %>
 
             <div class="header">
               <div class="date">
@@ -30,7 +34,7 @@
               
             </div>
 
-            <div class="location"><%=selectedEvent.address%></div>
+            <div class="location"><%=selectedEvent.address%> - <%=selectedEvent.city%></div>
 
             <p class="desc"><%=selectedEvent.description%></p>
 
@@ -64,6 +68,9 @@
         <div class="event-container">
         <% for (let i=0; i < recomendedEvent.length; i++) {%>
             <article style="background-image: url('/images/<%= recomendedEvent[i].image %>');" >
+              <% if(recomendedEvent[i].featured){ %>
+                  <span class="featured"></span>
+              <% } %>
                 <div class="caption">
                     <h4 class="title"><%= recomendedEvent[i].name%></h4>
                     <p class="desc"><%= recomendedEvent[i].description.slice(0,60).concat('...'); %></p>

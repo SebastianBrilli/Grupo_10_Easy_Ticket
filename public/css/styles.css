@@ -2,10 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   background-color: #262628;
 }
@@ -93,7 +97,7 @@ section.banner-home h2 {
 /**/
 
 section.carousel-events {
-  padding: 0;
+  padding: 0 2rem;
 }
 
 section.carousel-events h2 {
@@ -194,6 +198,20 @@ section.section-common h2 {
   cursor: pointer;
 }
 
+.event-container article .featured{
+  position: absolute;
+  display: block;
+  top: 1rem;
+  left: 1rem;
+  width: 32px;
+  height: 32px;
+  background-image: url(/images/icon-bookmark.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  z-index: 2;
+}
+
 .event-container article .caption {
   position: absolute;
   width: 100%;
@@ -276,7 +294,6 @@ section.section-common h2 {
 
 .product-detail h4 {
   font-size: 1.5rem;
-  font-family: Roboto, sans-serif;
 }
 
 .product-detail h1, .product-detail p {
@@ -305,6 +322,27 @@ section.section-common h2 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.product-detail .featured {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 1rem;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-indent: 1.5rem;
+  text-transform: uppercase;
+  color: yellow;
+
+  background-image: url(/images/icon-bookmark.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px auto;
 }
 
 .product-detail .header {
@@ -358,7 +396,7 @@ section.section-common h2 {
 }
 
 .product-detail .btn {
-  background-color: black;
+  background-color: #ffff0000;
   color: yellow;
   font-size: 1.25rem;
   padding: 0.5rem 1.5rem;
@@ -393,14 +431,58 @@ section.section-common h2 {
   margin-bottom: 0.5rem;
 }
 
+.product-detail .payment-methods .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.product-detail .payment-methods .price h5 {
+  margin-bottom: 0;
+}
 
+.product-detail .payment-methods .price span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white
+}
 
+.product-detail .payment-methods .price .label-yellow {
+  color: yellow
+}
 
+.product-detail .payment-methods .price.mb {
+  margin-bottom: 2rem;
+}
 
+.product-detail .payment-methods .price .select-number {
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 
+  border: none;  
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
 
+/**/
 
+.table-checkout {
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+}
+
+.table-checkout .image img {
+  max-width: 128px ;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
 
 
 
@@ -705,7 +787,6 @@ textarea.form-input {
     color: white;
     text-shadow: 5px 5px 10px black;
     text-align: start;
-    font-family: 'Roboto', sans-serif;
   }
   .titulo_banner {
     
@@ -720,7 +801,6 @@ textarea.form-input {
     color: white;
     text-shadow: 5px 5px 10px black;
     text-align:justify ;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     
   }
@@ -735,7 +815,6 @@ textarea.form-input {
     margin-top: 1px;
     text-decoration:none;
     color: black;
-    font-family: 'Roboto', sans-serif;
     background-color: #ffff00;
     padding: 2px;
     font-weight: bold;
@@ -768,7 +847,6 @@ textarea.form-input {
   color: white;
   font-size: 25vw;
   flex-grow: 0;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
   margin-left: 2vw;
   margin-bottom: 4vw;
@@ -779,7 +857,6 @@ textarea.form-input {
   color: white;
   font-size: 15vw;
   flex-grow: 0;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
   margin-left: 2vw;
   border-top: dotted yellow 2vw;
@@ -792,7 +869,6 @@ textarea.form-input {
   flex-grow: 0.65;
   font-size: 8vw;
   margin: 1vw;
-  font-family: 'Staatliches', cursive;
   align-items: center;
   justify-content: center;
   border-top: inset white 0.2vw;
@@ -806,7 +882,6 @@ textarea.form-input {
   font-size: 8vw;
   flex-grow: 0.15;
   margin-left: 2vw;
-  font-family: 'Staatliches', cursive;
   align-items: center;
   justify-content: center;
   margin-top: 1vw;
@@ -816,7 +891,6 @@ textarea.form-input {
   color: white;
   font-size: 8vw;
   flex-grow: 0.10;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
   margin-left: 2vw;
   
@@ -827,7 +901,6 @@ textarea.form-input {
   font-size: 2vw;
   flex-grow: 0.10;
   color: white;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
 }
 
@@ -969,7 +1042,6 @@ h3{
     background-color:white;
     font-weight: bold;
     border-radius: 3px;
-    font-family: 'Roboto', sans-serif;
 
 
 
@@ -991,7 +1063,6 @@ h3{
     background-color: rgba(255, 255, 0, 0.68);
     border-radius: 2px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
   }
   
   main section article:hover .img_evento {
@@ -1081,7 +1152,6 @@ main section article:hover .img_otros_eventos{
   font-size: 1vw;
   text-align:center;
   color: white;
-  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -1096,7 +1166,6 @@ main section article:hover .img_otros_eventos{
   margin-top: 1px;
   text-decoration:none;
   color:black;
-  font-family: 'Roboto', sans-serif;
   background-color: yellow;
   font-weight: bold;
   border-radius: 2px;
@@ -1121,7 +1190,6 @@ main section article:hover .info_otros_eventos{
   margin-top: 1px;
   text-decoration:none;
   color:black;
-  font-family: 'Roboto', sans-serif;
   background-color: yellow;
   font-weight: bold;
   border-radius: 2px;
@@ -1433,7 +1501,6 @@ font-size: 14px;
   color: white;
   font-size: 8vw;
   flex-grow: 0;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
   border-top: dotted yellow 1vw;
   border-bottom: dotted yellow 1vw;
@@ -1446,7 +1513,6 @@ font-size: 14px;
   flex-grow: 0.65;
   font-size: 5vw;
   margin: 1vw;
-  font-family: 'Staatliches', cursive;
   align-items: center;
   justify-content: center;
   border-top: inset white 0.2vw;
@@ -1460,7 +1526,6 @@ font-size: 14px;
   font-size: 7vw;
   flex-grow: 0.15;
   margin-left: 1vw;
-  font-family: 'Staatliches', cursive;
   align-items: center;
   justify-content: center;
   margin-top: 1vw;
@@ -1470,7 +1535,6 @@ font-size: 14px;
   color: white;
   font-size: 6vw;
   flex-grow: 0.10;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
   
   
@@ -1480,7 +1544,6 @@ font-size: 14px;
   font-size: 2vw;
   flex-grow: 0.10;
   color: white;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
 }
 
@@ -1563,7 +1626,6 @@ font-size: 14px;
       color: white;
       text-shadow: 5px 5px 10px black;
       text-align:justify ;
-      font-family: 'Roboto', sans-serif;
       font-weight: bold;
       
     }
@@ -1580,7 +1642,6 @@ font-size: 14px;
       background-color: rgba(255, 255, 0, 0.68);
       border-radius: 2px;
       font-weight: bold;
-      font-family: 'Roboto', sans-serif;
     }
 
 
@@ -1597,7 +1658,6 @@ font-size: 14px;
       color: white;
       text-shadow: 5px 5px 10px black;
       text-align: start;
-      font-family: 'Roboto', sans-serif;
     }
     .banner_section:hover .description_banner {
       display: block;
@@ -1613,7 +1673,6 @@ font-size: 14px;
       margin-top: 1px;
       text-decoration:none;
       color: black;
-      font-family: 'Roboto', sans-serif;
       background-color: #ffff00;
       padding: 2px;
       font-weight: bold;
@@ -1658,11 +1717,7 @@ font-size: 14px;
       color: black;
       background-color:rgba(255, 255, 255, 0.68);;
       font-weight: bold;
-      border-radius: 3px;
-      font-family: 'Roboto', sans-serif;
-  
-  
-  
+      border-radius: 3px; 
     }
     main section article:hover .info{
       display: block;
@@ -1823,7 +1878,6 @@ font-size: 14px;
     text-align:justify;
     color: white;
     text-shadow: 5px 5px 10px black;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
   }
   .titulo_banner {
@@ -1839,7 +1893,6 @@ font-size: 14px;
     color: white;
     text-shadow: 5px 5px 10px black;
     text-align:justify ;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     
     
@@ -1855,7 +1908,6 @@ font-size: 14px;
     margin-top: 1px;
     text-decoration:none;
     color: black;
-    font-family: 'Roboto', sans-serif;
     background-color: yellow;
     padding: 10px;
     font-weight: bold;
@@ -1889,7 +1941,6 @@ font-size: 14px;
     h3{
       text-align: left;
       font-size: 20px;
-      font-family: 'Roboto', sans-serif;
       color: white;
       
       font-weight: bold;
@@ -1904,7 +1955,6 @@ font-size: 14px;
       font-size: 1vw;
       text-align:center;
       color: white;
-      font-family: 'Roboto', sans-serif;
     }
     main section article:hover .description{
       display: block;
@@ -1920,7 +1970,6 @@ font-size: 14px;
       margin-top: 1px;
       text-decoration:none;
       color:black;
-      font-family: 'Roboto', sans-serif;
       background-color: yellow;
       font-weight: bold;
       border-radius: 2px;
@@ -2002,7 +2051,6 @@ font-size: 14px;
       font-size: 1vw;
       text-align:center;
       color: white;
-      font-family: 'Roboto', sans-serif;
     }
     
    
@@ -2017,7 +2065,6 @@ font-size: 14px;
       margin-top: 1px;
       text-decoration:none;
       color:black;
-      font-family: 'Roboto', sans-serif;
       background-color: yellow;
       font-weight: bold;
       border-radius: 2px;
@@ -2041,7 +2088,6 @@ font-size: 14px;
       margin-top: 1px;
       text-decoration:none;
       color:black;
-      font-family: 'Roboto', sans-serif;
       background-color: yellow;
       font-weight: bold;
       border-radius: 2px;
@@ -2218,7 +2264,6 @@ font-size: 14px;
   color: white;
   font-size: 8vw;
   flex-grow: 0;
-  font-family: 'Staatliches', cursive;
   
   font-weight: bold;
   border-top: none;
@@ -2232,7 +2277,6 @@ font-size: 14px;
   flex-grow: 0.30;
   font-size: 1.2vw;
   margin: 1vw;
-  font-family: Arial, Helvetica, sans-serif;
   align-items: center;
   justify-content: center;
   border-top: inset white 0.2vw;
@@ -2246,7 +2290,6 @@ font-size: 14px;
   font-size: 5vw;
   flex-grow: 0.15;
   margin-left: 1vw;
-  font-family: 'Staatliches', cursive;
   align-items: center;
   justify-content: center;
   margin-top: 1vw;
@@ -2256,7 +2299,6 @@ font-size: 14px;
   color: white;
   font-size: 3vw;
   flex-grow: 0.10;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
   
   
@@ -2266,7 +2308,6 @@ font-size: 14px;
   font-size: 2vw;
   flex-grow: 0.10;
   color: white;
-  font-family: 'Staatliches', cursive;
   font-weight: bold;
 }
 
@@ -2312,7 +2353,6 @@ font-size: 14px;
   font-size: 1.5vw;
   cursor: pointer;
   width: 200px;
-  font-family: 'Staatliches', cursive;
   height: 50px;
   transition: background, 500ms;
 }

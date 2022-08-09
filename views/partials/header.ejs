@@ -1,19 +1,30 @@
 <link href="/css/HEADERYFOOTER.css" rel="stylesheet" />
 
+<script>
+  function toogleMenu() {
+    var x = document.getElementById("menuMobile");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+
 <header>
   
   <div class="container">
+
+    <% if(locals.isLogged) {%>
+    <button class="btn-toogle-mobile logged" onclick="toogleMenu()"></button>
+    <% } else { %>
+    <button class="btn-toogle-mobile" onclick="toogleMenu()"></button>
+    <% } %>
     
     <nav>
       <ul>
         <li><a href="/">HOME</a></li>
         <li><a href="/events">EVENTOS</a></li>
-        <% if(locals.isLogged) {%>
-        <li><a href="/carro">CARRITO</a></li>
-        <li><a href="/events/create">CREAR EVENTO</a></li>
-        <li><a href="/events/list">LISTA DE EVENTOS</a></li>
-        <li><a href="/register/list">LISTA DE USUARIOS</a></li>
-        <% } %>
       </ul>
     </nav>
         
@@ -28,7 +39,7 @@
         </div>
         <div class="user-box">
           <span>Hola, <%=locals.userLogged.first_name%></span>
-          <a href="/login/logout"> LOGOUT </a>
+          <a href="/login/logout">Cerrar Sesión</a>
         </div>
       </div>
 
@@ -42,3 +53,34 @@
     <% } %>
   </div>
 </header>
+
+<div id="menuMobile" class="container-menu-mobile" style="display: none;">
+  <div class="backdrop" onclick="toogleMenu()"></div>
+  <nav>
+    <% if(locals.isLogged) {%>
+
+      <div class="user-data">
+        <div class="profile-pic" style="background-image: url(/images/users/<%=locals.userLogged.image%>);">
+        </div>
+        <div class="user-box">
+          <span>Hola, <%=locals.userLogged.first_name%></span>
+          <a href="/login/logout">Cerrar Sesión</a>
+        </div>
+      </div>
+
+    <% } %>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/events">EVENTOS</a></li>
+      <% if(locals.isLogged) {%>
+      <li><a href="/carro">CARRITO</a></li>
+      <li><a href="/events/create">CREAR EVENTO</a></li>
+      <li><a href="/events/list">LISTA DE EVENTOS</a></li>
+      <li><a href="/register/list">LISTA DE USUARIOS</a></li>
+      <% } else { %>        
+        <li><a href="/register">REGISTRATE</a></li>
+        <li><a href="/login">INICIA SESION</a></li>
+      <% } %>
+    </ul>
+  </nav>
+</div>

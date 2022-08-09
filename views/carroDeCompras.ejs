@@ -2,75 +2,91 @@
 <html lang="en">
     <%-include('./partials/head',{title: 'Carrito de compras'})%>
     
-<body>
-   
-    <%-include('./partials/header')%>
-   
-<main>
-    <section class="contenedor-sections">
-        <div class="foto">
-            <img class="Holapuqui" src="/images/<%= selectedEvent.image %>" alt="Imagen del Evento">
-        </div>
+    <body>
+        <%-include('./partials/header')%>
 
-            <section class="resumen-contenedor">
-                <p class="c_f_pd">Resumen de tu compra:</p>
-                <div class="resumen-body">
-                    <div class="c_i_pd">
-                        <p class="info_banner_2">
-                            <%=selectedEvent.name%>
-                        </p>
+        <section class="section-common product-detail">
+            <div class="container">
+
+                <h2>Resumen de tu compra</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">
+                        </div>
                     </div>
-                    <div class="c_f_pd">
-                        <p class="info_banner_2">
-                            <%=selectedEvent.address%>
-                        </p>
-                    </div>
-                    <div class="resumen-item">
-                      
-                        <div class="resumen-item-detalle">
-                            <div class="c_f_pd">
-                                Fecha: 
+                    
+                    <div class="col">
+                        <% if(selectedEvent.featured){ %>
+                        <span class="featured">Evento Destacado</span>
+                        <% } %>
+                        
+                        <div class="header">
+                            <div class="date">
+                                <div class="calendar">
+                                    <span><%=selectedEvent.date.getUTCDate()%>/<%=selectedEvent.date.getMonth()+1%></span>
+                                    <span><%=selectedEvent.date.getFullYear()%></span>
+                                </div>
+                                <div class="time">
+                                    <p><%=selectedEvent.hora%></p>
+                                </div>
                             </div>
-                            <div class="c_f_pd">
-                                <%=selectedEvent.date.getUTCDate()%> /
-                                <%=selectedEvent.date.getMonth()+1%> /
-                                <%=selectedEvent.date.getFullYear()%>
+                            <h1><%=selectedEvent.name%></h1>
+                        
+                        </div>
+                        
+                        <div class="location">
+                            <%=selectedEvent.address%> - <%=selectedEvent.city%>
+                        </div>
+                        
+                        <p class="desc"><%=selectedEvent.description%></p>
+                        
+                        <hr>
+                        
+                        <div class="payment-methods">
+                            <h5>Tarjetas admitidas</h5>
+                            <div class="cards">
+                                <img src="/images/visa.png" alt="">
+                                <img src="/images/AEX.png" alt="">
+                                <img src="/images/master.png" alt="">
                             </div>
                         </div>
-            
-                        <div class="resumen-item-detalle">
-                            <div class="c_f_pd">
-                                Precio: 
-                            </div>
-                            <div class="c_f_pd" id="price">
-                                <%= selectedEvent.price %> $
-                            </div>
-                        </div>
-
-                        <div class="resumen-item-detalle">
-                            <form action="/carro/<%=selectedEvent.id%>" method="POST" >
-                                
-                            <label class="c_f_pd">Selecciona la cantidad de entradas: </label>
-                            <input name="quantity" id="cantidad-entradas" type="number" class="desplegables" value='0' min='0' max='10'/>
+                        
+                        <hr>
+                        
+                        <div class="payment-methods">
                             
-                            <div class="resumen-item-detalle">
-                                <div class="c_f_pd">Total</div>
-                                <div class="c_f_pd" id="total" > 0 $ </div>
-                            </div>
+                            <form action="/carro/<%=selectedEvent.id%>" method="POST" >
+                            
+                                <div class="price">
+                                    <h5>Precio</h5>
+                                    <span id="price"><%= selectedEvent.price %> $</span>
+                                </div>
 
-                            <div class="resumen-item-detalle" class="botones_detalle">
-                                <button type="submit" class="boton-resumen" id="confirmar">Confirmar compra</button>
-                            </div>
+                                <div class="price">
+                                    <h5>Cantidad de entradas</h5>
+                                    <input name="quantity" id="cantidad-entradas" type="number" class="select-number" value='0' min='0' max='10'/>
+                                </div>
+
+                                <div class="price mb">
+                                    <h5 class="label-yellow">TOTAL</h5>
+                                    <span class="label-yellow" id="total">0 $</span>
+                                </div>
+
+                                <button type="submit" class="btn" id="confirmar">Confirmar compra</button>
 
                             </form>
+                            
                         </div>
+                        
+                        <!--video controls src="/images/<%=selectedEvent.video%>" ></video-->
                     </div>
                 </div>
-            </section>
-        </div>
-    </section>
-</main>
-<script src= "/js/carro.js" ></script>
-<%-include('./partials/footer')%>
-</body>
+
+            </div>
+        </section>
+
+        <script src= "/js/carro.js" ></script>
+        <%-include('./partials/footer')%>
+    </body>
 </html>

@@ -11,6 +11,9 @@
                 <div class="event-container">
                 <% for (let i=0; i < event.length; i++) {%>
                     <article style="background-image: url('/images/<%= event[i].image %>');" >
+                        <% if(event[i].featured){ %>
+                            <span class="featured"></span>
+                        <% } %>
                         <div class="caption">
                             <h4 class="title"><%= event[i].name%></h4>
                             <p class="desc"> <%= event[i].description.slice(0,80).concat('...'); %></p>

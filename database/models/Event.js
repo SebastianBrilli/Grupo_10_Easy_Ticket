@@ -58,6 +58,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
 
+        featured: {
+            type: dataTypes.BOOLEAN,
+            defaultValue: false,
+        },
+
     }
 
     let config = {

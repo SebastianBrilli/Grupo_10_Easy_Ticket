@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <%-include('./partials/head',{title: 'Carrito de compras'})%>
-    
-<body>
-   
-    <%-include('./partials/header')%>
+
+    <body>
+        
+        <%-include('./partials/header')%>
+
+        <section class="section-common product-detail">
+          <div class="container">
+
+            <div class="row">
+                <div class="col">
+                  <div class="img-event" style="background-image: url('/images/<%=selectedEvent.image%>');">              
+                  </div>
+                </div>
+                <div class="col">
+                  
+                  <% if(selectedEvent.featured){ %>
+                    <span class="featured">Evento Destacado</span>
+                  <% } %>
+      
+                  <div class="header">
+                    <div class="date">
+                      <div class="calendar">
+                        <span><%=selectedEvent.date.getUTCDate()%>/<%=selectedEvent.date.getMonth()+1%></span>
+                        <span><%=selectedEvent.date.getFullYear()%></span>
+                      </div>
+                      <div class="time">
+                        <p><%=selectedEvent.hora%></p>
+                      </div>
+                    </div>
+                    <h1><%=selectedEvent.name%></h1>
+                    
+                  </div>
+      
+                  <div class="location"><%=selectedEvent.address%> - <%=selectedEvent.city%></div>
+      
+                  <p class="desc"><%=selectedEvent.description%></p>
+      
+                  <hr>
+      
+                  <div class="payment-methods">
+                    <h5>Tarjetas admitidas</h5>
+                    <div class="cards">
+                      <img src="/images/visa.png" alt="">
+                      <img src="/images/AEX.png" alt="">
+                      <img src="/images/master.png" alt="">
+                    </div>
+                  </div>
+      
+                  <hr>
+      
+                  <a href="/carro/<%=selectedEvent.id%>" class="btn">Comprar</a>
+                  
+                  <!--video controls src="/images/<%=selectedEvent.video%>" ></video-->
+      
+                </div>
+              </div>    
+
+          </div>
+        </section>
    
 <main>
     <section class="contenedor-sections">

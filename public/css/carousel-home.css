@@ -9,21 +9,23 @@
     align-items: center;
     width: 100%;
     padding: 3rem 0;
-    background-image: url(/images/banner/bg-home-banner.jpg);
+    background-image: url(/images/banner/bg-home-banner-2.jpg);
     background-position: center center;
     background-size: cover;
 }
 
-#main-banner article {
+#main-banner .owl-stage-outer {
+    z-index: 1;
 }
 
 #main-banner article .container {
+    width: 60%;
     box-sizing: border-box;
     display: flex;
 }
 
 #main-banner article .container .image img {
-    width: 256px;
+    max-width: 356px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
@@ -33,7 +35,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 3rem;
+    align-items: flex-start;
+    padding-left: 3rem;
 }
 
 #main-banner article .container .caption *{
@@ -42,16 +45,25 @@
 
 #main-banner article .container .caption h3{
     font-size: 3rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1rem;
 }
 
 #main-banner article .container .caption h5{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    color: yellow;
+    background-image: url(/images/icon-bookmark.png);
+    background-repeat: no-repeat;
+    background-position: left 3px;
+    background-size: 18px auto;
+    text-indent: 28px;
 }
 
 #main-banner article .container .caption p{
     font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
 }
 
 #main-banner article .container .caption .container-btn {
@@ -59,6 +71,7 @@
 }
 
 #main-banner article .container .caption .container-btn .btn{
+    font-size: 1.25rem;
     background-color: yellow;
     color: black;
     padding: 0.75rem 2rem;
@@ -68,8 +81,56 @@
 }
 
 #main-banner article .container .caption .container-btn .btn:hover {
-    background-color: black;
-    color: yellow;
+    background-color: white;
+    color: black;
+}
+
+
+#main-banner .owl-carousel .owl-nav {
+    top: 45%;
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#main-banner .owl-carousel .owl-nav button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+    background-color: yellow ;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+#main-banner .owl-carousel .owl-nav button span {
+    position: absolute;
+    top: -20px;
+    line-height: normal;
+    font-size: 3rem;
+    font-weight: bold;
+    left: 12px;
+    color: black;
+}
+
+#main-banner .owl-carousel .owl-nav button.owl-next span {
+    top: -8px;
+    left: 17px;
+}
+
+#main-banner .owl-carousel .owl-nav button.owl-prev span {
+    top: -8px;
+    left: 14px;
 }
 
 /* Lista de eventos */
@@ -80,6 +141,10 @@
 
 .owl-theme-a .item {
     cursor: pointer;
+}
+
+.owl-theme-a .item article .caption {
+    position: relative;
 }
 
 .owl-theme-a .item article .caption {
@@ -102,6 +167,20 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
     overflow: hidden;    
+}
+
+
+.owl-theme-a .item article .caption .featured {
+    position: absolute;
+    display: block;
+    top: 1rem;
+    left: 1rem;
+    width: 32px;
+    height: 32px;
+    background-image: url(/images/icon-bookmark.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
 }
 
 .owl-theme-a .item article .caption:hover {
